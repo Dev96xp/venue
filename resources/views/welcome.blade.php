@@ -171,7 +171,7 @@
         <div class="text-2xl">
             <p>THE PALACE HALL</p>
             <P>3001 South 144th Street, Omaha, NE 68144</P>
-            <p>Phone Number: (308) 746-4108</p>
+            <p>Phone Number: (308)-746-4108 (402)-884-9950</p>
         </div>
         <div class="flex justify-center my-4">
             <a href="#" class="bg-pink-400 hover:bg-pink-300 text-white font-bold py-2 px-4 rounded">
