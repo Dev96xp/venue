@@ -79,9 +79,9 @@
                     </header>
 
                     <a href="#" class="mt-2">
-                        <p>CNC, or computer numerical control machining, is a widely used manufacturing process that
-                            uses automated,
-                            high-speed cutting tools to form designs from metal or plastic stock.</p>
+                        <p>From an intimate ceremony to a lavish formal gala, you can make your special day what you
+                            have
+                            always dreamed. Our main dining room can be arranged to suit your wishes</p>
                     </a>
 
                 </figure>
@@ -98,10 +98,10 @@
                         </a>
                     </header>
                     <a href="#" class="mt-2">
-                        <p>Skilled machinists operate a CNC machine by programming tool paths based on the geometry of
-                            the final
-                            machined parts. The part geometry information is provided by a
-                            CAD (computer-aided design) model.</p>
+                        <p>If you book your event at this location, you can expect to see lots of natural light, on a
+                            beuatifull cozy large space for until 500 people
+                            Moreover, the Venue is
+                            located on the mall with free parking and can be accessed via public transport</p>
                     </a>
 
                 </figure>
@@ -115,9 +115,10 @@
                     <header class="mt-2">
                         <h1 class="text-center text-xl text-gray-700">Quinceañeras</h1>
                     </header>
-                    <p>CNC machining is widely used across industries. It is common in aerospace, automotive, consumer
-                        electronics,
-                        robotics, agriculture, and other fields that frequently use metal parts.</p>
+                    <p>If you’re looking for a Quinceañera venue that offers something for everyone, then Infinity Park
+                        Event Center is your perfect fit,  you’ll be able to
+                        accommodate as many or as few guests as desired. No matter what the occasion, we are confident
+                        that your Quinceañera will be the most memorable event of your life!</p>
                 </figure>
             </article>
 
