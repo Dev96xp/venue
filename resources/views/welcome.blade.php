@@ -202,7 +202,7 @@
                                          opacity-75 - Detremina la opacity Inicial
                                          hover:opacity-100 - Elimina el opacity --}}
     <section class="mt-16 opacity-75 bg-fixed bg-center bg-no-repeat bg-cover hover:opacity-100"
-        style="background-image: url('{{ asset('img/home/pexels-matheus-bertelli-17023005.jpg') }}');background-size: 100%;background-repeat:no-repeat;background-position:center">
+        style="background-image: url('{{ asset('img/home/pexels-matheus-bertelli-17023005.jpg') }}')">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-48">
             <div class="w-full md:w-3/4 lg:w-1/2">
                 <h1 class="text-white text-bold text-6xl py-6 justify-center font-Playfair Display SC">Working with Best
