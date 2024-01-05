@@ -23,11 +23,11 @@
 
 
             <div class="w-full md:w-3/4 lg:w-3/4">
-                <h1 class="text-black text-6xl md:text-8xl lg:text-8xl py-6" style="font-family: Sche">THE PALACE HALL</h1>
-                <h1 class="text-white text-3xl md:text-5xl lg:text-5xl font-bold" style="font-family: Montserrat">
+                <p class="text-black text-6xl md:text-8xl lg:text-8xl py-6" style="font-family: Sche">THE PALACE HALL</p>
+                <p class="text-white text-3xl md:text-5xl lg:text-5xl font-bold" style="font-family: Montserrat">
                     Experiance and aptitude of our team
-                </h1>
-                <p class="text-gray-300 font-bold text-3xl mt-2 mb-4" style="font-family: Montserrat">
+                </p>
+                <p class="text-black font-bold text-3xl mt-2 mb-4" style="font-family: Montserrat">
                     Perfect for hosting Weddings, Receptions, Corporate Events, Private Celebrations, Pool Parties and
                     More!
                 </p>
