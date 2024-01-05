@@ -18,7 +18,7 @@
                                          min-h-screen - OCUPA TODA LA ALTURA DE PANTALLA
                                          opacity-75 - Detremina la opacity Inicial
                                          hover:opacity-100 - Elimina el opacity --}}
-        <div class="w-full mx-auto px-4 sm:px-6 lg:px-64 py-40 opacity-75 relative bg-fixed bg-center bg-no-repeat bg-cover hover:opacity-100"
+        <div class="w-full mx-auto px-4 sm:px-6 lg:px-64 py-40 opacity-75 relative bg-center bg-no-repeat bg-cover hover:opacity-100"
             style="background-image: url('{{ asset('img/home/pexels-matheus-bertelli-17023014.jpg') }}')">
 
 
