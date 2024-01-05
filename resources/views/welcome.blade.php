@@ -14,7 +14,7 @@
 
         {{-- py- Determina la altura de la imagen --}}
 
-        {{-- MASTER CLASS - PARALLAX EFFECT - (bg-fixed bg-center bg-no-repeat bg-cover)
+        {{-- MASTER CLASS - PARALLAX EFFECT - (bg-fixed bg-center bg-no-repeat bg-cover, EN ESTE CASO ELIMINE FIXED, PARA QUE TRABAJARA BIEN EN MOBIL)
                                          min-h-screen - OCUPA TODA LA ALTURA DE PANTALLA
                                          opacity-75 - Detremina la opacity Inicial
                                          hover:opacity-100 - Elimina el opacity --}}
@@ -125,7 +125,7 @@
                         <h1 class="text-center text-xl text-gray-700">Quinceañeras</h1>
                     </header>
                     <p>If you’re looking for a Quinceañera venue that offers something for everyone, then Infinity Park
-                        Event Center is your perfect fit,  you’ll be able to
+                        Event Center is your perfect fit, you’ll be able to
                         accommodate as many or as few guests as desired. No matter what the occasion, we are confident
                         that your Quinceañera will be the most memorable event of your life!</p>
                 </figure>
@@ -139,8 +139,10 @@
                     <header class="mt-2">
                         <h1 class="text-center text-xl text-gray-700">Professional and Bueatifull</h1>
                     </header>
-                    <p>Their portfolio spans weddings of all kind, from intimate seaside gatherings to the most extravagant
-                         country club takeovers, each specifically designed to speak to the essence of each couple’s unique preferences and tastes.</p>
+                    <p>Their portfolio spans weddings of all kind, from intimate seaside gatherings to the most
+                        extravagant
+                        country club takeovers, each specifically designed to speak to the essence of each couple’s
+                        unique preferences and tastes.</p>
                 </figure>
             </article>
 
@@ -183,6 +185,15 @@
             <p>Phone Number:</p>
             <p>(308)-746-4108</p>
             <p>(402)-884-9950</p>
+            <div>----</div>
+
+            <p>IMPORTANT !!!: The website is still being developed, the images you see here DO NOT represent this
+                event hall, were only used for development purposes, when the website is finished it will be notified by this means,
+                Thank you for your understanding, you are invited to visit the event room at the address shown above, before your hiring.</p>
+            <div>----</div>
+            <p>IMPORTANTE !!!: La Pagina web todavia se esta desarrollando, las imagenes que tu ves aqui no representa este
+                salon de eventos, solo se usaron para propositos de desarrollo, cuando este terminado el website se notificara por este medio,
+                gracias por su comprension, se te invita visitar el salon de eventos en la direcion mostrada anteriormente, antes de tu contratacion</p>
         </div>
         <div class="flex justify-center my-4">
             <a href="#" class="bg-pink-400 hover:bg-pink-300 text-white font-bold py-2 px-4 rounded">
