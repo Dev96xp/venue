@@ -16,6 +16,11 @@
             'route' => '#',
             'active' => false,
         ],
+        [
+            'name' => 'About',
+            'route' => '#',
+            'active' => false,
+        ],
         // [
         //     'name' => 'About Us',
         //     'route' => route('about'),

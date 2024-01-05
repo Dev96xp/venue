@@ -130,9 +130,8 @@
                     <header class="mt-2">
                         <h1 class="text-center text-xl text-gray-700">Professional and Bueatifull</h1>
                     </header>
-                    <p>Because CNC machining can cut a high variety of fully dense, durable materials like aluminum 5052
-                        and
-                        stainless steel, it is perfect for creating fixtures or molds.</p>
+                    <p>Their portfolio spans weddings of all kind, from intimate seaside gatherings to the most extravagant
+                         country club takeovers, each specifically designed to speak to the essence of each couple’s unique preferences and tastes.</p>
                 </figure>
             </article>
 
