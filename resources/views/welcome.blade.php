@@ -188,12 +188,17 @@
             <div>----</div>
 
             <p>IMPORTANT !!!: The website is still being developed, the images you see here DO NOT represent this
-                event hall, were only used for development purposes, when the website is finished it will be notified by this means,
-                Thank you for your understanding, you are invited to visit the event room at the address shown above, before your hiring.</p>
+                event hall, were only used for development purposes, when the website is finished it will be notified by
+                this means,
+                Thank you for your understanding, you are invited to visit the event room at the address shown above,
+                before your hiring.</p>
             <div>----</div>
-            <p>IMPORTANTE !!!: La Pagina web todavia se esta desarrollando, las imagenes que tu ves aqui no representa este
-                salon de eventos, solo se usaron para propositos de desarrollo, cuando este terminado el website se notificara por este medio,
-                gracias por su comprension, se te invita visitar el salon de eventos en la direcion mostrada anteriormente, antes de tu contratacion</p>
+            <p>IMPORTANTE !!!: La Pagina web todavia se esta desarrollando, las imagenes que tu ves aqui no representa
+                este
+                salon de eventos, solo se usaron para propositos de desarrollo, cuando este terminado el website se
+                notificara por este medio,
+                gracias por su comprension, se te invita visitar el salon de eventos en la direcion mostrada
+                anteriormente, antes de tu contratacion</p>
         </div>
         <div class="flex justify-center my-4">
             <a href="#" class="bg-pink-400 hover:bg-pink-300 text-white font-bold py-2 px-4 rounded">
@@ -203,8 +208,9 @@
 
     </section>
 
-
-
+    <section>
+        <img class="w-full p-4 bg-cover bg-center bg-no-repeat hover:opacity-100" src="{{ asset('img/home/calendar.png') }}" alt="">
+    </section>
 
 
     {{-- SECCTION 5 --}}

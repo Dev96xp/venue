@@ -145,6 +145,9 @@ return [
             /*
              * The disk names on which the backups will be stored.
              */
+
+            //  Lo modifique para realizar varios tipos de backups - - OJO OJO
+
             'disks' => [
                 'local',
                 'public',
@@ -254,10 +257,10 @@ return [
     'monitor_backups' => [
         [
             'name' => env('APP_NAME', 'laravel-backup'),
-            'disks' => ['local'],
+            'disks' => ['do'],  // REALIZAR MONITOREO EN DIGITAL OCEAN
             'health_checks' => [
-                \Spatie\Backup\Tasks\Monitor\HealthChecks\MaximumAgeInDays::class => 1,
-                \Spatie\Backup\Tasks\Monitor\HealthChecks\MaximumStorageInMegabytes::class => 5000,
+                \Spatie\Backup\Tasks\Monitor\HealthChecks\MaximumAgeInDays::class => 1,  //Maximo dias sin hacer un respaldo, antes de notificarnos
+                \Spatie\Backup\Tasks\Monitor\HealthChecks\MaximumStorageInMegabytes::class => 5000,     //Maximo tamaño de respaldo antes de notificarnos
             ],
         ],
 

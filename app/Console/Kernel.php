@@ -13,9 +13,15 @@ class Kernel extends ConsoleKernel
     protected function schedule(Schedule $schedule): void
     {
         // $schedule->command('inspire')->hourly();
+        // Esto realizara un cleanup cada dia, alas 2 de la mañana de la db y app
+        // Solo hace falta hacer un crome
+        $schedule->command('backup:clean')->daily()->at('00:00');
+
         // Esto realizara un backup cada dia, alas 4 de la mañana de la db y app
         // Solo hace falta hacer un crome
-        $schedule->command('backup:run')->daily()->at('04:00');
+        $schedule->command('backup:run')->daily()->at('01:00');
+
+        $schedule->command('backup:monitor')->daily()->at('02:00');
     }
 
     /**
