@@ -11,11 +11,11 @@
             'route' => '#',
             'active' => false,
         ],
-        // [
-        //     'name' => 'Invitation',
-        //     'route' => route('my-invite'),
-        //     'active' => request()->routeIs('my-invite'),
-        // ],
+        [
+            'name' => 'Invitation',
+            'route' => route('my-invite'),
+            'active' => request()->routeIs('my-invite'),
+        ],
         [
             'name' => 'About',
             'route' => '#',

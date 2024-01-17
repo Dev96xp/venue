@@ -29,7 +29,7 @@
                     Experiance and aptitude of our team
                 </p>
                 <p class="text-black font-bold text-3xl mt-2 mb-4" style="font-family: Montserrat">
-                    Perfect for hosting Weddings, Receptions, Corporate Events, Private Celebrations, Pool Parties and
+                    Perfect for hosting Weddings, Receptions, Corporate Events, Private Celebrations and
                     More!
                 </p>
 
