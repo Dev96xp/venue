@@ -34,40 +34,100 @@
             </article>
 
 
-            {{-- Articulo #2 - Pensamiento #2--}}
+            {{-- Articulo #2 - Pensamiento #2 --}}
             <article>
-                <figure>
-                    {{-- Background --}}
-                    <div class="w-full mx-auto px-4 py-80 opacity-50 bg-center bg-no-repeat bg-cover hover:opacity-75"
-                        style="background-image: url('{{ asset('img/home/pexels-moose-photos-1037994.jpg') }}')">
-                        {{-- CENTRA TEXTO DENTRO DEL BACKGROUND --}}
 
-                        <section aria-labelledby="sale-heading"
-                            class="h-screen relative mx-auto flex max-w-7xl flex-col items-center px-4 text-center sm:px-6 lg:px-8">
-                            <div class="mx-auto max-w-2xl lg:max-w-none">
-                                <h2 id="sale-heading"
-                                    class="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl lg:text-6xl">Mis XV Años</h2>
-                                <p class="mx-auto mt-4 max-w-xl text-xl text-gray-600">Most of our products are limited
-                                    releases that won't come back. Get your favorite items while they're in stock.</p>
-                                <p class="mx-auto mt-4 max-w-sm text-6xl text-gray-600" style="font-family:Sacramento">
-                                    Dejo atrás un mundo y
-                                    entro a uno nuevo aunque
-                                    a veces dudo o temo estoy
-                                    llena de esperanzas y sueños.
-                                    Tengo la sensación de que
-                                    estoy construyendo mi
-                                    propio camino siento
-                                    alegría y quiero
-                                    compartirlo rodeada de
-                                    todos los que quiero.</p>
-                            </div>
-                        </section>
-                    </div>
-                </figure>
+                {{-- Background --}}
+                <div class="w-full mx-auto px-4 py-80 opacity-50 bg-center bg-no-repeat bg-cover hover:opacity-75"
+                    style="background-image: url('{{ asset('img/home/pexels-moose-photos-1037994.jpg') }}')">
+                    {{-- CENTRA TEXTO DENTRO DEL BACKGROUND --}}
+
+                    <section aria-labelledby="sale-heading"
+                        class="h-screen relative mx-auto flex max-w-7xl flex-col items-center px-4 text-center sm:px-6 lg:px-8">
+                        <div class="mx-auto max-w-2xl lg:max-w-none">
+                            <h2 id="sale-heading"
+                                class="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl lg:text-6xl">Mis XV
+                                Años</h2>
+                            <p class="mx-auto mt-4 max-w-xl text-xl text-gray-600">Most of our products are limited
+                                releases that won't come back. Get your favorite items while they're in stock.</p>
+                            <p class="mx-auto mt-4 max-w-sm text-6xl text-gray-600" style="font-family:Sacramento">
+                                Dejo atrás un mundo y
+                                entro a uno nuevo aunque
+                                a veces dudo o temo estoy
+                                llena de esperanzas y sueños.
+                                Tengo la sensación de que
+                                estoy construyendo mi
+                                propio camino siento
+                                alegría y quiero
+                                compartirlo rodeada de
+                                todos los que quiero.</p>
+                        </div>
+                    </section>
+                </div>
+
             </article>
         </div>
     </section>
 
+
+    {{-- SECCTION 4 - Contenido Specials of the week --}}
+    <section class="my-16">
+        <div
+            class="mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-x-6 gap-y-8">
+
+            {{-- Articulo #1 Segunga foto y - Pensamiento #1 --}}
+            <article>
+                <figure>
+
+                    <h1 class="text-gray-600 text-center text-4xl mb-6 mx-12 font-bold"
+                        style="font-family:Dancing Script">Dicen que la vida es más bella
+                        si podemos cumplir con lo
+                        que soñamos.</h1>
+                    <a href="#"><img class="rounded-lg lg:h-full w-full object-cover shadow-2xl"
+                            src="{{ asset('img/home/pexels-inna-mykytas-13925971.jpg') }}" alt=""></a>
+                </figure>
+            </article>
+
+
+            {{-- Articulo #2 - Pensamiento #2 --}}
+            <article>
+
+                <div
+                    style="background: url('{{ asset('img/home/pexels-karolina-grabowska-4041285.jpg') }}')"
+                    class="w-full bg-center bg-no-repeat bg-cover">
+                    {{-- class="w-full mx-auto px-4 py-80 opacity-50 bg-center bg-no-repeat bg-cover hover:opacity-75" --}}
+
+                    <!-- Overlay Background + Center Control -->
+                    <div class="w-full bg-opacity-50 bg-black flex items-center justify-center"
+                        style="background:rgba(0,0,0,0.5);">
+
+                        <div class="py-20 mx-2 text-center">
+                            <h1 class="text-gray-100 font-extrabold text-4xl xs:text-5xl md:text-6xl">
+                                <span class="text-white">Mis Quince Años</span>
+                            </h1>
+                            <h2 class="text-gray-200 font-extrabold text-3xl xs:text-4xl md:text-5xl leading-tight">
+                                Get a <span class="text-white">Better</span> and <span
+                                    class="text-white">Professionals</span> Design
+                            </h2>
+                            <p class="mx-auto mt-4 max-w-sm text-6xl text-gray-600" style="font-family:Sacramento">
+                                Dejo atrás un mundo y
+                                entro a uno nuevo aunque
+                                a veces dudo o temo estoy
+                                llena de esperanzas y sueños.
+                                Tengo la sensación de que
+                                estoy construyendo mi
+                                propio camino siento
+                                alegría y quiero
+                                compartirlo rodeada de
+                                todos los que quiero.</p>
+
+                        </div>
+                    </div>
+                </div>
+
+            </article>
+        </div>
+    </section>
 
 
     {{-- Papas y padrinos --}}
@@ -92,8 +152,7 @@
     </section>
 
 
-    <section
-        class="my-16 mx-auto flex max-w-7xl flex-col items-center px-4 pt-8 text-center sm:px-6 lg:px-8">
+    <section class="my-16 mx-auto flex max-w-7xl flex-col items-center px-4 pt-8 text-center sm:px-6 lg:px-8">
         <div class="mx-auto max-w-2xl lg:max-w-none">
             {{-- Papas --}}
             <h2 id="sale-heading" class="text-4xl font-bold tracking-tight text-gray-900 sm:text-3xl lg:text-6xl">Para
@@ -142,8 +201,10 @@
                                 Hora: 05:00 p.m.
                             </p>
                             {{-- Padrinos --}}
-                            <p class="mx-auto mt-4 max-w-xl text-4xl text-gray-600" style="font-family:Great Vibes">Direccion</p>
-                            <p class="mx-auto mt-4 max-w-xl text-4xl text-gray-600" style="font-family:Sacramento">C. 60,
+                            <p class="mx-auto mt-4 max-w-xl text-4xl text-gray-600" style="font-family:Great Vibes">
+                                Direccion</p>
+                            <p class="mx-auto mt-4 max-w-xl text-4xl text-gray-600" style="font-family:Sacramento">C.
+                                60,
                                 Centro, 97000</p>
                             <p class="mx-auto mt-4 max-w-xl text-4xl text-gray-600" style="font-family:Sacramento">
                                 Mérida, Yuc
