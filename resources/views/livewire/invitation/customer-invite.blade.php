@@ -38,7 +38,7 @@
             <article>
                 <figure>
                     {{-- Background --}}
-                    <div class="w-full mx-auto px-4 py-80 opacity-25 bg-center bg-no-repeat bg-cover hover:opacity-50"
+                    <div class="w-full mx-auto px-4 py-80 opacity-50 bg-center bg-no-repeat bg-cover hover:opacity-75"
                         style="background-image: url('{{ asset('img/home/pexels-moose-photos-1037994.jpg') }}')">
                         {{-- CENTRA TEXTO DENTRO DEL BACKGROUND --}}
 
@@ -126,7 +126,7 @@
 
 
                         {{-- imagen de la iglesia --}}
-                        <img id="picture" class="h-full object-cover object-center mx-4 p-auto rounded-lg shadow-2xl"
+                        <img id="picture" class="object-cover object-center mx-4 p-auto rounded-lg shadow-2xl"
                             src="{{ asset('img/home/pexels-tom-fisk-1624307.jpg') }}" alt="">
 
                     </div>
