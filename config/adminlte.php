@@ -252,6 +252,8 @@ return [
     |
     */
 
+
+
     'use_route_url' => false,
     'dashboard_url' => '/',      //Lo cambie para apuntar a la ruta HOME
 
@@ -330,6 +332,29 @@ return [
             'url'  => 'admin/settings',
             'icon' => 'fas fa-fw fa-lock',
         ],
+        [
+            'text' => 'Settings',
+            'url'  => '#',
+            'icon' => 'fas fa-fw fa-lock',
+            'submenu' => [
+                [
+                    'text'        => 'Lista de Roles',
+                    //'url'         => 'admin/pages',
+                    'route'       => 'admin.roles.index',
+                    'icon'        => 'fas fa-fw fa-user-cog',
+                    'active'      => ['admin/roles*']
+                ],
+                [
+                    'text' => 'level_two',
+                    'url'  => '#',
+                ],
+                [
+                    'text' => 'level_three',
+                    'url'  => '#',
+                ],
+            ],
+        ],
+
         [
             'text'    => 'multilevel',
             'icon'    => 'fas fa-fw fa-share',

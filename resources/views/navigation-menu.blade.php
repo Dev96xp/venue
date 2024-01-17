@@ -12,9 +12,9 @@
             'active' => false,
         ],
         [
-            'name' => 'Supplies',
-            'route' => '#',
-            'active' => false,
+            'name' => 'Invitation',
+            'route' => route('my-invite'),
+            'active' => request()->routeIs('my-invite'),
         ],
         [
             'name' => 'About',
@@ -30,25 +30,39 @@
 @endphp
 
 <nav x-data="{ open: false }" class="bg-white border-b border-gray-100">
-    <!-- Primary Navigation Menu -->
+    <!-- Primary Navigation Menu (Menu principal)-->
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between h-16">
             <div class="flex">
-                <!-- Logo -->
-                <div class="shrink-0 flex items-center">
+
+
+                <!-- Logo - ORIGINAL -->
+                {{-- <div class="shrink-0 flex items-center">
                     <a href="{{ route('dashboard') }}">
                         <x-application-mark class="block h-9 w-auto" />
                     </a>
+                </div> --}}
+
+
+                <!-- Logo - NEW -->
+                <div class="shrink-0 flex items-center">
+                    <a href="{{ route('home') }}">
+                        <x-app-logo class="block h-9 w-auto"></x-app-logo>
+                    </a>
                 </div>
 
-                <!-- Navigation Links -->
+
+
+                <!-- Navigation Links (Links de Navegacion)-->
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    {{-- Muestra los nuevos menus, en pantalla normal --}}
+
+                    {{-- Muestra los nuevos menus, en pantalla normal, contenidos en el array --}}
                     @foreach ($nav_links as $nav_link)
                         <x-nav-link href="{{ $nav_link['route'] }}" :active="$nav_link['active']">
                             {{ $nav_link['name'] }}
                         </x-nav-link>
                     @endforeach
+
                 </div>
             </div>
 
@@ -111,7 +125,6 @@
                 <!-- Settings Dropdown -->
                 <div class="ms-3 relative">
                     @auth
-
                         <x-dropdown align="right" width="48">
                             <x-slot name="trigger">
                                 @if (Laravel\Jetstream\Jetstream::managesProfilePhotos())
@@ -145,6 +158,18 @@
                                 <x-dropdown-link href="{{ route('profile.show') }}">
                                     {{ __('Profile') }}
                                 </x-dropdown-link>
+
+                                {{-- <x-jet-responsive-nav-link href="{{ route('message.index') }}">
+                                    Send message
+                                </x-jet-responsive-nav-link> --}}
+
+                                {{-- SEGURIDAD - PERMISO --}}
+                                {{-- @can('Ver dashboard') --}}
+                                {{-- MASTER CLASS - OJO Uso la ruta completa cuando uso route() --}}
+                                <x-responsive-nav-link href="{{ route('admin.home') }}">
+                                    Administrator
+                                </x-responsive-nav-link>
+                                {{-- @endcan --}}
 
                                 @if (Laravel\Jetstream\Jetstream::hasApiFeatures())
                                     <x-dropdown-link href="{{ route('api-tokens.index') }}">
@@ -192,7 +217,7 @@
         </div>
     </div>
 
-    <!-- Responsive Navigation Menu -->
+    <!-- Responsive Navigation Menu (Menu para mobiles)-->
     <div :class="{ 'block': open, 'hidden': !open }" class="hidden sm:hidden">
         <div class="pt-2 pb-3 space-y-1">
             @foreach ($nav_links as $nav_link)

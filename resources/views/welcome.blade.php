@@ -208,6 +208,7 @@
 
     </section>
 
+    {{-- CALENDAR --}}
     <section>
         <img class="w-full p-4 bg-cover bg-center bg-no-repeat hover:opacity-100" src="{{ asset('img/home/calendar.png') }}" alt="">
     </section>

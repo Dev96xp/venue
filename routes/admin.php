@@ -2,8 +2,11 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\HomeController;
+use App\Http\Controllers\Admin\RoleController;
 
+Route::get('', [HomeController::class, 'index'])->name('home');
 
-Route::get('', [HomeController::class, 'index']);
+// IMPORTANTE: La ruta de tipo resource, genera las 7 rutas necesarias para hacer un CRUD COMPLETO
+// la SEGURIDAD DE PERMISOS se maneja desde su controlador, usando __constructor()
+Route::resource('roles',RoleController::class)->names('roles');
 
-//Route::get('/', HomeController::class)->name('home');  //este es de company-app

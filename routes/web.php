@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\Customer\CustomerController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,6 +22,11 @@ use App\Http\Controllers\HomeController;
 
 Route::get('/', HomeController::class)->name('home');
 
+//########## My Palace Ivitation ##############
+// PUBLICA
+Route::get('my-invite', [CustomerController::class, 'index'])->name('my-invite');  // *** PUBLICO ***//
+
+
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
@@ -30,3 +36,4 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 });
+
