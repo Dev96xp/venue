@@ -171,7 +171,7 @@
 
 
                         {{-- imagen del salon --}}
-                        <img id="picture" class="h-full object-cover object-center mx-4 p-auto rounded-lg shadow-2xl"
+                        <img id="picture" class="object-cover object-center mx-4 p-auto rounded-lg shadow-2xl"
                             src="{{ asset('img/home/pexels-ingo-joseph-87378.jpg') }}" alt="">
 
                     </div>
