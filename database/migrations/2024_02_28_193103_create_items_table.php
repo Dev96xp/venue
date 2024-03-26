@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('name')->nullable();
             $table->string('slug')->default('...');
             $table->string('model')->nullable();
-            $table->text('description')->default('...');
+            $table->text('description')->nullable();
             $table->text('note')->nullable();
             $table->float('price')->default(0.00);
             $table->float('payment')->default(0.00);
