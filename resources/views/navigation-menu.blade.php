@@ -11,11 +11,16 @@
             'route' => '#',
             'active' => false,
         ],
-        // [
-        //     'name' => 'Invitation',
-        //     'route' => route('my-invite'),
-        //     'active' => request()->routeIs('my-invite'),
-        // ],
+        [
+            'name' => 'Invitation',
+            'route' => route('my-invite'),
+            'active' => request()->routeIs('my-invite'),
+        ],
+        [
+            'name' => 'Price',
+            'route' => route('price'),
+            'active' => request()->routeIs('price'),
+        ],
         [
             'name' => 'About',
             'route' => '#',
@@ -164,12 +169,12 @@
                                 </x-jet-responsive-nav-link> --}}
 
                                 {{-- SEGURIDAD - PERMISO --}}
-                                {{-- @can('Ver dashboard') --}}
+                                @can('Ver dashboard')
                                 {{-- MASTER CLASS - OJO Uso la ruta completa cuando uso route() --}}
                                 <x-responsive-nav-link href="{{ route('admin.home') }}">
                                     Administrator
                                 </x-responsive-nav-link>
-                                {{-- @endcan --}}
+                                @endcan
 
                                 @if (Laravel\Jetstream\Jetstream::hasApiFeatures())
                                     <x-dropdown-link href="{{ route('api-tokens.index') }}">

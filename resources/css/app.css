@@ -1,3 +1,9 @@
+@import "cointainer.css";   /* Recuerda esto se pone hasta arriba para
+                               anteponerse a tailwind*/
+/* @import "form.css";
+@import "forms.css"; */
+@import "nav.css";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -5,3 +11,12 @@
 [x-cloak] {
     display: none;
 }
+
+/* Aqui se importo el archivo que contiene nuestros estilo propios
+1- Pero antes de que funcione se tiene que compilar
+
+Se compila ejecutando: npm run dev
+
+2- Una vez compilado se creara y se actualizara estos estiloS
+   dentro de la carpeta PUBLIC Y entonces seran disponibles para la app
+3- se compila con el sigueinte comando [npm run watch]    */

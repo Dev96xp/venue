@@ -22,6 +22,7 @@ class UserFactory extends Factory
     {
         return [
             'name' => $this->faker->name(),
+            'cus_id' => '2020-' . $this->faker->unique()->numberBetween($min=0000, $max=9999),
             'company' => $this->faker->company(),
             'address' => $this->faker->address(),
             'city' => $this->faker->city(),
@@ -35,6 +36,7 @@ class UserFactory extends Factory
             'remember_token' => Str::random(10),
             'profile_photo_path' => null,
             'current_team_id' => null,
+            'store_id' => $this->faker->randomElement([1, 2, 3, 4]),
         ];
     }
 

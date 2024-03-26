@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('users', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->string('cus_id')->default(0);
             $table->string('phone')->default('000-000-0000');
             $table->string('company')->nullable();
             $table->string('address')->nullable();
@@ -26,6 +27,12 @@ return new class extends Migration
             $table->rememberToken();
             $table->foreignId('current_team_id')->nullable();
             $table->string('profile_photo_path', 2048)->nullable();
+
+            // Para tabla :stores
+            $table->unsignedBigInteger('store_id')->nullable();  // Se pueden aceptar campos nulos
+            // Agregar las restriciones para las llaves foraneas
+            $table->foreign('store_id')->references('id')->on('stores');
+
             $table->timestamps();
         });
     }

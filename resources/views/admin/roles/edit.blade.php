@@ -9,7 +9,7 @@
 
 @section('content')
 
-{{-- <x-admin-layout> --}}
+    {{-- <x-admin-layout> --}}
 
     <div class="card">
         <div class="card-body">
@@ -19,12 +19,12 @@
             <form action="{{ route('admin.roles.update', $role->id) }}" method="POST">
                 @csrf
                 @method('PUT')
+
                 <div>
                     <label for="">
                         Nombre del Role
                     </label>
-                    <input type="text" class="form-control" name="name"
-                        id="name2" value="{{ $role->name }}">
+                    <input type="text" class="form-control" name="name" id="name2" value="{{ $role->name }}">
                 </div>
 
                 <br>
@@ -32,15 +32,19 @@
                 {{-- {!! Form::checkbox($name, $value, $checked, [$options]) !!} --}}
 
                 {{-- Muestra los checkbox METODO 1 --}}
+                {{-- Aqui se recorren todos los permisos existentes --}}
                 @foreach ($permissions as $permission)
+                    {{-- Aqui se revisa si el roll contiene algun permiso de toda la lista --}}
                     @php($x = false)
                     @foreach ($role->permissions as $permissionx)
-
                         @if ($permission->id == $permissionx->id)
+                            {{-- Si existe alguno a la variable x se le dice, dandole el valor de true --}}
                             @php($x = true)
                         @endif
                     @endforeach
 
+                    {{-- Aqui se muestran todos los permisos y adicionamente check-marks marcados
+                    para los permisos que dependiendo del valor de x, anteriormente obtenido --}}
                     <div>
                         <label>
                             <input type="checkbox" id="queso" name="permissions[]" value="{{ $permission->id }}"
@@ -48,7 +52,6 @@
                             {{ $permission->id }} - {{ $permission->name }}
                         </label>
                     </div>
-
                 @endforeach
 
                 <button class="btn btn-primary mt-2" type="submit">
@@ -58,7 +61,7 @@
         </div>
     </div>
 
-{{-- </x-admin-layout> --}}
+    {{-- </x-admin-layout> --}}
 @stop
 
 @section('css')

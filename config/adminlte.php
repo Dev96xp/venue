@@ -333,10 +333,79 @@ return [
             'icon' => 'fas fa-fw fa-lock',
         ],
         [
+            'text' => 'Clientes',
+            'icon' => 'fas fa-fw fa-user-cog',
+            'route'     => 'admin.users.index',
+            'active'    => ['admin/users*']
+        ],
+        [
+            'text' => 'PRODUCTS',
+            'url'  => '#',
+            'icon' => 'fas fa-fw fa-lock',
+            'submenu' => [
+                [
+                    'text'      => 'Brands',
+                    'route'       => 'admin.brands.index',    // La ruta ala que apunta
+                    'icon'      => 'fas fa-fw fa-user-cog',
+                    'icon_color'  => 'blue',
+                    //'can'       => 'Brands index',          // SEGURIDAD - PERMISO
+                ],
+                [
+                    'text'        => 'Category',
+                    //'url'         => '#',
+                    'route'       => 'admin.categories.index',    // La ruta ala que apunta
+                    'icon'        => 'fas fa-fw fa-user-cog',
+                    'icon_color'  => 'blue',
+                    //'can'         => 'Categories index',          // SEGURIDAD - PERMISO
+                ],
+                [
+                    'text'        => 'Subcategory',
+                    'route'       => 'admin.subcategories.index',    // La ruta ala que apunta
+                    'icon'        => 'fas fa-fw fa-user-cog',
+                    'icon_color'  => 'blue',
+                    //'can'         => 'Subcategories index',          // SEGURIDAD - PERMISO
+                ],
+                [
+                    'text'        => 'Products',
+                    'route'       => 'admin.products.index',    //(Aqui existe parametro opcional)
+                    'icon'        => 'fas fa-fw fa-user-cog',
+                    'icon_color'  => 'yellow',
+                    //'can'         => 'Subcategories index',          // SEGURIDAD - PERMISO
+                ],
+
+            ],
+        ],
+        [
+            'text' => 'EVENTS',
+            'url'  => '#',
+            'icon' => 'fas fa-fw fa-lock',
+            'submenu' => [
+                [
+                    'text'      => 'Events',
+                    'route'       => 'admin.events.index',    // La ruta ala que apunta
+                    'icon'      => 'fas fa-fw fa-user-cog',
+                    'icon_color'  => 'yellow',
+                ],
+                [
+                    'text'      => 'Events Confi.',
+                    'route'     => 'admin.configuration.event.index',    // La ruta ala que apunta
+                    'icon'      => 'fas fa-fw fa-user-cog',
+                    'icon_color'  => 'yellow',
+                ],
+
+            ],
+        ],
+        [
             'text' => 'Settings',
             'url'  => '#',
             'icon' => 'fas fa-fw fa-lock',
             'submenu' => [
+                [
+                    'text'      => 'Invitations',
+                    'icon'      => 'fas fa-fw fa-user-cog',
+                    'route'     => 'admin.invitations.index',
+                    'active'    => ['admin/invitations*']
+                ],
                 [
                     'text'        => 'Lista de Roles',
                     //'url'         => 'admin/pages',
@@ -345,13 +414,13 @@ return [
                     'active'      => ['admin/roles*']
                 ],
                 [
-                    'text' => 'level_two',
-                    'url'  => '#',
+                    'text'        => 'Lista de Sections',
+                    //'url'         => 'admin/pages',
+                    'route'       => 'admin.sections.index',
+                    'icon'        => 'fas fa-fw fa-user-cog',
+                    'active'      => ['admin/sections*']
                 ],
-                [
-                    'text' => 'level_three',
-                    'url'  => '#',
-                ],
+
             ],
         ],
 

@@ -3,6 +3,9 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Customer\CustomerController;
+use App\Http\Controllers\Customer\PriceController;
+use Gloudemans\Shoppingcart\Facades\Cart;
+use App\Livewire\Store\ShoppingCart;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,6 +30,11 @@ Route::get('/', HomeController::class)->name('home');
 Route::get('my-invite', [CustomerController::class, 'index'])->name('my-invite');  // *** PUBLICO ***//
 
 
+//########## My Palace Price ##############
+// PUBLICA
+Route::get('price', [PriceController::class, 'index'])->name('price');  // *** PUBLICO ***//
+
+
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
@@ -36,4 +44,14 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 });
+
+
+// Livewire
+Route::get('shopping-cart', ShoppingCart::class)->name('shopping-cart');
+
+
+Route::get('prueba', function () {
+    \Cart::destroy();
+});
+
 

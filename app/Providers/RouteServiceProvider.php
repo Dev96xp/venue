@@ -44,6 +44,14 @@ class RouteServiceProvider extends ServiceProvider
                 ->namespace($this->namespace)
                 ->group(base_path('routes/admin.php'));
 
+            // 'auth' - Pedira que me autentifique para poder entrar a todas rutas
+            // definidas bajo este archivo admin.php
+            Route::middleware('web', 'auth')
+                ->name('sales.')    //Las ruta va a comenzar con (sales.)
+                ->prefix('sales')
+                ->namespace($this->namespace)
+                ->group(base_path('routes/sales.php'));
+
         });
     }
 }

@@ -1,0 +1,25 @@
+Instale: https://image.intervention.io/v3/introduction/installation, para cambiar el tamaño de la imagen
+Use a. composer require intervention/image-laravel
+Use b. php artisan vendor:publish --provider="Intervention\Image\Laravel\ServiceProvider"
+    error: GD PHP extension must be installed to use this driver.
+    solucion: En el php.ini descomente esta linea ;extension=gd de esta manera extension=gd
+
+Use https://cdnjs.com/libraries/dropzone, para obtener los link de css and js de dropzone
+Use https://docs.dropzone.dev/getting-started/setup/declarative, para el formulario y las opciones
+
+Instale: hardevine-LaravelShoppingcart-package, para tener un shopping cart para laravel 10
+    Use https://github.com/dipak022/hardevine-LaravelShoppingcart-package
+
+Instale: Livewire-sortable, permite cambiar el orden de una lista de una tabla
+    Use https://github.com/livewire/sortable
+
+Use: https://tailwind-starter-kit.vercel.app/docs/badges
+
+Use: https://nickpiscitelli.github.io/Glider.js/  and https://cdnjs.com/libraries/glider-js
+
+Use: http://flexslider.woothemes.com/basic-carousel.html
+
+Use: https://github.com/Laraveles/spanish
+
+Use: Paypal (Segun video de codersfree, para Ecommerce)
+

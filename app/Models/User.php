@@ -3,6 +3,8 @@
 namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
+
+use Illuminate\Contracts\Filesystem\Filesystem;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
@@ -27,8 +29,16 @@ class User extends Authenticatable
      */
     protected $fillable = [
         'name',
+        'cus_id',
+        'phone',
+        'company',
+        'address',
+        'city',
+        'state',
+        'zip',
         'email',
         'password',
+        'store_id'
     ];
 
     /**
@@ -60,4 +70,27 @@ class User extends Authenticatable
     protected $appends = [
         'profile_photo_url',
     ];
+
+    // Relacion uno a muchos
+    public function files()
+    {
+        return $this->hasMany(File::class);
+    }
+
+    public function invitations()
+    {
+        return $this->hasMany(Invitation::class);
+    }
+
+    // relacion UNO A MUCHOS INVERSA,
+    public function store()
+    {
+        return $this->belongsTo('App\Models\Store');
+    }
+
+    // relacion UNO A UNO
+    public function account()
+    {
+        return $this->hasOne('App\Models\Account');
+    }
 }
