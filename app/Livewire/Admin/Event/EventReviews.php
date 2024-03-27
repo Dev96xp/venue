@@ -13,7 +13,10 @@ class EventReviews extends Component
     public $rating = 5;
     public $showDiv = false;
 
-    protected $listeners = ['sendData'];
+
+    protected $rules = [
+        'comment' => 'required'
+    ];
 
     public function mount(Event $event)
     {
@@ -58,7 +61,6 @@ class EventReviews extends Component
         if (isset($event->notes)) {
             $this->showDiv = true;
         } else {
-
         }
     }
 
@@ -66,6 +68,10 @@ class EventReviews extends Component
     // Guarda el review del usuario, junto con su evaluacion (rating)
     public function store()
     {
+
+        // Validar los datos
+        $this->validate();
+
         $event = Event::find($this->event_id);
         $event->notes()->create([
             'comment' => $this->comment,
@@ -84,4 +90,3 @@ class EventReviews extends Component
         $this->reset(['comment']); //Reset la variable comment, para borrar el comentario
     }
 }
-
