@@ -59,7 +59,10 @@
 
                         </article>
                         <div class="text-xs text-right mb-2">
-                            {{ $note->created_at }}
+                            {{-- {{ $note->created_at }} --}}
+                            {{-- {{ \Carbon\Carbon::parse($note->created_at)->toFormattedDateString('l j F g:i') }} --}}
+                            {{-- {{ \Carbon\Carbon::parse($note->created_at)->Format('jS F Y g:i a l') }} VERY GOOD --}}
+                            {{ \Carbon\Carbon::parse($note->created_at)->isoFormat('lll') }}  {{-- VERY GOOD  --}}
                         </div>
                     @endforeach
 
