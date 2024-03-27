@@ -68,8 +68,7 @@
         <x-slot name='footer'>
             <div class="flex">
                 <div>
-                    <x-secondary-button wire:click="hide" wire:loading.attr="disabled"
-                        class="disabled:opacity-25 mr-4">
+                    <x-secondary-button wire:click="hide" wire:loading.attr="disabled" class="disabled:opacity-25 mr-4">
                         Ocultar Paquete
                     </x-secondary-button>
                 </div>
@@ -100,5 +99,12 @@
         </x-slot>
 
     </x-dialog-modal>
+
+    {{-- MASTER CLASS - Para que se ejecute el codigo de javascript de un componente de LIVEWIRE,
+        hay que encerrarlo con las directivas de PUSH, @push('script') y que este lo envie a la
+        plantilla pricipal, esta lo recibira travez de la directiva @stack('script') y listo  --}}
+    @push('script')
+        {{-- Nada de codigo de javascript por el momento --}}
+    @endpush
 
 </div>

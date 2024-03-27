@@ -58,6 +58,14 @@ class SubcategorySeeder extends Seeder
                 'size' => true,
                 'brand_id' =>1
             ],
+            [
+                'category_id' => 4,
+                'name' => 'Eventos oakview',
+                'slug' => str::slug('eventos-oakview'),
+                'color' => true,
+                'size' => true,
+                'brand_id' =>1
+            ],
 
         ];
 
