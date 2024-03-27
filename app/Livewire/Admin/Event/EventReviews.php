@@ -73,20 +73,29 @@ class EventReviews extends Component
         $this->validate();
 
         $event = Event::find($this->event_id);
-        $event->notes()->create([
-            'comment' => $this->comment,
-            'rating' => $this->rating,
-            'user_id' => auth()->user()->id,
 
-            'model' => $event->code,
-            'notewable_id' => $event->id,
-            'noteable_type' => 'App\Models\Event'
-        ]);
+        // Si existe un evento selecionado
+        if (isset($event)) {
 
-        // MASTER CLASS - Ayuda actualizar la pantalla una ves agegado el registro a la base de datos
-        // para asi mostrar los cambios realizados
-        $this->event = $this->event->fresh();
+            $event->notes()->create([
+                'comment' => $this->comment,
+                'rating' => $this->rating,
+                'user_id' => auth()->user()->id,
 
-        $this->reset(['comment']); //Reset la variable comment, para borrar el comentario
+                'model' => $event->code,
+                'notewable_id' => $event->id,
+                'noteable_type' => 'App\Models\Event'
+            ]);
+
+
+            // MASTER CLASS - Ayuda actualizar la pantalla una ves agegado el registro a la base de datos
+            // para asi mostrar los cambios realizados
+            $this->event = $this->event->fresh();
+
+            $this->reset(['comment']); //Reset la variable comment, para borrar el comentario
+
+        } else {
+            // NO HACER NADA
+        }
     }
 }
