@@ -82,6 +82,12 @@ class User extends Authenticatable
         return $this->hasMany(Invitation::class);
     }
 
+    public function notes()
+    {
+        return $this->hasMany(Note::class);
+    }
+
+
     // relacion UNO A MUCHOS INVERSA,
     public function store()
     {

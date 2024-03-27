@@ -17,4 +17,12 @@ class Event extends Model
         return $this->belongsTo(User::class);
     }
 
+        // UNO A MUCHOS POLIMORFICA
+
+    // UN BUSINESS PUEDE TENER AHORA MUCHAS NOTAS
+    public function notes()
+    {
+        return $this->morphMany(Note::class, 'noteable');
+    }
+
 }

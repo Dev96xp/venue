@@ -198,7 +198,7 @@
         </div>
 
         {{-- Columna 2 --}}
-        <div class="col-span-7 bg-cover h-1/4"
+        <div class="col-span-6 bg-cover h-1/4"
             style="background-image: url('{{ asset('img/home/AdobeStock_425636423_nada.jpeg') }}') ;background-position:center"
             {{-- DECLARACION DE VARIABLE,  x-data="{open: false}" --}} {{-- x-data="{ filter_type: @entangle('filter_type') }" --}} x-data="{ product_type: @entangle('product_type') }">
 
@@ -235,6 +235,10 @@
 
             </div>
 
+        </div>
+
+        <div class="col-span-3">
+            @livewire('admin.event.event-reviews')
         </div>
 
     </div>

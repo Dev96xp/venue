@@ -86,6 +86,7 @@ class EventsIndex extends Component
 
         // Envia la señal a todo los otros componente de livewire
        //xxx $this->emit('sendData', $event->id);
+        $this->dispatch('send-data-reviews', send_event: $event);
     }
 
 
