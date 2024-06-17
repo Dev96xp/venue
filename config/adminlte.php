@@ -344,6 +344,13 @@ return [
             'icon' => 'fas fa-fw fa-lock',
             'submenu' => [
                 [
+                    'text'        => 'Products',
+                    'route'       => 'admin.products.index',    //(Aqui existe parametro opcional)
+                    'icon'        => 'fas fa-fw fa-user-cog',
+                    'icon_color'  => 'yellow',
+                    //'can'         => 'Subcategories index',          // SEGURIDAD - PERMISO
+                ],
+                [
                     'text'      => 'Brands',
                     'route'       => 'admin.brands.index',    // La ruta ala que apunta
                     'icon'      => 'fas fa-fw fa-user-cog',
@@ -365,13 +372,7 @@ return [
                     'icon_color'  => 'blue',
                     //'can'         => 'Subcategories index',          // SEGURIDAD - PERMISO
                 ],
-                [
-                    'text'        => 'Products',
-                    'route'       => 'admin.products.index',    //(Aqui existe parametro opcional)
-                    'icon'        => 'fas fa-fw fa-user-cog',
-                    'icon_color'  => 'yellow',
-                    //'can'         => 'Subcategories index',          // SEGURIDAD - PERMISO
-                ],
+
 
             ],
         ],

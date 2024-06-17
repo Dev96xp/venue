@@ -6,7 +6,7 @@
         {{-- @can('enrolled', $business) --}}
         <article class="mb-1">
 
-            <textarea wire:model="comment" class="form-input w-full" rows="3" placeholder="Agrega una nota"></textarea>
+            <textarea wire:model="comment" class="form-control w-full mb-2" rows="3" placeholder="Agrega una nota"></textarea>
 
             <div class="flex items-center">
                 <button class="btn btn-primary mr-2 py-1" wire:click="store">Agregar</button>

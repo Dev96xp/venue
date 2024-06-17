@@ -3,6 +3,7 @@
 /* @import "form.css";
 @import "forms.css"; */
 @import "nav.css";
+@import "buttons.css";
 
 @tailwind base;
 @tailwind components;

@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Package;
 use App\Models\Store;
 use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
@@ -29,7 +30,7 @@ class EventFactory extends Factory
             'store_id' => Store::all()->random()->id,
             'cus_id' => $user->cus_id,
             'user_id' => $user->id,
-            //'package_id' => package::all()->random()->id,
+            'package_id' => Package::all()->random()->id,
             'code' => $this->faker->unique()->numberBetween($min = 100000, $max = 997887),
             'aux1' => 'open',
             'aux2' => 'open',

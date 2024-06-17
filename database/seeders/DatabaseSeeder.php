@@ -87,13 +87,19 @@ class DatabaseSeeder extends Seeder
 
         $this->call(PaymentSeeder::class);
 
-        //$this->call(ScheduleSeeder::class); No se va usar se cambio, por events
-        $this->call(EventSeeder::class);
-
         // Paquetes
         $this->call(ElementSeeder::class);
         $this->call(PackageSeeder::class);
 
         $this->call(PackageLocationSeeder::class);
+
+        //$this->call(ScheduleSeeder::class); No se va usar se cambio, por events
+        $this->call(EventSeeder::class);  //Crea 20 eventos
+
+        $this->call(StatusItemSeeder::class);
+
+        $this->call(VenueSeeder::class); // Crea solo 2 salones
+        $this->call(StatusItemsVenueSeeder::class);  //Crea solo 4 cosas por cada salon cerado
+        $this->call(ItemsVenueSeeder::class);  //Crea solo 4 cosas por cada salon cerado
     }
 }

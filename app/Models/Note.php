@@ -12,16 +12,19 @@ class Note extends Model
 
     use HasFactory;
 
-    // Relacion uno a mucho inversa
-    public function user()
-    {
-        return $this->belongsTo('App\Models\User');
-    }
-
     //Relacion POLIMORFICA
     // (ESTO INDICA QUE ESTA ES UNA TABLA POLIMORFICA, LISTO)
     public function noteable()
     {
         return $this->morphTo();
     }
+
+    
+    // Relacion uno a mucho inversa
+    public function user()
+    {
+        return $this->belongsTo('App\Models\User');
+    }
+
+
 }
