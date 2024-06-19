@@ -26,19 +26,7 @@ class EventReviews extends Component
     public function render()
     {
 
-        // $appointments = Appointment::where('store_id', $this->store_id)
-        // ->where('status','ACTIVE')
-        // ->where('name','LIKE', '%' . $this->search .'%')
-        // ->orderBy($this->sort, $this->direction)
-        // ->paginate(20);
-
-        // $notes = $this->event->notes;
-
-
-
-        // (2/3) - Aqui se otorga otra vez ese valor
         $event = $this->event;
-        // (3/3) - Y se le otorga ala vista
         return view('livewire.admin.event.event-reviews', compact('event'));
     }
 

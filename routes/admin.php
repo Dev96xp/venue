@@ -14,8 +14,11 @@ use App\Http\Controllers\Admin\Event\EventController;
 use App\Http\Controllers\Admin\Product\ProductController;
 use App\Http\Controllers\Admin\Schedule\ScheduleController;
 use App\Http\Controllers\Admin\Subcategory\SubcategoryController;
+use App\Http\Controllers\Admin\Training\TrainingController;
 
 Route::get('', [HomeController::class, 'index'])->name('home');
+
+Route::resource('training',TrainingController::class)->names('training');
 
 Route::resource('users',UserController::class)->names('users');
 Route::resource('invitations',InvitationController::class)->names('invitations');

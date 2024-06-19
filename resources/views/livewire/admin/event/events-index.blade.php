@@ -1,31 +1,5 @@
 <div>
 
-    <!-- COMPONENT MODAL PART 1/3 style-->
-    <style>
-        dialog[open] {
-            animation: appear .15s cubic-bezier(0, 1.8, 1, 1.8);
-        }
-
-        dialog::backdrop {
-            background: linear-gradient(45deg, rgba(0, 0, 0, 0.5), rgba(54, 54, 54, 0.5));
-            backdrop-filter: blur(3px);
-        }
-
-
-        @keyframes appear {
-            from {
-                opacity: 0;
-                transform: translateX(-3rem);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-    </style>
-
-
     <div class="grid grid-cols-12 gap-2">
 
         {{-- Columna 1 - Lista de Eventos --}}
@@ -105,7 +79,7 @@
                         </thead>
                         <tbody class="bg-white divide-y divide-gray-200">
                             @foreach ($events as $event)
-                                <tr>
+                                <tr wire:key="eventos-{{ $event->id }}">
                                     {{-- Hace diferencia entre meses pares e impares --}}
                                     {{-- MES PAR --}}
                                     @if (\Carbon\Carbon::parse($event->date)->month % 2 == 1)
@@ -140,7 +114,7 @@
 
                                         {{-- Date --}}
                                         <td class="px-1 py-1 text-md font-medium bg-blue-100">
-                                            @livewire('admin.event.edit-date', ['event' => $event], key($event->id))
+                                            @livewire('admin.event.edit-date', ['event' => $event], key('edit-date' . $event->id))
 
                                             {{-- <livewire:admin.event.edit-date :$event :key="$event->id" /> --}}
 
@@ -180,7 +154,7 @@
 
                                         {{-- Date --}}
                                         <td class="px-1 py-1 text-xs font-medium bg-white">
-                                            @livewire('admin.event.edit-date', ['event' => $event], key($event->id))
+                                            @livewire('admin.event.edit-date', ['event' => $event], key('edit-date' . $event->id))
                                             {{-- <livewire:admin.event.edit-date :$event :key="$event->id" /> --}}
                                         </td>
                                     @endif
@@ -208,18 +182,15 @@
             {{-- DECLARACION DE VARIABLE,  x-data="{open: false}" --}} {{-- x-data="{ filter_type: @entangle('filter_type') }" --}} x-data="{ product_type: @entangle('product_type') }">
 
             {{-- Datos del Cliente-Evento --}}
-            <div class="col-span-12 w-full h-10 mr-2 ml-20 text-2xl">
-                <a href="{{ route('admin.pos.index', $user) }}">PK: {{ $event_id }}-{{ $client_name }} -
-                    {{ $lb_pkPhone }} /
-                    {{ \Carbon\Carbon::parse($client_date)->toFormattedDateString('l j F') }} -
-                    {{ $lb_pkPackage }}</a>
+            <div class="col-span-12 w-full h-10 mr-2 ml-4 text-lg">
+                <div>Evento: {{ $event_id }}</div>
+                <a href="{{ route('admin.pos.index', $user) }}"><span class="font-bold">{{ \Carbon\Carbon::parse($client_date)->toFormattedDateString('l j F') }}</span> - {{ $client_name }} -
+                   [ {{ $lb_pkPhone }} ] {{ $lb_pkPackage }}</a>
             </div>
 
 
             <div class="grid grid-cols-12 gap-2 mt-4">
 
-                {{-- VENUES - SALON - HALL --}}
-                {{-- card 1 - Venues - Salon - Hall --}}
                 @livewire('admin.event.event-salon', ['event_id' => $event_id])
 
                 @livewire('admin.event.event-personal', ['event_id' => $event_id])

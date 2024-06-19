@@ -3,13 +3,18 @@
 namespace App\Livewire\Admin\Event;
 
 use App\Models\Event;
+use Livewire\Attributes\Reactive;
 use Livewire\Component;
 
 class EditDate extends Component
 {
 
+    //#[Reactive]
+    public $event_id;    // ($event_id, es el evento selecionado, esta variable viene
+                         // desde el componente[EventsIndex] y esta sincronizada)
+
     public $open = false;
-    public $event, $event_id, $type = 5;
+    public $event, $type = 5;
     public $eventEditId;
 
 
@@ -19,8 +24,6 @@ class EditDate extends Component
         'date' => 'required',
         'name' => 'required'
     ];
-
-    protected $listeners = ['render'];
 
     public function mount(Event $event){
 
@@ -40,6 +43,14 @@ class EditDate extends Component
 
     public function render()
     {
+        $this->event = Event::find($this->event->id);
+        $this->eventEditId = $this->event->id;
+
+        // Muesta estos valores en el formulario
+        $this->eventEdit['id'] = $this->event->id;
+        $this->eventEdit['date'] = $this->event->date;
+        $this->eventEdit['name'] = $this->event->name;
+
         return view('livewire.admin.event.edit-date');
     }
 

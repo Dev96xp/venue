@@ -333,6 +333,12 @@ return [
             'icon' => 'fas fa-fw fa-lock',
         ],
         [
+            'text' => 'Training',
+            'icon' => 'fas fa-fw fa-user-cog',
+            'route'     => 'admin.training.index',
+            'active'    => ['admin/training*']
+        ],
+        [
             'text' => 'Clientes',
             'icon' => 'fas fa-fw fa-user-cog',
             'route'     => 'admin.users.index',

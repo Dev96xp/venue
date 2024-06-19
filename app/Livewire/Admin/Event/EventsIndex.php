@@ -103,4 +103,12 @@ class EventsIndex extends Component
     {
         // $event->delete();
     }
+
+    // Limpiar la pagina
+    // Para que la busqueda sea atravez de todas la paginas
+    public function limpiar_page()
+    {
+        $this->resetPage();
+    }
+
 }
