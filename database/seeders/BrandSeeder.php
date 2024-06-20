@@ -21,21 +21,6 @@ class BrandSeeder extends Seeder
             'name' => 'Morilee',
             'code' => 'MO'
         ]);
-        Brand::create([
-            'name' => 'Ragazza',
-            'code' => 'RA'
-        ]);
-        Brand::create([
-            'name' => 'Dancing Queen',
-            'code' => 'DQ'
-        ]);
-        Brand::create([
-            'name' => 'AC wedding',
-            'code' => 'AC'
-        ]);
-        Brand::create([
-            'name' => 'House of Wu',
-            'code' => 'HW'
-        ]);
+
     }
 }
