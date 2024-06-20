@@ -4,7 +4,7 @@
 @section('codersfree', 'Dashboard')
 
 @section('content_header')
-    <h1>Events</h1>
+    {{-- <h1>Events</h1> --}}
 @stop
 
 @section('content')

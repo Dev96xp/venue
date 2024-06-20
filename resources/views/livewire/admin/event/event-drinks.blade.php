@@ -3,7 +3,7 @@
     <div class="flex flex-row bg-white shadow-sm rounded p-3">
 
         <div class="flex items-center justify-center flex-shrink-0 h-12 w-12 rounded-xl bg-blue-100 text-blue-500">
-            <i class="fas fa-archway"></i>
+            <i class="text-lg fas fa-glass-martini-alt"></i>
         </div>
 
         <div class="flex flex-col flex-grow ml-4">

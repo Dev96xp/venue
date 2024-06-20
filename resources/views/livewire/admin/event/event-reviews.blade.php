@@ -1,6 +1,5 @@
 <div>
-
-    <section class="mr-2 mt-2">
+    <section>
 
         {{-- MASRTER CLASS - OJO , SOLO SI, el usuario esta autentificado, se mostrara este textarea --}}
         {{-- @can('enrolled', $business) --}}
@@ -71,5 +70,4 @@
             </div>
         @endisset
     </section>
-
 </div>

@@ -38,7 +38,7 @@
 
                 {{-- MASTER CLASS - Agrega un DATE-PICKER al input del formulario --}}
 
-                {{-- a) En la pagina del layout: adminx.blade.php se agrego:
+                {{-- a) En la pagina del layout: admin.blade.php se agrego:
 
                     b) los stilos:
                         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
@@ -46,7 +46,7 @@
                     c) en la parte de abajo los scripts:
                         <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 
-                    d) luego la funcion creada, apuntando al, el id = #datep, que se encuentra en el Layout(Plantilla principal)  :adminx.blade.php
+                    d) luego la funcion creada, apuntando al, el id = #datep, que se encuentra en el Layout(Plantilla principal)  :admin.blade.php
                         <script> flatpickr('#datep') </script>
 
                     e) por ultimo aqui se agrega el ( id="datep" ) al elemnto para mostrar el datepicker, listo --}}

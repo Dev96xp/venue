@@ -257,6 +257,12 @@
                         {{ __('Profile') }}
                     </x-responsive-nav-link>
 
+                    @can('Ver dashboard')
+                        <x-responsive-nav-link href="{{ route('admin.home') }}" :active="request()->routeIs('admin.home')">
+                            Administrador
+                        </x-responsive-nav-link>
+                    @endcan
+
                     @if (Laravel\Jetstream\Jetstream::hasApiFeatures())
                         <x-responsive-nav-link href="{{ route('api-tokens.index') }}" :active="request()->routeIs('api-tokens.index')">
                             {{ __('API Tokens') }}

@@ -21,6 +21,7 @@ class EventsIndex extends Component
 
     public $event = 0;
     public $registro;
+    public $search;
 
     public $sort = 'date';
     public $direction = 'asc'; //desc or asc ?
@@ -64,6 +65,7 @@ class EventsIndex extends Component
     {
         $events = Event::where('status', 'ACTIVE')
             ->where('store_id', $this->store_id)
+            ->where('name', 'LIKE', '%' . $this->search . '%')
             ->orderBy($this->sort, $this->direction)
             ->get();
 
@@ -108,7 +110,7 @@ class EventsIndex extends Component
     // Para que la busqueda sea atravez de todas la paginas
     public function limpiar_page()
     {
-        $this->resetPage();
+        //$this->resetPage();
     }
 
 }
