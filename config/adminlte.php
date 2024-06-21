@@ -322,6 +322,14 @@ return [
             'label_color' => 'success',
         ],
         ['header' => 'account_settings'],
+
+        [
+            'text' => 'Dashboard',
+            'icon' => 'fas fa-fw fa-user-cog',
+            'route'     => 'admin.dashboard.index',
+            'active'    => ['admin/dashboard*']
+        ],
+
         [
             'text' => 'profile',
             'url'  => 'admin/settings',
@@ -414,18 +422,18 @@ return [
                     'active'    => ['admin/invitations*']
                 ],
                 [
-                    'text'        => 'Lista de Roles',
-                    //'url'         => 'admin/pages',
-                    'route'       => 'admin.roles.index',
-                    'icon'        => 'fas fa-fw fa-user-cog',
-                    'active'      => ['admin/roles*']
-                ],
-                [
                     'text'        => 'Lista de Sections',
                     //'url'         => 'admin/pages',
                     'route'       => 'admin.sections.index',
                     'icon'        => 'fas fa-fw fa-user-cog',
                     'active'      => ['admin/sections*']
+                ],
+                [
+                    'text'        => 'Lista de Roles',
+                    //'url'         => 'admin/pages',
+                    'route'       => 'admin.roles.index',
+                    'icon'        => 'fas fa-fw fa-user-cog',
+                    'active'      => ['admin/roles*']
                 ],
 
             ],

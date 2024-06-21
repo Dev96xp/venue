@@ -9,6 +9,7 @@ use App\Http\Controllers\Admin\InvitationController;
 use App\Http\Controllers\Pos\PosController;
 use App\Http\Controllers\Admin\Category\CategoryController;
 use App\Http\Controllers\Admin\Brand\BrandController;
+use App\Http\Controllers\Admin\Dashboard\DashboardController;
 use App\Http\Controllers\Admin\Event\ConfigurationEventController;
 use App\Http\Controllers\Admin\Event\EventController;
 use App\Http\Controllers\Admin\Product\ProductController;
@@ -18,6 +19,7 @@ use App\Http\Controllers\Admin\Training\TrainingController;
 
 Route::get('', [HomeController::class, 'index'])->name('home');
 
+Route::resource('dashboard',DashboardController::class)->names('dashboard');
 Route::resource('training',TrainingController::class)->names('training');
 
 Route::resource('users',UserController::class)->names('users');

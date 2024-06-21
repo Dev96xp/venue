@@ -21,13 +21,13 @@ class RoleSeeder extends Seeder
         //e) Y pasarle los 11 permisos que creamos,usando su ids
 
         $role = Role::create(['name' => 'Admin']);
-        $role->permissions()->attach([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]);
+        $role->permissions()->attach([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]);
 
         $role = Role::create(['name' => 'Developer']);
         $role->permissions()->attach([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]);
 
         $role = Role::create(['name' => 'Master']);
-        $role->permissions()->attach([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]);
+        $role->permissions()->attach([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]);
 
         $role = Role::create(['name' => 'Customer']);
         $role->permissions()->attach([1, 2]);

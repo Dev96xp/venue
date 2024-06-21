@@ -37,5 +37,7 @@ class PermissionSeeder extends Seeder
       Permission::create(['name' => 'Leer usuarios',]);
       //11
       Permission::create(['name' => 'Editar usuarios',]);
+      //12
+      Permission::create(['name' => 'User edit',]);  // Apara asignarle un role
     }
 }

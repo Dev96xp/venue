@@ -51,6 +51,9 @@
     <!-- Styles -->
     @livewireStyles
 
+    {{-- Formatea EL PHONE NUMBER --}}
+    <script src="{{ asset('js/format_phone_numbercsd.js') }}"></script>
+
     @yield('css') {{-- Agrege esto para DropZone --}}
 </head>
 
@@ -91,7 +94,9 @@
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 
     {{-- Date Picker Part 3/4 --}}
-    <script> flatpickr('#datep') </script>
+    <script>
+        flatpickr('#datep')
+    </script>
 
     {{-- MASTER CLASS - @stack('script') - Sirve para recibir un script que viene desde un
     componente de Livewire enviado por un - @push('script') y lo inserta en esta plantilla
