@@ -12,7 +12,7 @@ use App\Http\Controllers\Admin\Brand\BrandController;
 use App\Http\Controllers\Admin\Dashboard\DashboardController;
 use App\Http\Controllers\Admin\Event\ConfigurationEventController;
 use App\Http\Controllers\Admin\Event\EventController;
-use App\Http\Controllers\Admin\event\EventScheduleController;
+use App\Http\Controllers\Admin\Event\EventScheduleController;
 use App\Http\Controllers\Admin\Product\ProductController;
 use App\Http\Controllers\Admin\Subcategory\SubcategoryController;
 use App\Http\Controllers\Admin\Training\TrainingController;
@@ -50,6 +50,7 @@ Route::get('pos/order/prninvoice/{transaction_id}', [PosController::class,'prnin
 Route::resource('brands', BrandController::class)->names('brands');
 Route::resource('categories', CategoryController::class)->names('categories');
 Route::resource('subcategories', SubcategoryController::class)->names('subcategories');
+
 
 // Events
 //Route::resource('schedules', ScheduleController::class)->names('schedules');   NO SE USA, SE CAMBIO POR EVENT
