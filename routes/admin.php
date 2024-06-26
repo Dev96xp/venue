@@ -14,7 +14,6 @@ use App\Http\Controllers\Admin\Event\ConfigurationEventController;
 use App\Http\Controllers\Admin\Event\EventController;
 use App\Http\Controllers\Admin\event\EventScheduleController;
 use App\Http\Controllers\Admin\Product\ProductController;
-use App\Http\Controllers\Admin\Schedule\ScheduleController;
 use App\Http\Controllers\Admin\Subcategory\SubcategoryController;
 use App\Http\Controllers\Admin\Training\TrainingController;
 use App\Models\Event;
