@@ -25,7 +25,9 @@ class EventFactory extends Factory
         return [
             'name' => $this->faker->name,
             'date' => $this->faker->date('Y-m-d', 'now'),
+            'scheduled_at' =>$this->faker->date('Y-m-d', 'now'),
             'phone' => $this->faker->phoneNumber,
+            'title' => $this->faker->randomElement(['QUINCE', 'BODA', 'EVENTO ESPECIAL', 'CONFERENCIA', 'CONCIERTO']),
             'status' => 'ACTIVE',
             'store_id' => Store::all()->random()->id,
             'cus_id' => $user->cus_id,
@@ -36,7 +38,9 @@ class EventFactory extends Factory
             'aux2' => 'open',
             'aux3' => 'open',
             'aux4' => 'open',
-            'description' => ''
+            'description' => '',
+            'note' => ''
         ];
     }
 }
+

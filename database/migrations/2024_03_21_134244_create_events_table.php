@@ -16,14 +16,18 @@ return new class extends Migration
             $table->string('code')->unique();
             $table->string('cus_id');
             $table->string('name');
+            $table->string('title');
             $table->string('phone');
             $table->date('date');
+            $table->date('scheduled_at');
             $table->string('status');
             $table->string('aux1');
             $table->string('aux2');
             $table->string('aux3');
             $table->string('aux4');
             $table->string('description');
+            $table->text('note');
+
 
             $table->unsignedBigInteger('store_id');
             $table->foreign('store_id')->references('id')->on('stores')->onDelete('cascade');

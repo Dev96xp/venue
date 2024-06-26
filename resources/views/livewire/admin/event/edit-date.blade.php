@@ -4,7 +4,7 @@
     <a class="py-1 cursor-pointer text-sm" wire:click="$set('open', true)">
         <div class="font-roboto">
 
-            {{ \Carbon\Carbon::parse($event->date)->toFormattedDateString('l j F') }}
+            {{ \Carbon\Carbon::parse($event->scheduled_at)->toFormattedDateString('l j F') }}
         </div>
     </a>
 
@@ -56,8 +56,34 @@
 
                 <div class="col-span-1 mb-4">
                     <x-label value="Fecha del Evento / Event Date" />
-                    <x-input wire:model.defer="eventEdit.date" type="text" class="w-full" id="datep" />
-                    <x-input-error for="eventEdit.date" />
+                    <x-input wire:model.defer="eventEdit.scheduled_at" type="text" class="w-full" id="datep" />
+                    <x-input-error for="eventEdit.scheduled_at" />
+                </div>
+
+                {{-- <div class="col-span-1">
+                    <x-label value="Tipo de Evento" />
+                    <x-input wire:model.defer="eventEdit.title" type="text" class="w-full" />
+                    <x-input-error for="eventEdit.title" />
+                </div> --}}
+
+                {{-- QUINCE', 'BODA', 'EVENTO ESPECIAL', 'CONFERENCIA', 'CONCIERTO' --}}
+                <div>
+                    <x-label value="Tipo de Evento" />
+                    <select wire:model="eventEdit.title" class="form-control">
+                        {{-- Este es el valor por default --}}
+                        <option value="" selected disabled>Tipo de Evento</option>
+                        <option value="QUINCE">QUINCE</option>
+                        <option value="BODA">BODA</option>
+                        <option value="FASHION SHOW">FASHION SHOW</option>
+                        <option value="EVENTO ESPECIAL">EVENTO ESPECIAL</option>
+                        <option value="CONFERENCIA">CONFERENCIA</option>
+                        <option value="CONCIERTO">CONCIERTO</option>
+
+                        {{-- Valores de la base de datos --}}
+                        {{-- @foreach ($stores as $store)
+                        <option value="{{ $store->id }}">{{ $store->name }}</option>
+                    @endforeach --}}
+                    </select>
                 </div>
             </div>
 

@@ -14,7 +14,7 @@ return [
     |
     */
 
-    'title' => 'AdminLTE 3',
+    'title' => 'THE PALACE HALL',
     'title_prefix' => '',
     'title_postfix' => '',
 
@@ -325,27 +325,21 @@ return [
 
         [
             'text' => 'Dashboard',
-            'icon' => 'fas fa-fw fa-user-cog',
+            'icon' => 'fas fa-server',
             'route'     => 'admin.dashboard.index',
             'active'    => ['admin/dashboard*']
         ],
 
-        [
-            'text' => 'profile',
-            'url'  => 'admin/settings',
-            'icon' => 'fas fa-fw fa-user',
-        ],
-        [
-            'text' => 'change_password',
-            'url'  => 'admin/settings',
-            'icon' => 'fas fa-fw fa-lock',
-        ],
-        [
-            'text' => 'Training',
-            'icon' => 'fas fa-fw fa-user-cog',
-            'route'     => 'admin.training.index',
-            'active'    => ['admin/training*']
-        ],
+        // [
+        //     'text' => 'profile',
+        //     'url'  => 'admin/settings',
+        //     'icon' => 'fas fa-fw fa-user',
+        // ],
+        // [
+        //     'text' => 'change_password',
+        //     'url'  => 'admin/settings',
+        //     'icon' => 'fas fa-fw fa-lock',
+        // ],
         [
             'text' => 'Clientes',
             'icon' => 'fas fa-fw fa-user-cog',
@@ -355,12 +349,12 @@ return [
         [
             'text' => 'PRODUCTS',
             'url'  => '#',
-            'icon' => 'fas fa-fw fa-lock',
+            'icon' => 'fas fa-box-open',
             'submenu' => [
                 [
                     'text'        => 'Products',
                     'route'       => 'admin.products.index',    //(Aqui existe parametro opcional)
-                    'icon'        => 'fas fa-fw fa-user-cog',
+                    'icon'        => 'fas fa-box-open',
                     'icon_color'  => 'yellow',
                     //'can'         => 'Subcategories index',          // SEGURIDAD - PERMISO
                 ],
@@ -393,12 +387,18 @@ return [
         [
             'text' => 'EVENTS',
             'url'  => '#',
-            'icon' => 'fas fa-fw fa-lock',
+            'icon' => 'far fa-calendar',
             'submenu' => [
                 [
                     'text'      => 'Events',
                     'route'       => 'admin.events.index',    // La ruta ala que apunta
-                    'icon'      => 'fas fa-fw fa-user-cog',
+                    'icon'      => 'far fa-calendar',
+                    'icon_color'  => 'yellow',
+                ],
+                [
+                    'text'      => 'Calendario',
+                    'route'       => 'admin.schedule.index',    // La ruta ala que apunta
+                    'icon'      => 'far fa-calendar-alt',
                     'icon_color'  => 'yellow',
                 ],
                 [
@@ -438,7 +438,12 @@ return [
 
             ],
         ],
-
+        [
+            'text' => 'Training',
+            'icon' => 'fas fa-fw fa-user-cog',
+            'route'     => 'admin.training.index',
+            'active'    => ['admin/training*']
+        ],
         [
             'text'    => 'multilevel',
             'icon'    => 'fas fa-fw fa-share',

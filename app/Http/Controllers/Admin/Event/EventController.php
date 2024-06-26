@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin\Event;
 
 use App\Http\Controllers\Controller;
+use App\Models\Event;
 use Illuminate\Http\Request;
 
 class EventController extends Controller
@@ -62,4 +63,30 @@ class EventController extends Controller
     {
         //
     }
+
+    // Para imprimir atravez del impressora una REPORT - INVOICE
+    public function print_report(Request $request)
+    {
+
+        $event = Event::find($request->event_id);
+        //dd($event);
+
+
+        //$transaction = Transaction::find($request->transaction_id);
+        //$items = $transaction->items->where('status', '3'); // Con el status igual a 3, por que 4 significa que ue cancelado ese item
+
+        // $subtotal = get_subtotal($items);
+        // $totalpayments = get_totalpayments($items);
+        // $total = $subtotal * 1.07;
+        // $balance = $total - $totalpayments;
+
+        $user = $event->user;
+        $venue = $event->venue;
+        $drink = $event->drink;
+        $personal = $event->personal;
+
+
+        return view('admin.events.report', compact('user','event','venue','drink','personal'));
+    }
+
 }

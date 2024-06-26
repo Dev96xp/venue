@@ -50,6 +50,7 @@
 
     <!-- Styles -->
     @livewireStyles
+    @livewireCalendarScripts
 
     {{-- Formatea EL PHONE NUMBER --}}
     <script src="{{ asset('js/format_phone_numbercsd.js') }}"></script>

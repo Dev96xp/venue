@@ -6,9 +6,9 @@
             <div>Evento: <span class="font-bold">{{ $event_id }}</span></div>
             <a href="{{ route('admin.pos.index', $user) }}"><span
                     class="font-bold">{{ \Carbon\Carbon::parse($client_date)->toFormattedDateString('l j F') }}</span> -
-                <span class="text-blue">{{ $client_name }}</span> -
+                <span class="font-bold text-blue">{{ $client_name }}</span> -
                 [ {{ $lb_pkPhone }} ]</a>
-            <div>{{ $lb_pkPackage }}</div>
+            <div><span class="mr-4 font-bold text-pink-500">{{ $title }}</span>{{ $lb_pkPackage }}</div>
         </div>
     </div>
 
@@ -56,7 +56,7 @@
                     @isset($event->user)
                         <div class="mt-1">
                             <a class="bg-blue-400 hover:bg-blue-300 text-white py-2 px-3 rounded text-uppercase text-sm"
-                                href="#" class="text-indigo-600 hover:text-indigo-900"><i
+                                href="{{ route('admin.events.print_report', $event_id) }}" class="text-indigo-600 hover:text-indigo-900"><i
                                     class="text-lg fa fa-print"></i></a>
                         </div>
                     @endisset
@@ -91,7 +91,7 @@
                                 <tr wire:key="eventos-{{ $event->id }}"> {{-- SUPER IMPORTANTE --}}
                                     {{-- Hace diferencia entre meses pares e impares --}}
                                     {{-- MES PAR --}}
-                                    @if (\Carbon\Carbon::parse($event->date)->month % 2 == 1)
+                                    @if (\Carbon\Carbon::parse($event->scheduled_at)->month % 2 == 1)
                                         {{-- ID --}}
                                         <td class="px-2 py-0 cursor-pointer bg-blue-100"
                                             wire:click="show_items({{ $event }})">

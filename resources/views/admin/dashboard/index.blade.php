@@ -6,12 +6,12 @@
 @section('codersfree', 'Dashboard')
 
 @section('content_header')
-    <h1>EL PALACIO Inc</h1>
+    <h1>THE PALACE HALL Inc</h1>
 @stop
 
 @section('content')
 
-    <p class="mb-10 text-lg">Welcome to Nucleous Data Industries 2024: {{ Auth::user()->name }}</p>
+    <p class="mb-10 text-lg text-right">Welcome to Nucleous Data Industries 2024: {{ Auth::user()->name }}</p>
 
     <x-admin-layout>
 

@@ -23,10 +23,11 @@ class EventsIndex extends Component
     public $registro;
     public $search;
 
-    public $sort = 'date';
+    public $sort = 'scheduled_at';
     public $direction = 'asc'; //desc or asc ?
 
     public $store_id = "";
+    public $title ='';
 
     public $lbCase = 4;  //En el caso 4, Imprimir etiqueta para paquetes
     public $lb_pkId = "";
@@ -82,7 +83,7 @@ class EventsIndex extends Component
         $this->registro = Event::find($this->event_id)->name;   //agrege esto, para otra cosa
 
         $this->client_name = $event->name;
-        $this->client_date = $event->date;
+        $this->client_date = $event->scheduled_at;
         $this->client_created_at = $event->created_at;
 
         $this->user = $event->user;
@@ -93,7 +94,9 @@ class EventsIndex extends Component
         $this->lb_pkPhone = $event->phone;
         $this->lb_pkStore = $event->store_id;
         $this->lb_pkPackage = $event->aux4;
-        $this->lb_pkDate = $event->date;
+        $this->lb_pkDate = $event->scheduled_at;
+
+        $this->title = $event->title;
 
         // Envia la señal a todo los otros componente de livewire
         //xxx $this->emit('sendData', $event->id);

@@ -248,7 +248,9 @@ class PosIndex extends Component
                         'code' => $new_event_id->nextid,
                         'cus_id' => $user->cus_id, //Cliente
                         'name' => $user->name,
+                        'title' => '',
                         'date' => now(),
+                        'scheduled_at' => now(),
                         'phone' => $user->phone,
                         'status' => 'ACTIVE',
                         'store_id' => $this->store_id,
@@ -259,7 +261,8 @@ class PosIndex extends Component
                         'aux2' => 'open',
                         'aux3' => 'open',
                         'aux4' => $product->sku,
-                        'description' => ''
+                        'description' => '',
+                        'note' => '',
                     ]);
 
                     // DETERMINAR EL SALON - VENUE

@@ -23,3 +23,6 @@ Use: https://github.com/Laraveles/spanish
 
 Use: Paypal (Segun video de codersfree, para Ecommerce)
 
+Use: https://github.com/asantibanez/livewire-calendar
+Use https://github.com/omnia-digital/livewire-calendar, igual que el anterior pero actulizado con livewire 3.0
+

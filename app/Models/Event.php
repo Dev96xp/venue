@@ -12,6 +12,7 @@ class Event extends Model
 
     use HasFactory;
 
+    // Relacion uno a mucho inversa
     public function user()
     {
         return $this->belongsTo(User::class);
@@ -50,5 +51,4 @@ class Event extends Model
     {
         return $this->hasOne(Cleaning::class);
     }
-
 }

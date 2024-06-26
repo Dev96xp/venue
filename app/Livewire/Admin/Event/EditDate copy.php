@@ -21,9 +21,8 @@ class EditDate extends Component
     // 1.  Crear una propiedad que tenga los mismos campos del formulario
     public $eventEdit = [
         'id' => 'required',
-        'scheduled_at' => 'required',
-        'name' => 'required',
-        'title' => 'required'
+        'date' => 'required',
+        'name' => 'required'
     ];
 
     public function mount(Event $event){
@@ -37,9 +36,8 @@ class EditDate extends Component
 
         // Muesta estos valores en el formulario
         $this->eventEdit['id'] = $event->id;
-        $this->eventEdit['scheduled_at'] = $event->scheduled_at;
+        $this->eventEdit['date'] = $event->date;
         $this->eventEdit['name'] = $event->name;
-        $this->eventEdit['title'] = $event->title;
 
     }
 
@@ -50,9 +48,8 @@ class EditDate extends Component
 
         // Muesta estos valores en el formulario
         $this->eventEdit['id'] = $this->event->id;
-        $this->eventEdit['scheduled_at'] = $this->event->scheduled_at;
+        $this->eventEdit['date'] = $this->event->date;
         $this->eventEdit['name'] = $this->event->name;
-        $this->eventEdit['title'] = $this->event->title;
 
         return view('livewire.admin.event.edit-date');
     }
@@ -68,8 +65,7 @@ class EditDate extends Component
         $event = Event::find($this->eventEditId);
 
         $event->update([
-            'scheduled_at' => $this->eventEdit['scheduled_at'],
-            'title' => $this->eventEdit['title'],
+            'date' => $this->eventEdit['date'],
         ]);
 
         $this->reset(['open','eventEdit','eventEditId']);

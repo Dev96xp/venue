@@ -68,14 +68,13 @@
 
         {{-- Si existe algun usario en: $users, muestra la tabla --}}
         @if ($users->count())
-
+            {{-- METODO 1 --}}
             <div class="card-body">
                 <table class="table table-striped">
                     <thead>
                         <tr>
                             <th>ID</th>
                             <th>Name</th>
-                            <th>Company</th>
                             <th>Phone, email</th>
                             <th>Addresss</th>
                             <th>Store</th>
@@ -87,7 +86,6 @@
                         @foreach ($users as $user)
                             <tr>
                                 <td>{{ $user->id }}</td>
-
                                 <td>
                                     <a class="font-bold"
                                         href="{{ route('admin.pos.index', $user) }}">{{ $user->name }}</a>
@@ -97,20 +95,7 @@
                                         <div class="text-indigo-600 hover:text-indigo-900">{{ $user->store->name }}
                                         </div>
                                     @endif
-
                                 </td>
-
-                                <td>
-                                    <div>
-                                        <span>
-                                            {{ $user->company }}
-                                        </span>
-                                    </div>
-                                </td>
-
-                                {{-- AHORA --}}
-                                {{-- Se envia con datos del usuario --}}
-                                {{-- <td><a href="{{ route('admin.pos.index', $user) }}"> {{ $user->phone }}</a></td> --}}
                                 <td>
                                     <div>
                                         <span>
@@ -137,7 +122,6 @@
                                 </td>
 
                                 <td width="10px">
-                                    {{-- <a class="btn btn-danger" href="{{ route('admin.pos.index', $user) }}">Sales</a> --}}
                                     <a class="btn btn-danger" href="">Sales</a>
                                 </td>
 
@@ -147,10 +131,9 @@
                                     </td>
                                 @endcan
 
-                                {{-- Select User to Print label on DYMO PRINTERS --}}
                                 <td class="py-4 cursor-pointer text-sm" wire:click="select_user({{ $user->id }})">
                                     <div class="text-indigo-600 hover:text-indigo-900">
-                                        Print
+                                        DYMO
                                     </div>
                                 </td>
 
@@ -160,6 +143,39 @@
                 </table>
             </div>
 
+            {{-- METODO 2 --}}
+            <div class="card-body">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach ($users as $user)
+                            <tr>
+                                <td>{{ $user->id }}</td>
+                                <td>
+                                    <a class="font-bold"
+                                        href="{{ route('admin.pos.index', $user) }}">{{ $user->name }}</a>
+                                    <div>
+                                        <span>
+                                            {{ $user->phone }}
+                                        </span>
+                                    </div>
+                                </td>
+
+                                @can('User edit')
+                                    <td width="10px">
+                                        <a class="btn btn-primary" href="{{ route('admin.users.edit', $user) }}">Editar</a>
+                                    </td>
+                                @endcan
+
+                            </tr>
+                        @endforeach
+                    </tbody>
+                </table>
+            </div>
             {{-- card-footer -  Esta es una clase de boostrap --}}
             <div class="card-footer">
                 {{ $users->links() }}
