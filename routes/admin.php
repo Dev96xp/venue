@@ -12,11 +12,12 @@ use App\Http\Controllers\Admin\Brand\BrandController;
 use App\Http\Controllers\Admin\Dashboard\DashboardController;
 use App\Http\Controllers\Admin\Event\ConfigurationEventController;
 use App\Http\Controllers\Admin\Event\EventController;
-use App\Http\Controllers\Admin\Event\EventScheduleController;
 use App\Http\Controllers\Admin\Product\ProductController;
 use App\Http\Controllers\Admin\Subcategory\SubcategoryController;
 use App\Http\Controllers\Admin\Training\TrainingController;
-use App\Models\Event;
+
+use App\Http\Controllers\Admin\Event\EventCalendarController;
+
 
 Route::get('', [HomeController::class, 'index'])->name('home');
 
@@ -57,7 +58,7 @@ Route::resource('subcategories', SubcategoryController::class)->names('subcatego
 Route::resource('events', EventController::class)->names('events');
 Route::get('events/{event_id}/print_report', [EventController::class,'print_report'])->name('events.print_report');
 Route::get('configuration/event', [ConfigurationEventController::class,'index'])->name('configuration.event.index');
-Route::get('schedule', [EventScheduleController::class,'index'])->name('schedule.index');
+Route::get('schedule', [EventCalendarController::class,'index'])->name('schedule.index');
 
 // Route::get('products/index/{brand?}/{category?}', [ProductController::class,'index'])->middleware('can:Product Index')->name('products.index'); ORIGINAL
 Route::get('products/index/{brand?}/{category?}', [ProductController::class,'index'])->name('products.index'); //TEMPORAL

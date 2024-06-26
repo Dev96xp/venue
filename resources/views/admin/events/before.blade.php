@@ -1,4 +1,4 @@
-<div class="flex justify-between w-full">
+<div class="flex justify-between w-full mb-2">
 
     {{-- ES LA VISTA ARRIBA DEL CALENDARIO(SCHEDULE) --}}
 

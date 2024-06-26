@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Http\Controllers\Admin\event;
+namespace App\Http\Controllers\Admin\Event;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class EventScheduleController extends Controller
+class EventCalendarController extends Controller
 {
     /**
      * Display a listing of the resource.
