@@ -15,13 +15,15 @@ class AppointmentsCalendar extends LivewireCalendar
     // IMPORTANTE: Este componente trabaja en conjunto con LivewireCalendar hubicado en:
     // vendor/omnia-digital/livewire-calendar/src/LiveiwreCalendear.php
 
+    public $store_id = 1;
+
     // METODO  2
     public function events(): Collection
     {
         return Event::query()
             ->whereDate('scheduled_at', '>=', $this->gridStartsAt)
             ->whereDate('scheduled_at', '<=', $this->gridEndsAt)
-            ->where('store_id', 1)  //Lo agregue
+            ->where('store_id', $this->store_id)  //Lo agregue
             ->get()
             ->map(function (Event $event) {
                 return [
