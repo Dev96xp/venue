@@ -84,9 +84,11 @@ class EventController extends Controller
         $venue = $event->venue;
         $drink = $event->drink;
         $personal = $event->personal;
+        $decoration = $event->decoration;
+        $cleaning = $event->cleaning;
 
 
-        return view('admin.events.report', compact('user','event','venue','drink','personal'));
+        return view('admin.events.report', compact('user','event','venue','drink','personal','decoration','cleaning'));
     }
 
 }

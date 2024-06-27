@@ -86,6 +86,54 @@
                 </tbody>
             </table>
         </div>
+
+        {{-- Decoration --}}
+        <h2 class="text-left text-xl font-bold">Decoration: {{ $event->decoration->name }}</h2>
+        <div class=" w-full border-black border-t-2 border-b-2 py-4">
+            <table class="table-fixed text-sm">
+                <thead class="border-black border-b-2 py-4">
+                    <tr>
+                        <th>Items</th>
+                        <th>Description</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach ($decoration->items_decorations as $item)
+                        <tr>
+                            <td class="px-4">{{ $item->name }}</td>
+                            <td class="px-4">{{ $item->description }}</td>
+                            <td class="px-4">{{ $item->status_items->name }}</td>
+                        </tr>
+                    @endforeach
+                </tbody>
+            </table>
+        </div>
+
+        {{-- Limpieza - Cleaning --}}
+        <h2 class="text-left text-xl font-bold">Limpieza: {{ $event->cleaning->name }}</h2>
+        <div class=" w-full border-black border-t-2 border-b-2 py-4">
+            <table class="table-fixed text-sm">
+                <thead class="border-black border-b-2 py-4">
+                    <tr>
+                        <th>Items</th>
+                        <th>Description</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach ($cleaning->items_cleanings as $item)
+                        <tr>
+                            <td class="px-4">{{ $item->name }}</td>
+                            <td class="px-4">{{ $item->description }}</td>
+                            <td class="px-4">{{ $item->status_items->name }}</td>
+                        </tr>
+                    @endforeach
+                </tbody>
+            </table>
+        </div>
+
+
         <br>
 
         <div class="grid grid-cols-10 gap-4 mb-40">

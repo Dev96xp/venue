@@ -9,7 +9,7 @@
                 <div class="col-span-1">
 
                     {{-- El select esta sincronizado con la propiedad color --}}
-                    <select wire:model="store_id" class="form-control w-full">
+                    <select wire:model.live="store_id" class="form-control w-full">
                         {{-- Este es el valor por default --}}
                         <option value="" selected disabled>Store</option>
 
