@@ -3,10 +3,10 @@
         {{-- card-header - boostrap --}}
         <div class="card-header">
 
-            <div class="py-2 px-2 grid grid-cols-7 gap-6">
+            <div class="py-1 px-1 grid grid-cols-4 lg:grid-cols-7 gap-2">
 
                 {{-- Selecionar TIENDA --}}
-                <div class="col-span-1">
+                <div class="col-span-2">
 
                     {{-- El select esta sincronizado con la propiedad color --}}
                     <select wire:model.live="store_id" class="form-control w-full">
@@ -20,6 +20,11 @@
 
                 </div>
 
+                {{-- LIVEWIRE --}}
+                {{-- Boton para crear un usuario --}}
+                <div class="col-span-2">
+                    @livewire('admin.user.create-user')
+                </div>
 
                 {{-- MASTER CLASS --}}
                 {{-- form-control - boostrap --}}
@@ -30,13 +35,6 @@
                 <div class="col-span-2">
                     <input wire:keydown="limpiar_page" wire:model="search" placeholder="Escriba un nombre..."
                         class="form-control w-full">
-                </div>
-
-
-                {{-- LIVEWIRE --}}
-                {{-- Boton para crear un usuario --}}
-                <div class="col-span-1">
-                    @livewire('admin.user.create-user')
                 </div>
 
                 {{-- bUSCADO POR QR Barcode
@@ -62,14 +60,14 @@
                     <label for="">{{ $lbCode }} - {{ $lbName }}</label>
                 </div>
 
-
             </div>
         </div>
 
         {{-- Si existe algun usario en: $users, muestra la tabla --}}
         @if ($users->count())
-            {{-- METODO 1 --}}
-            <div class="card-body">
+
+            {{-- METODO 1 Para pantalla grande --}}
+            <div class="card-body hidden lg:block">
                 <table class="table table-striped">
                     <thead>
                         <tr>
@@ -143,8 +141,8 @@
                 </table>
             </div>
 
-            {{-- METODO 2 --}}
-            <div class="card-body">
+            {{-- METODO 2 Para pantalla pequeña --}}
+            <div class="card-body block lg:hidden">
                 <table class="table table-striped">
                     <thead>
                         <tr>
@@ -154,8 +152,7 @@
                     <tbody>
                         @foreach ($users as $user)
                             <tr>
-                                <td>{{ $user->id }}</td>
-                                <td>
+                                <td class="py-0">
                                     <a class="font-bold"
                                         href="{{ route('admin.pos.index', $user) }}">{{ $user->name }}</a>
                                     <div>
@@ -167,7 +164,7 @@
 
                                 @can('User edit')
                                     <td width="10px">
-                                        <a class="btn btn-primary" href="{{ route('admin.users.edit', $user) }}">Editar</a>
+                                        <a class="btn btn-primary py-0" href="{{ route('admin.users.edit', $user) }}">Editar</a>
                                     </td>
                                 @endcan
 
@@ -176,6 +173,7 @@
                     </tbody>
                 </table>
             </div>
+
             {{-- card-footer -  Esta es una clase de boostrap --}}
             <div class="card-footer">
                 {{ $users->links() }}
