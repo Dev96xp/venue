@@ -12,10 +12,16 @@
             <select wire:model.live="store_id" class="form-control w-1/2">
                 {{-- Este es el valor por default --}}
                 <option value="" selected disabled>Store</option>
+                <option value="1">Oakview</option>
+                <option value="2">Kansas</option>
+                <option value="3">Southerhills</option>
+                <option value="4">GrandIsland</option>
+                <option value="5">Miami</option>
+                <option value="6">Online</option>
                 {{-- Valores de la base de datos --}}
-                @foreach ($stores as $store)
+                {{-- @foreach ($stores as $store)
                     <option value="{{ $store->id }}">{{ $store->name }}</option>
-                @endforeach
+                @endforeach --}}
             </select>
         </div>
     </div>

@@ -16,14 +16,11 @@ class AppointmentsCalendar extends LivewireCalendar
     // vendor/omnia-digital/livewire-calendar/src/LiveiwreCalendear.php
 
     public $store_id = 1;
-    public $store;
 
 
     // METODO  2
     public function events(): Collection
     {
-        $store = Store::all();
-
         return Event::query()
             ->whereDate('scheduled_at', '>=', $this->gridStartsAt)
             ->whereDate('scheduled_at', '<=', $this->gridEndsAt)
