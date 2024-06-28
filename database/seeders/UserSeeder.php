@@ -51,6 +51,6 @@ class UserSeeder extends Seeder
         $user->assignRole('Customer');
 
         // Crear otros 20 usuarios mas
-        User::factory(10)->create();
+        User::factory(4)->create();
     }
 }
