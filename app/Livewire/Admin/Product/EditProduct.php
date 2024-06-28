@@ -106,7 +106,7 @@ class EditProduct extends Component
             'description' => $this->productEdit['description'],
         ]);
 
-        $this->reset(['open','productEdit','productEditId']);
+        $this->reset(['open']);
 
         // DISPATCH - Emite un evento, para ser escuchado por otro componente de livewire
         // EJEMPLO - $this->dispatch('post-created', title: $post->title);

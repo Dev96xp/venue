@@ -82,7 +82,7 @@
                     </thead>
                     <tbody>
                         @foreach ($users as $user)
-                            <tr>
+                            <tr wire:key="usuarios-{{ $user->id }}"> {{-- SUPER IMPORTANTE --}}
                                 <td>{{ $user->id }}</td>
                                 <td>
                                     <a class="font-bold"
@@ -119,8 +119,9 @@
                                     </div>
                                 </td>
 
-                                <td width="10px">
-                                    <a class="btn btn-danger" href="">Sales</a>
+                                {{-- LIVEWIRE --}} {{-- BOTON - SI SIRVE PERO NO SE USA EN ESTE MOMENTO, PARA EDITAR CLIENTE --}}
+                                <td class="py-1" width="10px">
+                                    @livewire('admin.user.edit-user', ['user' => $user], key($user->id))
                                 </td>
 
                                 @can('User edit')
@@ -164,7 +165,8 @@
 
                                 @can('User edit')
                                     <td width="10px">
-                                        <a class="btn btn-primary py-0" href="{{ route('admin.users.edit', $user) }}">Editar</a>
+                                        <a class="btn btn-primary py-0"
+                                            href="{{ route('admin.users.edit', $user) }}">Editar</a>
                                     </td>
                                 @endcan
 
