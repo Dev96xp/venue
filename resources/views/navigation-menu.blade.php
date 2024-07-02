@@ -6,6 +6,12 @@
             'route' => route('home'),
             'active' => request()->routeIs('home'),
         ],
+        [
+            'name' => 'Gallery',
+            'route' => route('gallery'),
+            'active' => request()->routeIs('gallery'),
+        ],
+
         // [
         //     'name' => 'Equipment',
         //     'route' => '#',
@@ -170,10 +176,10 @@
 
                                 {{-- SEGURIDAD - PERMISO --}}
                                 @can('Ver dashboard')
-                                {{-- MASTER CLASS - OJO Uso la ruta completa cuando uso route() --}}
-                                <x-responsive-nav-link href="{{ route('admin.home') }}">
-                                    Administrator
-                                </x-responsive-nav-link>
+                                    {{-- MASTER CLASS - OJO Uso la ruta completa cuando uso route() --}}
+                                    <x-responsive-nav-link href="{{ route('admin.home') }}">
+                                        Administrator
+                                    </x-responsive-nav-link>
                                 @endcan
 
                                 @if (Laravel\Jetstream\Jetstream::hasApiFeatures())

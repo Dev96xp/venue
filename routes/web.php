@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Customer\CustomerController;
 use App\Http\Controllers\Customer\PriceController;
+use App\Http\Controllers\Gallery\GalleryController;
 use Gloudemans\Shoppingcart\Facades\Cart;
 use App\Livewire\Store\ShoppingCart;
 
@@ -33,6 +34,10 @@ Route::get('my-invite', [CustomerController::class, 'index'])->name('my-invite')
 //########## My Palace Price ##############
 // PUBLICA
 Route::get('price', [PriceController::class, 'index'])->name('price');  // *** PUBLICO ***//
+
+// PUBLICA - Para Gallery de fotos
+Route::get('gallery', [GalleryController::class, 'index'])->name('gallery');  // *** PUBLICO ***//
+
 
 
 Route::middleware([
