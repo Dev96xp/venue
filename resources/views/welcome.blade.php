@@ -19,13 +19,13 @@
                                          opacity-75 - Detremina la opacity Inicial
                                          hover:opacity-100 - Elimina el opacity --}}
         <div class="w-full mx-auto px-4 sm:px-6 lg:px-64 py-40 opacity-75 relative bg-center bg-no-repeat bg-cover hover:opacity-100"
-            style="background-image: url('{{ asset('img/home/pexels-matheus-bertelli-17023014.jpg') }}')">
+            style="background-image: url('{{ asset('img/home/DSC_3034.jpg') }}')">
 
 
             <div class="w-full md:w-3/4 lg:w-3/4">
                 {{-- APLICANDO UNA CONDICIONAL PARA CLASES --}}
                 <p class="text-black text-6xl md:text-8xl lg:text-8xl py-6" style="font-family: Sche">THE PALACE HALL</p>
-                <p class="text-white text-2xl md:text-5xl lg:text-5xl font-bold" style="font-family: Montserrat">
+                <p class="text-gray-400 text-2xl md:text-5xl lg:text-5xl font-bold mb-60" style="font-family: Montserrat">
                     Experiance and aptitude of our team
                 </p>
                 <p class="text-black font-bold text-3xl mt-2 mb-4" style="font-family: Montserrat">
@@ -79,7 +79,7 @@
             <article>
                 <figure>
                     <a href="#"><img class="rounded-xl lg:h-40 w-full object-cover opacity-75"
-                            src="{{ asset('img/home/pexels-matheus-bertelli-17023020.jpg') }}" alt=""></a>
+                            src="{{ asset('img/home/pexels-rene-asmussen-2504968.jpg') }}" alt=""></a>
 
                     <header class="mt-2">
                         <a href="#">
@@ -100,7 +100,7 @@
             <article>
                 <figure>
                     <img class="rounded-xl h-40 w-full object-cover opacity-75"
-                        src="{{ asset('img/home/pexels-matheus-bertelli-17023014.jpg') }}" alt="">
+                        src="{{ asset('img/home/DSC_3053.jpg') }}" alt="">
                     <header class="mt-2">
                         <a href="#">
                             <h1 class="text-center text-xl text-gray-700">Events</h1>
@@ -120,7 +120,7 @@
             <article>
                 <figure>
                     <img class="rounded-xl h-40 w-full object-cover opacity-75"
-                        src="{{ asset('img/home/pexels-rene-asmussen-2504968.jpg') }}" alt="">
+                        src="{{ asset('img/home/DSC_3085.jpg') }}" alt="">
                     <header class="mt-2">
                         <h1 class="text-center text-xl text-gray-700">Quinceañeras</h1>
                     </header>
@@ -135,7 +135,7 @@
             <article>
                 <figure>
                     <img class="rounded-xl h-40 w-full object-cover opacity-75"
-                        src="{{ asset('img/home/pexels-sergio-millan-4609951.jpg') }}" alt="">
+                        src="{{ asset('img/home/DSC_3035.jpg') }}" alt="">
                     <header class="mt-2">
                         <h1 class="text-center text-xl text-gray-700">Professional and Bueatifull</h1>
                     </header>
@@ -187,7 +187,7 @@
             <p>(402)-884-9950</p>
             <div>----</div>
 
-            <p>IMPORTANT !!!: The website is still being developed, the images you see here DO NOT represent this
+            {{-- <p>IMPORTANT !!!: The website is still being developed, the images you see here DO NOT represent this
                 event hall, were only used for development purposes, when the website is finished it will be notified by
                 this means,
                 Thank you for your understanding, you are invited to visit the event room at the address shown above,
@@ -198,7 +198,7 @@
                 salon de eventos, solo se usaron para propositos de desarrollo, cuando este terminado el website se
                 notificara por este medio,
                 gracias por su comprension, se te invita visitar el salon de eventos en la direcion mostrada
-                anteriormente, antes de tu contratacion</p>
+                anteriormente, antes de tu contratacion</p> --}}
         </div>
         <div class="flex justify-center my-4">
             <a href="#" class="bg-pink-400 hover:bg-pink-300 text-white font-bold py-2 px-4 rounded">
@@ -220,7 +220,7 @@
                                          opacity-75 - Detremina la opacity Inicial
                                          hover:opacity-100 - Elimina el opacity --}}
     <section class="mt-16 opacity-75 relative bg-cover bg-center bg-no-repeat hover:opacity-100"
-        style="background-image: url('{{ asset('img/home/pexels-matheus-bertelli-17023005.jpg') }}')">
+        style="background-image: url('{{ asset('img/home/DSC_3042.jpg') }}')">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-48">
             <div class="w-full md:w-3/4 lg:w-1/2">
                 <h1 class="text-white text-bold text-6xl py-6 justify-center font-Playfair Display SC">Working with Best

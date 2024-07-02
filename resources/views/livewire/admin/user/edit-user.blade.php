@@ -18,14 +18,14 @@
 
         <x-slot name="content">
 
-            <div class="grid grid-cols-4 gap-4 mb-3">
-                <div class="col-span-2">
+            <div class="grid grid-cols-7 gap-2 mb-3">
+                <div class="col-span-5">
                     <x-label value="Name" class="mb-1" />
                     <x-input type="text" class="w-full text-blue-800 font-bold" wire:model.live="name"
                         id="" />
                     <x-input-error for="name" />
                 </div>
-                <div class="col-span-1">
+                <div class="col-span-2">
                     <x-label value="Phone" class="mb-1" />
                     <x-input type="text" class="w-full text-blue-800 font-bold" wire:model.live="phone"
                         id="" />
