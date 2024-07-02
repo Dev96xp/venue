@@ -99,7 +99,7 @@
             {{-- ARTICULO 2 --}}
             <article>
                 <figure>
-                    <img class="rounded-xl h-40 w-full object-cover opacity-75"
+                    <img class="rounded-xl lg:h-40 w-full object-cover opacity-75"
                         src="{{ asset('img/home/DSC_3053.jpg') }}" alt="">
                     <header class="mt-2">
                         <a href="#">
@@ -119,7 +119,7 @@
             {{-- ARTICULO 3 --}}
             <article>
                 <figure>
-                    <img class="rounded-xl h-40 w-full object-cover opacity-75"
+                    <img class="rounded-xl lg:h-40 w-full object-cover opacity-75"
                         src="{{ asset('img/home/DSC_3085.jpg') }}" alt="">
                     <header class="mt-2">
                         <h1 class="text-center text-xl text-gray-700">Quinceañeras</h1>
@@ -134,7 +134,7 @@
             {{-- ARTICULO 4 --}}
             <article>
                 <figure>
-                    <img class="rounded-xl h-40 w-full object-cover opacity-75"
+                    <img class="rounded-xl lg:h-40 w-full object-cover opacity-75"
                         src="{{ asset('img/home/DSC_3035.jpg') }}" alt="">
                     <header class="mt-2">
                         <h1 class="text-center text-xl text-gray-700">Professional and Bueatifull</h1>
@@ -202,7 +202,7 @@
         </div>
         <div class="flex justify-center my-4">
             <a href="gallery" class="bg-pink-400 hover:bg-pink-300 text-white font-bold py-2 px-4 rounded">
-                Images
+                Gallery
             </a>
         </div>
 
