@@ -54,7 +54,7 @@
     <div class="row">
         <div class="column">
             <img src="/img/gallery/salon1.jpg" class="rounded-xl w-full">
-            <img src="/img/gallery/salon2.jpg" class="rounded-xl w-full">
+            <img src="/img/gallery/salon15.jpg" class="rounded-xl w-full">
             <img src="/img/gallery/salon3.jpg" class="rounded-xl w-full">
             <img src="/img/gallery/salon4.jpg" class="rounded-xl w-full">
         </div>
@@ -67,17 +67,17 @@
         </div>
 
         <div class="column">
-            <img src="/img/gallery/salon6.jpg" class="rounded-xl w-full">
-            <img src="/img/gallery/salon7.jpg" class="rounded-xl w-full">
             <img src="/img/gallery/salon8.jpg" class="rounded-xl w-full">
-            <img src="/img/gallery/salon1.jpg" class="rounded-xl w-full">
+            <img src="/img/gallery/salon9.jpg" class="rounded-xl w-full">
+            <img src="/img/gallery/salon10.jpg" class="rounded-xl w-full">
+            <img src="/img/gallery/salon11.jpg" class="rounded-xl w-full">
         </div>
 
         <div class="column">
-            <img src="/img/gallery/salon4.jpg" class="rounded-xl w-full">
-            <img src="/img/gallery/salon7.jpg" class="rounded-xl w-full">
-            <img src="/img/gallery/salon2.jpg" class="rounded-xl w-full">
-            <img src="/img/gallery/salon7.jpg" class="rounded-xl w-full">
+            <img src="/img/gallery/salon12.jpg" class="rounded-xl w-full">
+            <img src="/img/gallery/salon13.jpg" class="rounded-xl w-full">
+            <img src="/img/gallery/salon14.jpg" class="rounded-xl w-full">
+            <img src="/img/gallery/salon15.jpg" class="rounded-xl w-full">
         </div>
     </div>
 
