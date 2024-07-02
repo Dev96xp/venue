@@ -6,11 +6,11 @@
             'route' => route('home'),
             'active' => request()->routeIs('home'),
         ],
-        // [
-        //     'name' => 'Gallery',
-        //     'route' => route('gallery'),
-        //     'active' => request()->routeIs('gallery'),
-        // ],
+         [
+             'name' => 'Gallery',
+             'route' => route('gallery'),
+             'active' => request()->routeIs('gallery'),
+         ],
 
         // [
         //     'name' => 'Equipment',
