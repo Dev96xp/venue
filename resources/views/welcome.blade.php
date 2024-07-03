@@ -124,7 +124,7 @@
                     <header class="mt-2">
                         <h1 class="text-center text-xl text-gray-700">Quinceañeras</h1>
                     </header>
-                    <p>If you’re looking for a Quinceañera venue that offers something for everyone, then Infinity Park
+                    <p>If you’re looking for a Quinceañera venue that offers something for everyone, then THE PALACE HALL
                         Event Center is your perfect fit, you’ll be able to
                         accommodate as many or as few guests as desired. No matter what the occasion, we are confident
                         that your Quinceañera will be the most memorable event of your life!</p>
@@ -139,9 +139,7 @@
                     <header class="mt-2">
                         <h1 class="text-center text-xl text-gray-700">Professional and Bueatifull</h1>
                     </header>
-                    <p>Their portfolio spans weddings of all kind, from intimate seaside gatherings to the most
-                        extravagant
-                        country club takeovers, each specifically designed to speak to the essence of each couple’s
+                    <p>Their portfolio spans weddings of all kind, each specifically designed to speak to the essence of each couple’s
                         unique preferences and tastes.</p>
                 </figure>
             </article>
@@ -176,6 +174,282 @@
         </div>
     </section>
 
+    <section class="my-16" style="display:none">
+        <!-- component -->
+        <div class="flex flex-grow flex-col bg-white border-t border-b sm:rounded sm:border shadow overflow-hidden">
+            <div class="border-b">
+                <div class="flex justify-between pl-6 -mb-px">
+                    <h3 class="text-blue-dark py-4 font-normal text-lg">Vacation Settings</h3>
+                    <div class="flex"></div>
+                </div>
+            </div>
+            <div class="flex px-2 py-2 -mb-px">
+                <div class="flex flex-wrap bg-white overflow-hidden">
+
+
+                    <div class="w-auto mx-3 my-3 border-solid border-grey-light rounded border shadow-sm">
+                        <div class="bg-grey-lighter px-2 py-2 border-solid border-grey-light border-b text-center">
+                            {{ $currentMonth }} {{ $currentYear }}//{{ $firstDayOfMonth }}-{{ $daysInMonth }}</div>
+                        <div class="">
+                            <table class="w-full">
+
+
+                                <tr class="border-b">
+                                    <th class="py-3 px-4">Sun</th>
+                                    <th class="py-3 px-4">Mon</th>
+                                    <th class="py-3 px-4">Tue</th>
+                                    <th class="py-3 px-4">Wed</th>
+                                    <th class="py-3 px-4">Thu</th>
+                                    <th class="py-3 px-4">Fri</th>
+                                    <th class="py-3 px-4">Sat</th>
+                                </tr>
+
+                                @php
+                                    $unaVez = true;
+                                    $counter = 0;
+                                @endphp
+
+                                {{-- Primer semana --}}
+                                <tr>
+                                    {{-- Agrega los ESPACIOS blancos --}}
+                                    @for ($x = 1; $x <= $firstDayOfMonth; $x++)
+                                        <td></td>
+                                    @endfor
+
+                                    {{-- Agrega los DIAS  --}}
+                                    @for ($i = 1; $i <= $daysInMonth; $i++)
+                                        @php
+                                            $counter = $firstDayOfMonth + $i;
+                                        @endphp
+
+                                        @if ($counter < 8)
+                                            <td
+                                                class="py-3 px-4 hover:bg-blue hover:text-white text-center cursor-pointer">
+                                                {{ $i }}</td>
+                                        @endif
+                                    @endfor
+                                </tr>
+                                {{-- Segunda semana --}}
+                                <tr>
+                                    {{-- Agrega los DIAS  --}}
+                                    @for ($i = 1; $i <= $daysInMonth; $i++)
+                                        @php
+                                            $counter = $firstDayOfMonth + $i;
+                                        @endphp
+
+                                        @if ($counter >= 8 and $counter < 15)
+                                            <td
+                                                class="py-3 px-4 hover:bg-blue hover:text-white text-center cursor-pointer">
+                                                {{ $i }}</td>
+                                        @endif
+                                    @endfor
+                                </tr>
+
+                                {{-- Tercer semana --}}
+                                <tr>
+                                    {{-- Agrega los DIAS  --}}
+                                    @for ($i = 1; $i <= $daysInMonth; $i++)
+                                        @php
+                                            $counter = $firstDayOfMonth + $i;
+                                        @endphp
+
+                                        @if ($counter >= 15 and $counter < 22)
+                                            <td
+                                                class="py-3 px-4 hover:bg-blue hover:text-white text-center cursor-pointer">
+                                                {{ $i }}</td>
+                                        @endif
+                                    @endfor
+                                </tr>
+
+                                {{-- Cuarta semana --}}
+                                <tr>
+                                    {{-- Agrega los DIAS  --}}
+                                    @for ($i = 1; $i <= $daysInMonth; $i++)
+                                        @php
+                                            $counter = $firstDayOfMonth + $i;
+                                        @endphp
+
+                                        @if ($counter >= 22 and $counter < 29)
+                                            <td
+                                                class="py-3 px-4 hover:bg-blue hover:text-white text-center cursor-pointer">
+                                                {{ $i }}</td>
+                                        @endif
+                                    @endfor
+                                </tr>
+                                {{-- Quinta semana --}}
+                                <tr>
+                                    {{-- Agrega los DIAS  --}}
+                                    @for ($i = 1; $i <= $daysInMonth; $i++)
+                                        @php
+                                            $counter = $firstDayOfMonth + $i;
+                                        @endphp
+
+                                        @if ($counter >= 29)
+                                            <td
+                                                class="py-3 px-4 hover:bg-blue hover:text-white text-center cursor-pointer">
+                                                {{ $i }}</td>
+                                        @endif
+                                    @endfor
+                                </tr>
+
+                            </table>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <!-- component -->
+        {{-- <div class="bg-gray-100 flex items-center justify-center h-screen">
+
+            <div class="lg:w-7/12 md:w-9/12 sm:w-10/12 mx-auto p-4">
+                <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+                    <div class="flex items-center justify-between px-6 py-3 bg-gray-700">
+                        <button id="prevMonth" class="text-white">Previous</button>
+                        <h2 id="currentMonth" class="text-white"></h2>
+                        <button id="nextMonth" class="text-white">Next</button>
+                    </div>
+                    <div class="grid grid-cols-7 gap-2 p-4" id="calendar">
+                        <!-- Calendar Days Go Here -->
+                    </div>
+                    <div id="myModal" class="modal hidden fixed inset-0 flex items-center justify-center z-50">
+                        <div class="modal-overlay absolute inset-0 bg-black opacity-50"></div>
+
+                        <div
+                            class="modal-container bg-white w-11/12 md:max-w-md mx-auto rounded shadow-lg z-50 overflow-y-auto">
+                            <div class="modal-content py-4 text-left px-6">
+                                <div class="flex justify-between items-center pb-3">
+                                    <p class="text-2xl font-bold">Selected Date</p>
+                                    <button id="closeModal"
+                                        class="modal-close px-3 py-1 rounded-full bg-gray-200 hover:bg-gray-300 focus:outline-none focus:ring">✕</button>
+                                </div>
+                                <div id="modalDate" class="text-xl font-semibold"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> --}}
+        <script>
+            // Function to generate the calendar for a specific month and year
+            function generateCalendar(year, month) {
+                const calendarElement = document.getElementById('calendar');
+                const currentMonthElement = document.getElementById('currentMonth');
+
+                // Create a date object for the first day of the specified month
+                const firstDayOfMonth = new Date(year, month, 1);
+                const daysInMonth = new Date(year, month + 1, 0).getDate();
+
+                // Clear the calendar
+                calendarElement.innerHTML = '';
+
+                // Set the current month text
+                const monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September',
+                    'October', 'November', 'December'
+                ];
+                currentMonthElement.innerText = `${monthNames[month]} ${year}`;
+
+                // Calculate the day of the week for the first day of the month (0 - Sunday, 1 - Monday, ..., 6 - Saturday)
+                const firstDayOfWeek = firstDayOfMonth.getDay();
+
+                // Create headers for the days of the week
+                const daysOfWeek = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+                daysOfWeek.forEach(day => {
+                    const dayElement = document.createElement('div');
+                    dayElement.className = 'text-center font-semibold';
+                    dayElement.innerText = day;
+                    calendarElement.appendChild(dayElement);
+                });
+
+                // Create empty boxes for days before the first day of the month
+                for (let i = 0; i < firstDayOfWeek; i++) {
+                    const emptyDayElement = document.createElement('div');
+                    calendarElement.appendChild(emptyDayElement);
+                }
+
+                // Create boxes for each day of the month
+                for (let day = 1; day <= daysInMonth; day++) {
+                    const dayElement = document.createElement('div');
+                    dayElement.className = 'text-center py-2 border cursor-pointer';
+                    dayElement.innerText = day;
+
+                    // Check if this date is the current date
+                    const currentDate = new Date();
+                    if (year === currentDate.getFullYear() && month === currentDate.getMonth() && day === currentDate
+                        .getDate()) {
+                        dayElement.classList.add('bg-blue-500', 'text-white'); // Add classes for the indicator
+                    }
+
+                    calendarElement.appendChild(dayElement);
+                }
+            }
+
+            // Initialize the calendar with the current month and year
+            const currentDate = new Date();
+            let currentYear = currentDate.getFullYear();
+            let currentMonth = currentDate.getMonth();
+            generateCalendar(currentYear, currentMonth);
+
+            // Event listeners for previous and next month buttons
+            document.getElementById('prevMonth').addEventListener('click', () => {
+                currentMonth--;
+                if (currentMonth < 0) {
+                    currentMonth = 11;
+                    currentYear--;
+                }
+                generateCalendar(currentYear, currentMonth);
+            });
+
+            document.getElementById('nextMonth').addEventListener('click', () => {
+                currentMonth++;
+                if (currentMonth > 11) {
+                    currentMonth = 0;
+                    currentYear++;
+                }
+                generateCalendar(currentYear, currentMonth);
+            });
+
+            // Function to show the modal with the selected date
+            function showModal(selectedDate) {
+                const modal = document.getElementById('myModal');
+                const modalDateElement = document.getElementById('modalDate');
+                modalDateElement.innerText = selectedDate;
+                modal.classList.remove('hidden');
+            }
+
+            // Function to hide the modal
+            function hideModal() {
+                const modal = document.getElementById('myModal');
+                modal.classList.add('hidden');
+            }
+
+            // Event listener for date click events
+            const dayElements = document.querySelectorAll('.cursor-pointer');
+            dayElements.forEach(dayElement => {
+                dayElement.addEventListener('click', () => {
+                    const day = parseInt(dayElement.innerText);
+                    const selectedDate = new Date(currentYear, currentMonth, day);
+                    const options = {
+                        weekday: 'long',
+                        year: 'numeric',
+                        month: 'long',
+                        day: 'numeric'
+                    };
+                    const formattedDate = selectedDate.toLocaleDateString(undefined, options);
+                    showModal(formattedDate);
+                });
+            });
+
+            // Event listener for closing the modal
+            document.getElementById('closeModal').addEventListener('click', () => {
+                hideModal();
+            });
+        </script>
+    </section>
 
     {{-- SECCTION  --}}
     <section class="mt-24 bg-gray-400 mx-auto px-4 sm:px-6 lg:px-64 py-12">
@@ -210,7 +484,8 @@
 
     {{-- CALENDAR --}}
     <section>
-        <img class="w-full p-4 bg-cover bg-center bg-no-repeat hover:opacity-100" src="{{ asset('img/home/calendar.png') }}" alt="">
+        <img class="w-full p-4 bg-cover bg-center bg-no-repeat hover:opacity-100"
+            src="{{ asset('img/home/calendar.png') }}" alt="">
     </section>
 
 
@@ -223,7 +498,8 @@
         style="background-image: url('{{ asset('img/home/DSC_3042.jpg') }}')">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-48">
             <div class="w-full md:w-3/4 lg:w-1/2">
-                <h1 class="text-white text-bold text-6xl py-6 justify-center font-Playfair Display SC">Working with Best
+                <h1 class="text-white text-bold text-6xl py-6 justify-center font-Playfair Display SC">Working with
+                    Best
                     Wedding planners</h1>
                 <h1 class="text-white text-bold text-4xl">
                     Means
@@ -277,7 +553,8 @@
 
                     <header class="mt-4">
                         <a href="#">
-                            <h1 class="text-center text-xl text-gray-700 font-bold">$500 OFF on Privated Collection</h1>
+                            <h1 class="text-center text-xl text-gray-700 font-bold">$500 OFF on Privated Collection
+                            </h1>
                         </a>
                     </header>
 
@@ -296,8 +573,8 @@
 
             <article>
                 <figure>
-                    <img class="rounded-lg h-60 w-full object-cover" src="{{ asset('img/home/web_specials_002.jpg') }}"
-                        alt="">
+                    <img class="rounded-lg h-60 w-full object-cover"
+                        src="{{ asset('img/home/web_specials_002.jpg') }}" alt="">
                     <header class="mt-4">
                         <a href="#">
                             <h1 class="text-center text-xl text-gray-700 font-bold">$300.00 OFF Any quinceañera dress
