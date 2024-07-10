@@ -78,16 +78,16 @@
             {{-- ARTICULO 1 --}}
             <article>
                 <figure>
-                    <a href="#"><img class="rounded-xl lg:h-40 w-full object-cover opacity-75"
+                    <a href="gallery"><img class="rounded-xl lg:h-40 w-full object-cover opacity-75"
                             src="{{ asset('img/home/pexels-rene-asmussen-2504968.jpg') }}" alt=""></a>
 
                     <header class="mt-2">
-                        <a href="#">
+                        <a href="gallery">
                             <h1 class="text-center text-xl text-gray-700">Weddings</h1>
                         </a>
                     </header>
 
-                    <a href="#" class="mt-2">
+                    <a href="gallery" class="mt-2">
                         <p>From an intimate ceremony to a lavish formal gala, you can make your special day what you
                             have
                             always dreamed. Our main dining room can be arranged to suit your wishes</p>
@@ -119,16 +119,23 @@
             {{-- ARTICULO 3 --}}
             <article>
                 <figure>
-                    <img class="rounded-xl lg:h-40 w-full object-cover opacity-75"
-                        src="{{ asset('img/home/DSC_3085.jpg') }}" alt="">
+                    <a href="gallery">
+                        <img class="rounded-xl lg:h-40 w-full object-cover opacity-75"
+                            src="{{ asset('img/home/DSC_3085.jpg') }}" alt="">
+                    </a>
                     <header class="mt-2">
-                        <h1 class="text-center text-xl text-gray-700">Quinceañeras</h1>
+                        <a href="gallery">
+                            <h1 class="text-center text-xl text-gray-700">Quinceañeras</h1>
+                        </a>
                     </header>
-                    <p>If you’re looking for a Quinceañera venue that offers something for everyone, then THE PALACE
-                        HALL
-                        Event Center is your perfect fit, you’ll be able to
-                        accommodate as many or as few guests as desired. No matter what the occasion, we are confident
-                        that your Quinceañera will be the most memorable event of your life!</p>
+                    <a href="gallery" class="mt-2">
+                        <p>If you’re looking for a Quinceañera venue that offers something for everyone, then THE PALACE
+                            HALL
+                            Event Center is your perfect fit, you’ll be able to
+                            accommodate as many or as few guests as desired. No matter what the occasion, we are
+                            confident
+                            that your Quinceañera will be the most memorable event of your life!</p>
+                    </a>
                 </figure>
             </article>
 
@@ -342,48 +349,40 @@
 
     </section>
 
+    <section class="mt-12">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-3 gap-x-6 gap-y-8">
 
+            <div class="col-span-1 mt-12 opacity-75 hover:opacity-100">
+                <img src="{{ asset('img/home/DSC_3053.jpg') }}" class="rounded-md" style="width:100%">
+            </div>
 
-    {{-- SECCTION  --}}
-    <section class="mt-24 bg-gray-400 mx-auto px-4 sm:px-6 lg:px-64 py-12">
-        <div class="text-2xl">
-            <p>THE PALACE HALL</p>
-            <P>3001 South 144th Street, Omaha, NE 68144</P>
-            <p>Phone Number:</p>
-            <p>(308)-746-4108</p>
-            <p>(402)-884-9950</p>
-            <div>----</div>
+            <div class="col-span-2">
+                <div class="ml-24 mb-4">
+                    <h3 class="">WHERE I WORK</h3>
+                    <p class=""><em>I'd love your visit!</em></p>
+                </div>
 
-            {{-- <p>IMPORTANT !!!: The website is still being developed, the images you see here DO NOT represent this
-                event hall, were only used for development purposes, when the website is finished it will be notified by
-                this means,
-                Thank you for your understanding, you are invited to visit the event room at the address shown above,
-                before your hiring.</p>
-            <div>----</div>
-            <p>IMPORTANTE !!!: La Pagina web todavia se esta desarrollando, las imagenes que tu ves aqui no representa
-                este
-                salon de eventos, solo se usaron para propositos de desarrollo, cuando este terminado el website se
-                notificara por este medio,
-                gracias por su comprension, se te invita visitar el salon de eventos en la direcion mostrada
-                anteriormente, antes de tu contratacion</p> --}}
-        </div>
-        <div class="flex justify-center my-4">
-            <a href="gallery" class="bg-pink-400 hover:bg-pink-300 text-white font-bold py-2 px-4 rounded">
-                Gallery
-            </a>
+                <div class="ml-24">
+                    <h3 class="">THE PALACE HALL</h3>
+                    <p class="">3001 South 144th Street, Omaha, NE 68144</p>
+                </div>
+
+                <i class="far fa-map-marked hover:text-neutral-800 text-3xl mr-6"></i>
+                Chicago, Nebraska, Iowa, Kansas, Missouri, Miami, South Dakota, US.<br>
+
+                <i class="fa fa-phone fa-fw hover:text-neutral-800 text-3xl mr-6"></i> Phone: +00
+                308.746.4108 / 402.884.9950<br>
+
+                <i class="fa fa-envelope fa-fw hover:text-neutral-800 text-3xl mr-6 mb-4"></i> Email:
+                thepalace15@gmail.com<br>
+
+                {{-- <p>Swing by for a cup of <i class="fa fa-coffee"></i>, or leave me a note</p> --}}
+
+            </div>
+
         </div>
 
     </section>
-
-
-
-    {{-- CALENDAR --}}
-    <section>
-        <img class="w-full p-4 bg-cover bg-center bg-no-repeat hover:opacity-100"
-            src="{{ asset('img/home/calendar.png') }}" alt="">
-    </section>
-
-
 
 
     {{-- SECCTION 5 --}}
