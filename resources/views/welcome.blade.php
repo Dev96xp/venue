@@ -1,7 +1,5 @@
-{{-- USO: PAGINA PRINCIPAL - HOME NO 1 --}}
-
 <x-app-layout>
-
+    {{-- USO: PAGINA PRINCIPAL - HOME NO 1 --}}
 
     {{-- SECCTION 1 - Portada Background  IMAGEN PRINCIPAL --}}
     <section>
@@ -16,7 +14,7 @@
                                          opacity-75 - Detremina la opacity Inicial
                                          hover:opacity-100 - Elimina el opacity --}}
         <div class="w-full mx-auto px-4 sm:px-6 lg:px-64 py-40 opacity-75 relative bg-center bg-no-repeat bg-cover hover:opacity-100"
-            style="background-image: url('{{ asset('img/gallery/25003786-6b3c-453e-9885-5d275016dbb7.jpg') }}')">
+            style="background-image: url('{{ asset('img/gallery/salon16.jpg') }}')">
 
 
             <div class="w-full md:w-3/4 lg:w-3/4">
@@ -66,7 +64,7 @@
     </section> --}
 
 
-    {{-- SECCTION 2 - Contenido --}}
+    {{-- SECCTION 2 - Contenido con 4 articulos --}}
     <section class="mt-6">
         <h1 class="text-gray-800 text-center text-4xl mb-6 font-bold"
             style="my-6 font-family: proxima-nova, sans-serif;font-weight: 800;font-style: normal">AT YOUR SERVICE</h1>
@@ -149,8 +147,6 @@
                         unique preferences and tastes.</p>
                 </figure>
             </article>
-
-
         </div>
     </section>
 
@@ -180,177 +176,21 @@
         </div>
     </section>
 
-    <section class="my-2" style="display:none">
-        <!-- component -->
-        <div class="flex flex-grow flex-col bg-white border-t border-b sm:rounded sm:border shadow overflow-hidden">
-            <div class="border-b">
-                <div class="flex justify-between pl-6 -mb-px">
-                    <h3 class="text-blue-dark py-4 font-normal text-lg">Vacation Settings</h3>
-                    <div class="flex"></div>
-                </div>
-            </div>
-            <div class="flex px-2 py-2 -mb-px">
-                <div class="flex flex-wrap bg-white overflow-hidden">
-
-
-                    <div class="w-auto mx-3 my-3 border-solid border-grey-light rounded border shadow-sm">
-                        <div class="bg-grey-lighter px-2 py-2 border-solid border-grey-light border-b text-center">
-                            {{ $currentMonth }} {{ $currentYear }}//{{ $firstDayOfMonth }}-{{ $daysInMonth }}</div>
-                        <div class="">
-                            <table class="w-full">
-
-
-                                <tr class="border-b">
-                                    <th class="py-3 px-4">Sun</th>
-                                    <th class="py-3 px-4">Mon</th>
-                                    <th class="py-3 px-4">Tue</th>
-                                    <th class="py-3 px-4">Wed</th>
-                                    <th class="py-3 px-4">Thu</th>
-                                    <th class="py-3 px-4">Fri</th>
-                                    <th class="py-3 px-4">Sat</th>
-                                </tr>
-
-                                @php
-                                    $unaVez = true;
-                                    $counter = 0;
-                                @endphp
-
-                                {{-- Primer semana --}}
-                                <tr>
-                                    {{-- Agrega los ESPACIOS blancos --}}
-                                    @for ($x = 1; $x <= $firstDayOfMonth; $x++)
-                                        <td></td>
-                                    @endfor
-
-                                    {{-- Agrega los DIAS  --}}
-                                    @for ($i = 1; $i <= $daysInMonth; $i++)
-                                        @php
-                                            $counter = $firstDayOfMonth + $i;
-                                        @endphp
-
-                                        @if ($counter < 8)
-                                            <td
-                                                class="py-3 px-4 hover:bg-blue hover:text-white text-center cursor-pointer">
-                                                {{ $i }}</td>
-                                        @endif
-                                    @endfor
-                                </tr>
-                                {{-- Segunda semana --}}
-                                <tr>
-                                    {{-- Agrega los DIAS  --}}
-                                    @for ($i = 1; $i <= $daysInMonth; $i++)
-                                        @php
-                                            $counter = $firstDayOfMonth + $i;
-                                        @endphp
-
-                                        @if ($counter >= 8 and $counter < 15)
-                                            <td
-                                                class="py-3 px-4 hover:bg-blue hover:text-white text-center cursor-pointer">
-                                                {{ $i }}</td>
-                                        @endif
-                                    @endfor
-                                </tr>
-
-                                {{-- Tercer semana --}}
-                                <tr>
-                                    {{-- Agrega los DIAS  --}}
-                                    @for ($i = 1; $i <= $daysInMonth; $i++)
-                                        @php
-                                            $counter = $firstDayOfMonth + $i;
-                                        @endphp
-
-                                        @if ($counter >= 15 and $counter < 22)
-                                            <td
-                                                class="py-3 px-4 hover:bg-blue hover:text-white text-center cursor-pointer">
-                                                {{ $i }}</td>
-                                        @endif
-                                    @endfor
-                                </tr>
-
-                                {{-- Cuarta semana --}}
-                                <tr>
-                                    {{-- Agrega los DIAS  --}}
-                                    @for ($i = 1; $i <= $daysInMonth; $i++)
-                                        @php
-                                            $counter = $firstDayOfMonth + $i;
-                                        @endphp
-
-                                        @if ($counter >= 22 and $counter < 29)
-                                            <td
-                                                class="py-3 px-4 hover:bg-blue hover:text-white text-center cursor-pointer">
-                                                {{ $i }}</td>
-                                        @endif
-                                    @endfor
-                                </tr>
-                                {{-- Quinta semana --}}
-                                <tr>
-                                    {{-- Agrega los DIAS  --}}
-                                    @php
-                                        $counterX = 0; // Permite imprimir solo 7 dias
-                                    @endphp
-                                    @for ($i = 1; $i <= $daysInMonth; $i++)
-                                        @php
-                                            $counter = $firstDayOfMonth + $i;
-                                        @endphp
-
-                                        @if ($counter >= 29 and $counterX < 7)
-                                            @php
-                                                $counterX = $counterX + 1;
-                                            @endphp
-                                            <td
-                                                class="py-3 px-4 hover:bg-blue hover:text-white text-center cursor-pointer">
-                                                {{ $i }}</td>
-                                        @endif
-                                    @endfor
-                                </tr>
-                                {{-- SEXTA --}}
-                                <tr>
-                                    {{-- Agrega los DIAS  --}}
-                                    @php
-                                        $counterX = 0; // Permite imprimir solo 7 dias
-                                    @endphp
-                                    @for ($i = 1; $i <= $daysInMonth; $i++)
-                                        @php
-                                            $counter = $firstDayOfMonth + $i;
-                                        @endphp
-
-                                        @if ($counter >= 29 and $counterX < 7)
-                                            @php
-                                                $counterX = $counterX + 1;
-                                            @endphp
-                                            <td
-                                                class="py-3 px-4 hover:bg-blue hover:text-white text-center cursor-pointer">
-                                                {{ $i }}</td>
-                                        @endif
-                                    @endfor
-                                </tr>
-
-                            </table>
-                        </div>
-                    </div>
-
-
-                </div>
-            </div>
-        </div>
-    </section>
-
-
 
     {{-- CALENDAR de fechas disponibles --}}
     <section>
-
         <div>
             @livewire('availability-calendar')
         </div>
-
     </section>
 
+
+    {{-- Location --}}
     <section class="mt-12">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-3 gap-x-6 gap-y-8">
 
             <div class="col-span-1 mt-12 opacity-75 hover:opacity-100">
-                <img src="{{ asset('img/home/DSC_3053.jpg') }}" class="rounded-md" style="width:100%">
+                <img src="{{ asset('img/home/c31696d0-c404-4016-8c1f-d8b3744748bb.jpg') }}" class="rounded-md" style="width:100%">
             </div>
 
             <div class="col-span-2">
@@ -378,7 +218,6 @@
             </div>
 
         </div>
-
     </section>
 
 
@@ -387,6 +226,8 @@
                                          min-h-screen - OCUPA TODA LA ALTURA DE PANTALLA
                                          opacity-75 - Detremina la opacity Inicial
                                          hover:opacity-100 - Elimina el opacity --}}
+
+    {{-- Imagen --}}
     <section class="mt-16 opacity-75 relative bg-cover bg-center bg-no-repeat hover:opacity-100"
         style="background-image: url('{{ asset('img/home/DSC_3042.jpg') }}')">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-48">
@@ -406,34 +247,7 @@
     </section>
 
 
-
-    {{-- SECCTION 3 - Banda  OCULTADA --}}
-    <section class="mt-24 bg-gray-700 py-12" style="display:none">
-        <h1 class="text-center text-white text-3xl">Buscar organizar tu evento ?</h1>
-        <p class="text-center text-white">Dirigete al catalago de vestidos y seleciona tu favorito</p>
-
-        <article>
-            <figure>
-                <img class="m-auto w-36 h-36" src="{{ asset('img/home/shield_05.png') }}" alt="">
-                <header class="mt-2 W-FULL">
-                    <a href="#">
-                        <h1 class="text-center text-xl text-gray-700">Estilos</h1>
-                    </a>
-
-                </header>
-            </figure>
-        </article>
-        <h1 class="text-center text-white text-3xl">THE PALACE COLLECTION</h1>
-
-        <div class="flex justify-center my-4">
-            <a href="#" class="bg-pink-500 hover:bg-pink-300 text-white font-bold py-2 px-4 rounded">
-                Catalagos de Vestidos
-            </a>
-        </div>
-
-    </section>
-
-    {{-- SECCTION 4 - Banda OCULTADA Contenido Specials of the week --}}
+    {{-- SECCTION 4 - SPECIALS - Banda OCULTADA Contenido Specials of the week --}}
     <section class="my-16" style="display:none">
         <h1 class="text-gray-600 text-center text-3xl mb-6 font-bold" style="font-family:Montserrat">SPECIALS OF THE
             MONTH</h1>
@@ -466,8 +280,8 @@
 
             <article>
                 <figure>
-                    <img class="rounded-lg h-60 w-full object-cover"
-                        src="{{ asset('img/home/web_specials_002.jpg') }}" alt="">
+                    <img class="rounded-lg h-60 w-full object-cover" src="{{ asset('img/home/web_specials_002.jpg') }}"
+                        alt="">
                     <header class="mt-4">
                         <a href="#">
                             <h1 class="text-center text-xl text-gray-700 font-bold">$300.00 OFF Any quinceañera dress
@@ -533,7 +347,8 @@
                         <p class="mt-2 text-sm text-gray-500">Design, Code and Ship!</p>
                         <div class="mt-4">
                             <span class="inline-flex justify-center mt-2 sm:ml-auto sm:mt-0 sm:justify-start">
-                                <a href="https://www.facebook.com/profile.php?id=100004629788695" class="text-gray-500 cursor-pointer hover:text-gray-700">
+                                <a href="https://www.facebook.com/profile.php?id=100004629788695"
+                                    class="text-gray-500 cursor-pointer hover:text-gray-700">
                                     <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round"
                                         stroke-width="2" class="w-8 h-8" viewBox="0 0 24 24">
                                         <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
@@ -635,8 +450,10 @@
                 </div>
                 <div class="bg-gray-300">
                     <div class="container px-5 py-4 mx-auto">
-                        <p class="text-sm text-gray-700 capitalize xl:text-center">Nucleus-Technologies © 2024 All rights reserved </p>
-                        <p class="text-sm text-gray-700 capitalize lg:text-center">The Palace Hall is a Trademark with Copyright 2024 The Palace Hall. </p>
+                        <p class="text-sm text-gray-700 capitalize xl:text-center">Nucleus-Technologies © 2024 All
+                            rights reserved </p>
+                        <p class="text-sm text-gray-700 capitalize lg:text-center">The Palace Hall is a Trademark with
+                            Copyright 2024 The Palace Hall. </p>
                     </div>
                 </div>
             </footer>
