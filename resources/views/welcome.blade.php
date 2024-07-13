@@ -14,7 +14,7 @@
                                          opacity-75 - Detremina la opacity Inicial
                                          hover:opacity-100 - Elimina el opacity --}}
         <div class="w-full mx-auto px-4 sm:px-6 lg:px-64 py-40 opacity-75 relative bg-center bg-no-repeat bg-cover hover:opacity-100"
-            style="background-image: url('{{ asset('img/gallery/salon16.jpg') }}')">
+            style="background-image: url('{{ asset('img/gallery/25003786-6b3c-453e-9885-5d275016dbb7.jpg') }}')">
 
 
             <div class="w-full md:w-3/4 lg:w-3/4">
