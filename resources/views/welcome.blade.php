@@ -78,7 +78,7 @@
                         src="{{ asset('img/home/DSC_3035.jpg') }}" alt=""> --}}
 
                     <a href="gallery"><img class="rounded-xl lg:h-40 w-full object-cover opacity-75"
-                            src="{{ Storage::url($article1) }}" alt=""></a>
+                            src="{{ Storage::url($article1) }}" alt="article1"></a>
 
                     <header class="mt-2">
                         <a href="gallery">
@@ -100,7 +100,7 @@
                 <figure>
                     <img class="rounded-xl lg:h-40 w-full object-cover opacity-75"
                         src="{{ Storage::url($article2) }}"
-                        alt="">
+                        alt="article2">
                     <header class="mt-2">
                         <a href="#">
                             <h1 class="text-center text-xl text-gray-700">Events</h1>
@@ -121,7 +121,7 @@
                 <figure>
                     <a href="gallery">
                         <img class="rounded-xl lg:h-40 w-full object-cover opacity-75"
-                        src="{{ Storage::url($article3) }}" alt="">
+                        src="{{ Storage::url($article3) }}" alt="article3">
                     </a>
                     <header class="mt-2">
                         <a href="gallery">
@@ -145,7 +145,7 @@
                     {{-- <img class="rounded-xl lg:h-40 w-full object-cover opacity-75"
                         src="{{ asset('img/home/DSC_3035.jpg') }}" alt=""> --}}
                     <img class="rounded-xl lg:h-40 w-full object-cover opacity-75"
-                        src="{{ Storage::url($article4) }}" alt="">
+                        src="{{ Storage::url($article4) }}" alt="article4">
 
                     <header class="mt-2">
                         <h1 class="text-center text-xl text-gray-700">Professional and Bueatifull</h1>
@@ -198,7 +198,7 @@
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-3 gap-x-6 gap-y-8">
 
             <div class="col-span-1 mt-12 opacity-75 hover:opacity-100">
-                <img src="{{ Storage::url($whereIWork) }}" class="rounded-md"
+                <img src="{{ Storage::url($whereIWork) }}" alt="whereIWork" class="rounded-md"
                     style="width:100%">
             </div>
 

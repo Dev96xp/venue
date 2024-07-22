@@ -27,6 +27,7 @@ class HomeController extends Controller
 
         $sectionxes = $pages->sectionxes;
 
+        $headImage = '';
         $article1 = '';
         $article2 = '';
         $article3 = '';
@@ -38,7 +39,7 @@ class HomeController extends Controller
         foreach ($sectionxes as $section) {
             foreach ($section->images as $image) {
                 switch ($image->location) {
-                    case 'Head Image':
+                    case 'headImage':
                         $headImage = $image->url;
                         break;
                     case 'article1':

@@ -14,7 +14,7 @@ class SectionxSeeder extends Seeder
     public function run(): void
     {
         Sectionx::create([
-            'name' => 'Home',
+            'name' => 'Head Image',
             'status' => 'ACTIVE',
             'page_id' => 1,
         ]);
@@ -34,14 +34,19 @@ class SectionxSeeder extends Seeder
             'page_id' => 1,
         ]);
         Sectionx::create([
-            'name' => 'Head Image',
+            'name' => 'Gallery',
             'status' => 'ACTIVE',
             'page_id' => 2,
         ]);
         Sectionx::create([
-            'name' => 'Gallery',
+            'name' => 'Testimonials',
             'status' => 'ACTIVE',
-            'page_id' => 2,
+            'page_id' => 3,
+        ]);
+        Sectionx::create([
+            'name' => 'About',
+            'status' => 'ACTIVE',
+            'page_id' => 4,
         ]);
     }
 }

@@ -22,7 +22,11 @@ class PageSeeder extends Seeder
             'status' => 'ACTIVE',
         ]);
         Page::create([
-            'name' => 'Page 3 - About',
+            'name' => 'Page 3 - Testimonils',
+            'status' => 'ACTIVE',
+        ]);
+        Page::create([
+            'name' => 'Page 4 - About',
             'status' => 'ACTIVE',
         ]);
     }
