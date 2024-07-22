@@ -182,10 +182,10 @@
 
                                 {{-- SEGURIDAD - PERMISO --}}
                                 {{-- @can('Account') --}}
-                                    {{-- MASTER CLASS - OJO Uso la ruta completa cuando uso route() --}}
-                                    <x-responsive-nav-link href="{{ route('account.my-account') }}">
-                                        My Account
-                                    </x-responsive-nav-link>
+                                {{-- MASTER CLASS - OJO Uso la ruta completa cuando uso route() --}}
+                                <x-responsive-nav-link href="{{ route('account.my-account') }}">
+                                    My Account
+                                </x-responsive-nav-link>
                                 {{-- @endcan --}}
 
                                 {{-- SEGURIDAD - PERMISO --}}
@@ -276,6 +276,13 @@
                     <x-responsive-nav-link href="{{ route('profile.show') }}" :active="request()->routeIs('profile.show')">
                         {{ __('Profile') }}
                     </x-responsive-nav-link>
+
+                    {{-- SEGURIDAD - PERMISO --}}
+                    {{-- @can('Account') --}}
+                    <x-responsive-nav-link href="{{ route('account.my-account') }}">
+                        My Account
+                    </x-responsive-nav-link>
+                    {{-- @endcan --}}
 
                     @can('Ver dashboard')
                         <x-responsive-nav-link href="{{ route('admin.home') }}" :active="request()->routeIs('admin.home')">
