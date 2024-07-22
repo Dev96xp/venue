@@ -28,7 +28,7 @@ class Transaction extends Model
 
         public function items()
         {
-            return $this->hasMany(item::class);
+            return $this->hasMany(Item::class);
         }
 
         // relacion UNO A MUCHOS INVERSA
