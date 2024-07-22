@@ -14,7 +14,7 @@
                 <div class="card-body">
                     <div class="flex">
                         <div class="text-lg mr-10 py-1">
-                            Packages
+                            Packages X
                         </div>
                         <div>
                             @livewire('admin.event.create-package')

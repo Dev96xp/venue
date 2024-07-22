@@ -52,6 +52,11 @@ class RouteServiceProvider extends ServiceProvider
                 ->namespace($this->namespace)
                 ->group(base_path('routes/sales.php'));
 
+            Route::middleware('web', 'auth')
+                ->name('account.')    //Las ruta va a comenzar con (account.)
+                ->prefix('account')
+                ->namespace($this->namespace)
+                ->group(base_path('routes/account.php'));
         });
     }
 }

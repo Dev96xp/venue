@@ -1,20 +1,21 @@
 <x-app-layout>
     {{-- USO: PAGINA PRINCIPAL - HOME NO 1 --}}
-
-    {{-- SECCTION 1 - Portada Background  IMAGEN PRINCIPAL --}}
+    {{-- SECCTION 1 - Head Image  IMAGEN PRINCIPAL --}}
     <section>
 
         {{-- Moño --}}
         {{-- <img style="width:50%" class="z-10 absolute bottom-0 left-0" src="{{ asset('img/home/AdobeStock_292882187.png') }}" alt=""> --}}
 
-
         {{-- py- Determina la altura de la imagen --}}
         {{-- MASTER CLASS - PARALLAX EFFECT - (bg-fixed bg-center bg-no-repeat bg-cover, EN ESTE CASO ELIMINE FIXED, PARA QUE TRABAJARA BIEN EN MOBIL)
                                          min-h-screen - OCUPA TODA LA ALTURA DE PANTALLA
                                          opacity-75 - Detremina la opacity Inicial
-                                         hover:opacity-100 - Elimina el opacity --}}
+                                         hover:opacity-100 - Elimina el opacity
         <div class="w-full mx-auto px-4 sm:px-6 lg:px-64 py-40 opacity-75 relative bg-center bg-no-repeat bg-cover hover:opacity-100"
-            style="background-image: url('{{ asset('img/gallery/25003786-6b3c-453e-9885-5d275016dbb7.jpg') }}')">
+            style="background-image: url('{{ asset('img/gallery/25003786-6b3c-453e-9885-5d275016dbb7.jpg') }}')">        --}}
+
+        <div class="w-full mx-auto px-4 sm:px-6 lg:px-64 py-40 opacity-75 relative bg-center bg-no-repeat bg-cover hover:opacity-100"
+            style="background-image: url('{{ Storage::url($headImage) }}')">
 
 
             <div class="w-full md:w-3/4 lg:w-3/4">
@@ -64,7 +65,7 @@
     </section> --}
 
 
-    {{-- SECCTION 2 - Contenido con 4 articulos --}}
+    {{-- SECCTION 2 - At your service - Contenido con 4 articulos --}}
     <section class="mt-6">
         <h1 class="text-gray-800 text-center text-4xl mb-6 font-bold"
             style="my-6 font-family: proxima-nova, sans-serif;font-weight: 800;font-style: normal">AT YOUR SERVICE</h1>
@@ -73,8 +74,11 @@
             {{-- ARTICULO 1 --}}
             <article>
                 <figure>
+                    {{-- <img class="rounded-xl lg:h-40 w-full object-cover opacity-75"     ORIGINAL - ANTES
+                        src="{{ asset('img/home/DSC_3035.jpg') }}" alt=""> --}}
+
                     <a href="gallery"><img class="rounded-xl lg:h-40 w-full object-cover opacity-75"
-                            src="{{ asset('img/home/pexels-rene-asmussen-2504968.jpg') }}" alt=""></a>
+                            src="{{ Storage::url($article1) }}" alt=""></a>
 
                     <header class="mt-2">
                         <a href="gallery">
@@ -95,7 +99,8 @@
             <article>
                 <figure>
                     <img class="rounded-xl lg:h-40 w-full object-cover opacity-75"
-                        src="{{ asset('img/home/DSC_3053.jpg') }}" alt="">
+                        src="{{ Storage::url($article2) }}"
+                        alt="">
                     <header class="mt-2">
                         <a href="#">
                             <h1 class="text-center text-xl text-gray-700">Events</h1>
@@ -116,7 +121,7 @@
                 <figure>
                     <a href="gallery">
                         <img class="rounded-xl lg:h-40 w-full object-cover opacity-75"
-                            src="{{ asset('img/home/DSC_3085.jpg') }}" alt="">
+                        src="{{ Storage::url($article3) }}" alt="">
                     </a>
                     <header class="mt-2">
                         <a href="gallery">
@@ -137,8 +142,11 @@
             {{-- ARTICULO 4 --}}
             <article>
                 <figure>
+                    {{-- <img class="rounded-xl lg:h-40 w-full object-cover opacity-75"
+                        src="{{ asset('img/home/DSC_3035.jpg') }}" alt=""> --}}
                     <img class="rounded-xl lg:h-40 w-full object-cover opacity-75"
-                        src="{{ asset('img/home/DSC_3035.jpg') }}" alt="">
+                        src="{{ Storage::url($article4) }}" alt="">
+
                     <header class="mt-2">
                         <h1 class="text-center text-xl text-gray-700">Professional and Bueatifull</h1>
                     </header>
@@ -190,7 +198,8 @@
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-3 gap-x-6 gap-y-8">
 
             <div class="col-span-1 mt-12 opacity-75 hover:opacity-100">
-                <img src="{{ asset('img/home/c31696d0-c404-4016-8c1f-d8b3744748bb.jpg') }}" class="rounded-md" style="width:100%">
+                <img src="{{ Storage::url($whereIWork) }}" class="rounded-md"
+                    style="width:100%">
             </div>
 
             <div class="col-span-2">
@@ -227,9 +236,9 @@
                                          opacity-75 - Detremina la opacity Inicial
                                          hover:opacity-100 - Elimina el opacity --}}
 
-    {{-- Imagen --}}
+    {{-- footImagen1 --}}
     <section class="mt-16 opacity-75 relative bg-cover bg-center bg-no-repeat hover:opacity-100"
-        style="background-image: url('{{ asset('img/home/DSC_3042.jpg') }}')">
+        style="background-image: url('{{ Storage::url($footImage1) }}')">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-48">
             <div class="w-full md:w-3/4 lg:w-1/2">
                 <h1 class="text-white text-bold text-6xl py-6 justify-center font-Playfair Display SC">Working with

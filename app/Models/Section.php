@@ -17,9 +17,6 @@ class Section extends Model
     const PENDING = 3;
 
     // Relacion *** UNO A MUCHOS POLIMORFICA
-
-    // Una UNA SUBCATEGORIA PUEDE TENER AHORA MUCHAS IMAGENES
-    // Tambien para App2
     public function images()
     {
         return $this->morphMany('App\Models\Image', 'imageable');
@@ -30,8 +27,6 @@ class Section extends Model
     {
         return $this->hasMany(Part::class);
     }
-
-
 
     // Relacion uno a muchos (inversa)
     public function Invitation()

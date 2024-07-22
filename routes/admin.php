@@ -17,12 +17,16 @@ use App\Http\Controllers\Admin\Subcategory\SubcategoryController;
 use App\Http\Controllers\Admin\Training\TrainingController;
 
 use App\Http\Controllers\Admin\Event\EventCalendarController;
-
+use App\Http\Controllers\Admin\Page\PageController;
 
 Route::get('', [HomeController::class, 'index'])->name('home');
 
 Route::resource('dashboard',DashboardController::class)->names('dashboard');
 Route::resource('training',TrainingController::class)->names('training');
+
+Route::resource('pages', PageController::class)->names('pages');
+Route::get('pages/{sectionx}/select_images', [PageController::class,'select_images'])->name('pages.select_images');
+Route::post('pages/{sectionx}/save_images/', [PageController::class,'save_images'])->name('pages.save_images');
 
 Route::resource('users',UserController::class)->names('users');
 Route::resource('invitations',InvitationController::class)->names('invitations');

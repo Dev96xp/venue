@@ -13,8 +13,10 @@ return new class extends Migration
     {
         Schema::create('images', function (Blueprint $table) {
             $table->id();
+            $table->integer('order_position')->default(0);
             $table->string('url');
             $table->string('model')->nullable();
+            $table->string('location')->nullable();
             // tabla polimorfica
             $table->unsignedBigInteger('imageable_id');
             $table->string('imageable_type');

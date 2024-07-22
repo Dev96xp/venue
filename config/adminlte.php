@@ -321,6 +321,21 @@ return [
             'label'       => 4,
             'label_color' => 'success',
         ],
+
+        [
+            'text' => 'Pages set',
+            'url'  => '#',
+            'icon' => 'fas fa-file-alt',
+            'submenu' => [
+                [
+                    'text'      => 'Pages',
+                    'icon'      => 'far fa-images',
+                    'route'     => 'admin.pages.index',
+                    'active'    => ['admin/pages*']
+                ],
+            ],
+        ],
+
         ['header' => 'account_settings'],
 
         [

@@ -9,8 +9,10 @@ use App\Models\Country;
 use App\Models\Detail;
 use App\Models\Feature;
 use App\Models\Invitation;
+use App\Models\page;
 use App\Models\Payment;
 use App\Models\Schedule;
+use App\Models\Sectionx;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Storage;
 
@@ -43,6 +45,9 @@ class DatabaseSeeder extends Seeder
 
         Storage::deleteDirectory('public/sections');
         Storage::makeDirectory('public/sections');
+
+        Storage::deleteDirectory('public/sectionx');
+        Storage::makeDirectory('public/sectionx');
 
         Storage::deleteDirectory('public/subcategories');
         Storage::makeDirectory('public/subcategories');
@@ -101,5 +106,8 @@ class DatabaseSeeder extends Seeder
         $this->call(VenueSeeder::class); // Crea solo 2 salones
         $this->call(StatusItemsVenueSeeder::class);  //Crea solo 4 cosas por cada salon cerado
         $this->call(ItemsVenueSeeder::class);  //Crea solo 4 cosas por cada salon cerado
+
+        $this->call(PageSeeder::class);  //Crea solo 3
+        $this->call(SectionxSeeder::class);  //Crea solo 3
     }
 }

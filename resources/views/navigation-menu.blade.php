@@ -6,12 +6,16 @@
             'route' => route('home'),
             'active' => request()->routeIs('home'),
         ],
-         [
-             'name' => 'Gallery',
-             'route' => route('gallery'),
-             'active' => request()->routeIs('gallery'),
-         ],
-
+        [
+            'name' => 'Gallery',
+            'route' => route('gallery'),
+            'active' => request()->routeIs('gallery'),
+        ],
+        [
+            'name' => 'About',
+            'route' => route('about'),
+            'active' => request()->routeIs('about'),
+        ],
         // [
         //     'name' => 'Equipment',
         //     'route' => '#',
@@ -27,11 +31,7 @@
         //     'route' => route('price'),
         //     'active' => request()->routeIs('price'),
         // ],
-        [
-            'name' => 'About',
-            'route' => '#',
-            'active' => false,
-        ],
+
         // [
         //     'name' => 'About Us',
         //     'route' => route('about'),
@@ -164,6 +164,7 @@
                                 <!-- Account Management -->
                                 <div class="block px-4 py-2 text-xs text-gray-400">
                                     {{ __('Manage Account') }}
+                                    <div class="font-bold">{{ Auth::user()->email }}</div>
                                 </div>
 
                                 <x-dropdown-link href="{{ route('profile.show') }}">
@@ -173,6 +174,14 @@
                                 {{-- <x-jet-responsive-nav-link href="{{ route('message.index') }}">
                                     Send message
                                 </x-jet-responsive-nav-link> --}}
+
+                                {{-- SEGURIDAD - PERMISO --}}
+                                {{-- @can('Account') --}}
+                                    {{-- MASTER CLASS - OJO Uso la ruta completa cuando uso route() --}}
+                                    <x-responsive-nav-link href="{{ route('account.my-account') }}">
+                                        My Account
+                                    </x-responsive-nav-link>
+                                {{-- @endcan --}}
 
                                 {{-- SEGURIDAD - PERMISO --}}
                                 @can('Ver dashboard')
