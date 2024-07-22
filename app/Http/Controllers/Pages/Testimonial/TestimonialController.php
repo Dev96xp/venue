@@ -1,22 +1,18 @@
 <?php
 
-namespace App\Http\Controllers\Account;
+namespace App\Http\Controllers\Pages\Testimonial;
 
 use App\Http\Controllers\Controller;
-use App\Models\Account;
 use Illuminate\Http\Request;
 
-class AccountController extends Controller
+class TestimonialController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $user = auth()->user();
-        $account_id = $user->account->id;
-        $account = Account::find($account_id);
-        return view('account.index',compact('account'));
+         return view('pages.testimonials.index');
     }
 
     /**

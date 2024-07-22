@@ -6,6 +6,7 @@ use App\Http\Controllers\Customer\CustomerController;
 use App\Http\Controllers\Customer\PriceController;
 use App\Http\Controllers\Gallery\GalleryController;
 use App\Http\Controllers\Pages\About\AboutController;
+use App\Http\Controllers\Pages\Testimonial\TestimonialController;
 use Gloudemans\Shoppingcart\Facades\Cart;
 use App\Livewire\Store\ShoppingCart;
 
@@ -38,6 +39,9 @@ Route::get('price', [PriceController::class, 'index'])->name('price');  // *** P
 
 // PUBLICA - Para Gallery de fotos
 Route::get('gallery', [GalleryController::class, 'index'])->name('gallery');  // *** PUBLICO ***//
+
+// PUBLICA - Testimonios
+Route::get('testimonial', [TestimonialController::class, 'index'])->name('testimonial');  // *** PUBLICO ***//
 
 // PUBLICA - Para Gallery de fotos
 Route::get('about', [AboutController::class, 'index'])->name('about');  // *** PUBLICO ***//

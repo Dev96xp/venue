@@ -12,6 +12,11 @@
             'active' => request()->routeIs('gallery'),
         ],
         [
+            'name' => 'Testimonials',
+            'route' => route('testimonial'),
+            'active' => request()->routeIs('testimonial'),
+        ],
+        [
             'name' => 'About',
             'route' => route('about'),
             'active' => request()->routeIs('about'),

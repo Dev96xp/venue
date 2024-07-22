@@ -3,7 +3,7 @@
         <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:pb-24">
             <div class="max-w-xl">
                 <h1 class="text-2xl font-bold tracking-tight text-gray-700 sm:text-3xl">My Account - Order history</h1>
-                <h1 class="text-gray-500">XXXX-XXXX-{{ substr($account->acc_id,-4) }} {{ auth()->user()->name }}</h1>
+                <h1 class="text-gray-500">XXXX-XXXX-{{ substr($account->acc_id, -4) }} {{ auth()->user()->name }}</h1>
 
                 <p class="mt-2 text-sm text-gray-500">Check the status of recent orders, manage returns, and download
                     invoices.</p>
@@ -42,7 +42,7 @@
                                                     $total = $total + $item->price;
                                                 @endphp
                                             @endforeach
-                                            $ {{ number_format($total,2) }}
+                                            $ {{ number_format($total, 2) }}
                                         </dd>
                                     </div>
                                 </dl>
@@ -80,22 +80,23 @@
                                                             alt="Details"
                                                             class="mr-6 h-16 w-16 rounded object-cover object-center">
                                                     @else
-                                                        <img src="{{ asset('img/home/DSC_3035.jpg') }}"
-                                                            alt="Details"
+                                                        <img src="{{ asset('img/home/DSC_3035.jpg') }}" alt="Details"
                                                             class="mr-6 h-16 w-16 rounded object-cover object-center">
                                                     @endif
                                                     <div>
                                                         <div class="font-medium text-gray-900">{{ $item->name }}
 
                                                         </div>
-                                                        <div class="mt-1 sm:hidden">$ {{ number_format($item->price,2) }}</div>
+                                                        <div class="mt-1 sm:hidden">$
+                                                            {{ number_format($item->price, 2) }}</div>
                                                     </div>
                                                 </div>
                                             </td>
 
 
 
-                                            <td class="hidden px-3 py-5 text-right text-sm text-gray-500 sm:table-cell">$ {{ number_format($item->price,2) }} </td>
+                                            <td class="hidden px-3 py-5 text-right text-sm text-gray-500 sm:table-cell">
+                                                $ {{ number_format($item->price, 2) }} </td>
                                             <td class="hidden py-4 pr-8 sm:table-cell">Delivered Jan 25, 2021</td>
                                             <td class="whitespace-nowrap py-6 text-right font-medium">
                                                 <a href="#" class="text-indigo-600">View<span
