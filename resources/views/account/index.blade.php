@@ -19,7 +19,8 @@
                             <div
                                 class="rounded-lg mt-10 bg-gray-200 px-4 py-6 sm:flex sm:items-center sm:justify-between sm:space-x-6 sm:px-6 lg:space-x-8">
                                 <dl
-                                    class="flex-auto space-y-6 divide-y divide-gray-200 text-sm text-gray-600 sm:grid sm:grid-cols-3 sm:gap-x-6 sm:space-y-0 sm:divide-y-0 lg:w-1/2 lg:flex-none lg:gap-x-8">
+                                    class="flex-auto space-y-6 divide-y divide-gray-200 text-sm text-gray-600 sm:grid sm:grid-cols-4 sm:gap-x-6 sm:space-y-0 sm:divide-y-0 lg:w-1/2 lg:flex-none lg:gap-x-8">
+
                                     <div class="flex justify-between sm:block">
                                         <dt class="font-medium text-gray-900">Date placed</dt>
                                         <dd class="sm:mt-1">
@@ -27,24 +28,41 @@
                                                 datetime="2021-01-22">{{ \Carbon\Carbon::parse($transaction->created_at)->toFormattedDateString('l j F') }}</time>
                                         </dd>
                                     </div>
-                                    <div class="flex justify-between pt-6 sm:block sm:pt-0">
-                                        <dt class="font-medium text-gray-900">Order number</dt>
-                                        <dd class="sm:mt-1 font-bold text-purple-500">{{ $transaction->id }}</dd>
-                                    </div>
-                                    <div class="flex justify-between pt-6 font-medium text-gray-900 sm:block sm:pt-0">
+
+                                    <div class="flex justify-between pt-0 font-medium text-gray-900 sm:block sm:pt-0">
                                         <dt>Total amount</dt>
                                         <dd class="sm:mt-1">
                                             @php
                                                 $total = 0;
+                                                $payments = 0;
                                             @endphp
                                             @foreach ($transaction->items as $item)
                                                 @php
-                                                    $total = $total + $item->price;
+                                                    if ($item->status == 3) {
+                                                        $total = $total + $item->price;
+                                                        $payments = $payments + $item->payment;
+                                                    }
                                                 @endphp
                                             @endforeach
                                             $ {{ number_format($total, 2) }}
                                         </dd>
                                     </div>
+
+                                    <div class="flex justify-between pt-0 sm:block sm:pt-0">
+                                        <dt class="font-medium text-gray-900">Payments</dt>
+                                        <dd class="sm:mt-1 font-bold text-purple-500">$
+                                            {{ number_format($payments, 2) }}</dd>
+                                    </div>
+
+                                    <div class="flex justify-between pt-0 sm:block sm:pt-0">
+                                        <dt class="font-medium text-gray-900">Order number</dt>
+                                        <dd class="sm:mt-1 font-bold text-purple-500">{{ $transaction->id }}</dd>
+                                    </div>
+
+
+
+
+
                                 </dl>
                                 <a href="#"
                                     class="mt-6 flex w-full items-center justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:mt-0 sm:w-auto">
@@ -72,38 +90,53 @@
                                 <tbody class="divide-y divide-gray-200 border-b border-gray-200 text-sm sm:border-t">
 
                                     @foreach ($transaction->items as $item)
-                                        <tr>
-                                            <td class="py-4 pr-8">
-                                                <div class="flex items-center">
-                                                    @if ($item->images->count())
-                                                        <img src="{{ Storage::url($item->images->first()->url) }}"
-                                                            alt="Details"
-                                                            class="mr-6 h-16 w-16 rounded object-cover object-center">
-                                                    @else
-                                                        <img src="{{ asset('img/home/DSC_3035.jpg') }}" alt="Details"
-                                                            class="mr-6 h-16 w-16 rounded object-cover object-center">
-                                                    @endif
-                                                    <div>
-                                                        <div class="font-medium text-gray-900">{{ $item->name }}
+                                        @if ($item->status == 3)
+                                            <tr>
+                                                <td class="py-4 pr-8">
+                                                    <div class="flex items-center">
+                                                        @if ($item->images->count())
+                                                            <img src="{{ Storage::url($item->images->first()->url) }}"
+                                                                alt="Details"
+                                                                class="mr-6 h-16 w-16 rounded object-cover object-center">
+                                                        @else
+                                                            <img src="{{ asset('img/home/DSC_3035.jpg') }}"
+                                                                alt="Details"
+                                                                class="mr-6 h-16 w-16 rounded object-cover object-center">
+                                                        @endif
+                                                        <div>
+                                                            <div class="font-medium text-gray-900">{{ $item->name }}
 
+                                                            </div>
+                                                            @if ($item->price != 0)
+                                                                <div class="mt-1 sm:hidden">$
+                                                                    {{ number_format($item->price, 2) }}</div>
+                                                            @endif
+
+                                                            @if ($item->payment != 0)
+                                                                <div class="mt-1 sm:hidden">$
+                                                                    {{ number_format($item->payment, 2) }}</div>
+                                                            @endif
                                                         </div>
-                                                        <div class="mt-1 sm:hidden">$
-                                                            {{ number_format($item->price, 2) }}</div>
                                                     </div>
-                                                </div>
-                                            </td>
+                                                </td>
 
 
 
-                                            <td class="hidden px-3 py-5 text-right text-sm text-gray-500 sm:table-cell">
-                                                $ {{ number_format($item->price, 2) }} </td>
-                                            <td class="hidden py-4 pr-8 sm:table-cell">Delivered Jan 25, 2021</td>
-                                            <td class="whitespace-nowrap py-6 text-right font-medium">
-                                                <a href="#" class="text-indigo-600">View<span
-                                                        class="hidden lg:inline"> Product</span><span class="sr-only">,
-                                                        Machined Pen and Pencil Set</span></a>
-                                            </td>
-                                        </tr>
+                                                <td
+                                                    class="hidden px-3 py-5 text-right text-sm text-gray-500 sm:table-cell">
+                                                    $ {{ number_format($item->price, 2) }} </td>
+                                                <td
+                                                    class="hidden px-3 py-5 text-right text-sm text-gray-500 sm:table-cell">
+                                                    $ {{ number_format($item->payment, 2) }} </td>
+                                                <td class="hidden py-4 pr-8 sm:table-cell">Delivered Jan 25, 2021</td>
+                                                <td class="whitespace-nowrap py-6 text-right font-medium">
+                                                    <a href="#" class="text-indigo-600">View<span
+                                                            class="hidden lg:inline"> Product</span><span
+                                                            class="sr-only">,
+                                                            Machined Pen and Pencil Set</span></a>
+                                                </td>
+                                            </tr>
+                                        @endif
                                     @endforeach
 
 
