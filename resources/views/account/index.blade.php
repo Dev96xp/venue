@@ -19,7 +19,7 @@
                             <div
                                 class="rounded-lg mt-10 bg-gray-200 px-4 py-6 sm:flex sm:items-center sm:justify-between sm:space-x-6 sm:px-6 lg:space-x-8">
                                 <dl
-                                    class="flex-auto space-y-6 divide-y divide-gray-200 text-sm text-gray-600 sm:grid sm:grid-cols-4 sm:gap-x-6 sm:space-y-0 sm:divide-y-0 lg:w-1/2 lg:flex-none lg:gap-x-8">
+                                    class="flex-auto space-y-6 divide-y divide-gray-200 text-sm text-gray-600 sm:grid sm:grid-cols-5 sm:gap-x-6 sm:space-y-0 sm:divide-y-0 lg:w-1/2 lg:flex-none lg:gap-x-8">
 
                                     <div class="flex justify-between sm:block">
                                         <dt class="font-medium text-gray-900">Date placed</dt>
@@ -35,31 +35,39 @@
                                             @php
                                                 $total = 0;
                                                 $payments = 0;
+                                                $subtotal = 0;
                                             @endphp
                                             @foreach ($transaction->items as $item)
                                                 @php
                                                     if ($item->status == 3) {
-                                                        $total = $total + $item->price;
+                                                        // $total = $total + $item->price;
+                                                        $subtotal = $subtotal + $item->price;
                                                         $payments = $payments + $item->payment;
                                                     }
                                                 @endphp
                                             @endforeach
+                                            @php
+                                                $total = $subtotal * 1.07;
+                                            @endphp
                                             $ {{ number_format($total, 2) }}
                                         </dd>
                                     </div>
 
                                     <div class="flex justify-between pt-0 sm:block sm:pt-0">
                                         <dt class="font-medium text-gray-900">Payments</dt>
-                                        <dd class="sm:mt-1 font-bold text-purple-500">$
+                                        <dd class="sm:mt-1 font-bold text-blue-500">$
                                             {{ number_format($payments, 2) }}</dd>
                                     </div>
 
                                     <div class="flex justify-between pt-0 sm:block sm:pt-0">
-                                        <dt class="font-medium text-gray-900">Order number</dt>
-                                        <dd class="sm:mt-1 font-bold text-purple-500">{{ $transaction->id }}</dd>
+                                        <dt class="font-medium text-gray-900">Balance</dt>
+                                        <dd class="sm:mt-1 font-bold text-gray-800">$ {{ number_format($total - $payments, 2) }}</dd>
                                     </div>
 
-
+                                    <div class="flex justify-between pt-0 sm:block sm:pt-0">
+                                        <dt class="font-medium text-gray-900">Envoice</dt>
+                                        <dd class="sm:mt-1 font-bold text-gray-800">{{ $transaction->id }}</dd>
+                                    </div>
 
 
 
@@ -79,8 +87,11 @@
                                 <thead class="sr-only text-left text-sm text-gray-500 sm:not-sr-only">
                                     <tr>
                                         <th scope="col" class="py-3 pr-8 font-normal sm:w-2/5 lg:w-1/3">Product</th>
-                                        <th scope="col" class="hidden w-1/5 py-3 pr-8 font-normal sm:table-cell">
+                                        <th scope="col" class="hidden w-1/5 py-3 pr-8 font-normal text-right sm:table-cell">
                                             Price
+                                        </th>
+                                        <th scope="col" class="hidden w-1/5 py-3 pr-8 font-normal text-right sm:table-cell">
+                                            Payment
                                         </th>
                                         <th scope="col" class="hidden py-3 pr-8 font-normal sm:table-cell">Status
                                         </th>
@@ -124,10 +135,19 @@
 
                                                 <td
                                                     class="hidden px-3 py-5 text-right text-sm text-gray-500 sm:table-cell">
-                                                    $ {{ number_format($item->price, 2) }} </td>
+                                                    @if ($item->price != 0)
+                                                        $ {{ number_format($item->price, 2) }}
+                                                    @endif
+
+                                                </td>
+
                                                 <td
                                                     class="hidden px-3 py-5 text-right text-sm text-gray-500 sm:table-cell">
-                                                    $ {{ number_format($item->payment, 2) }} </td>
+                                                    @if ($item->payment != 0)
+                                                        $ {{ number_format($item->payment, 2) }}
+                                                    @endif
+                                                </td>
+
                                                 <td class="hidden py-4 pr-8 sm:table-cell">Delivered Jan 25, 2021</td>
                                                 <td class="whitespace-nowrap py-6 text-right font-medium">
                                                     <a href="#" class="text-indigo-600">View<span
