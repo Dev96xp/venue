@@ -65,7 +65,7 @@
                                     </div>
 
                                     <div class="flex justify-between pt-0 sm:block sm:pt-0">
-                                        <dt class="font-medium text-gray-900">Envoice</dt>
+                                        <dt class="font-medium text-gray-900">Invoice</dt>
                                         <dd class="sm:mt-1 font-bold text-gray-800">{{ $transaction->id }}</dd>
                                     </div>
 
