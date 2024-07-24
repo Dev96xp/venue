@@ -14,22 +14,22 @@ class PaymentSeeder extends Seeder
     public function run(): void
     {
         Payment::create([
-            'name' => 'Cash',
+            'name' => 'Payment Cash',
             'code' => 'CA',
             'signo' => false
         ]);
         Payment::create([
-            'name' => 'Visa',
+            'name' => 'Payment Visa',
             'code' => 'VI',
             'signo' => false
         ]);
         Payment::create([
-            'name' => 'Check',
+            'name' => 'Payment Check',
             'code' => 'CH',
             'signo' => false
         ]);
         Payment::create([
-            'name' => 'Credict Card',
+            'name' => 'Payment Credict Card',
             'code' => 'CR',
             'signo' => false
         ]);
