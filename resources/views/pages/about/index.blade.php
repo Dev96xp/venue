@@ -358,7 +358,7 @@
                     </svg>
                 </a>
             </div>
-            <p class="mt-10 text-center text-xs leading-5 text-gray-500">&copy; 2024 THE PALACE HALL LLLC, Inc. All rights
+            <p class="mt-10 text-center text-xs leading-5 text-gray-500">&copy; 2024 THE PALACE HALL LLC, Inc. All rights
                 reserved.</p>
         </footer>
     </div>
