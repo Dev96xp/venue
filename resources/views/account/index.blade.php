@@ -114,6 +114,7 @@
                                                                 alt="Details"
                                                                 class="mr-6 h-16 w-16 rounded object-cover object-center">
                                                         @endif
+                                                        {{-- Para Mobiles --}}
                                                         <div>
                                                             <div class="font-medium text-gray-900">{{ $item->name }}
 
@@ -128,11 +129,12 @@
                                                                     {{ number_format($item->payment, 2) }}</div>
                                                             @endif
                                                         </div>
+
                                                     </div>
                                                 </td>
 
 
-
+                                                {{-- Para Computadoras --}}
                                                 <td
                                                     class="hidden px-3 py-5 text-right text-sm text-gray-500 sm:table-cell">
                                                     @if ($item->price != 0)

@@ -1,3 +1,4 @@
+
 <div>
     {{-- header --}}
     <section class="card">
@@ -36,9 +37,9 @@
 
     <div class="card">
 
-        <div class="py-2 px-2 grid sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-5 gap-2">
+        <div class="py-2 px-2 grid grid-cols-1 md:grid-cols-1 lg:grid-cols-5 gap-2">
             {{-- LISTA DE ITEMS PARA ESTA FACTURA --}}
-            <div class="col-span-3 mr-6">
+            <div class="col-span-3">
 
                 <div x-data="{ open: false }"> {{-- 1) Se declara la variable: open --}}
 
@@ -51,9 +52,9 @@
                     {{-- Lista de FACTURAS --}}
                     {{-- 3) Segun el valor de la variable open, se muestra o se oculta esta seccion (este div) --}}
                     <div x-show="open">
-                        <div class="grid sm:grid-cols-1 lg:grid-cols-4 bg-white rounde-lg shadow-lg px-2 py-4 mb-4">
+                        <div class="grid grid-cols-1 lg:grid-cols-4 bg-white rounde-lg shadow-lg px-2 py-4 mb-4">
 
-                    {{-- Lista de TODAS FACTURAS --}}
+                            {{-- Lista de TODAS FACTURAS --}}
                             <div class="col-span-2 mr-4">
                                 <table class="table table-striped text-sm">
                                     <thead>
@@ -98,10 +99,8 @@
                                 </table>
                             </div>
 
-                    {{-- AGREGAR UNA FACTURA - Add factura --}}
-                            <div class="col-span-2">
-
-                                <div class="col-span-1">
+                            {{-- AGREGAR UNA FACTURA - Add factura --}}
+                            <div class="col-span-1">
                                     {{-- SOLO SI EXISTE UNA CUENTA DEFINIDA --}}
                                     @isset($user->account)
                                         <a class="btn btn-blue w-40" wire:click="add_invoice({{ $user }})">Add h
@@ -109,8 +108,6 @@
                                     @else
                                         <a class="btn btn-blue w-40" wire:click="">Add Invoice</a>
                                     @endisset
-                                </div>
-
                             </div>
 
                         </div>
@@ -124,25 +121,24 @@
                     <table class="table table-striped text-md"> {{-- Tamano del texto: (text-md) --}}
                         <thead>
                             <tr>
-                                <th>ID</th>
-                                <th>Qty</th>
+                                <th class="hidden sm:table-cell">ID</th>
+                                <th class="hidden sm:table-cell">Qty</th>
                                 <th>Items</th>
-                                <th class="text-right">Price</th>
-                                <th class="text-right">Subtotal</th>
-                                <th class="text-right">Pago</th>
-                                <th>Status</th>
+                                <th class="text-right hidden sm:table-cell">Price</th>
+                                <th class="text-right hidden sm:table-cell">Subtotal</th>
+                                <th class="text-right hidden sm:table-cell">Pago</th>
+                                <th class="hidden sm:table-cell">Status</th>
                             </tr>
                         </thead>
                         <tbody>
                             @foreach ($items as $item)
                                 <tr>
                                     {{-- Sku --}}
-                                    <td class="py-1">
+                                    <td>
                                         <div class="flex items-center">
 
                                             {{-- IMAGEN DEl PRODUCTO XP --}}
-                                            <div class="flex-shrink-0 h-10 w-10">
-
+                                            <div class="h-10 w-10">
                                                 {{-- Si existe la variable $item y ademas tiene una imagen relaicionada, que imprima, de lo contrario q lo ignore --}}
 
                                                 @if ($item->images->count())
@@ -155,22 +151,18 @@
                                                         src="https://images.pexels.com/photos/6147134/pexels-photo-6147134.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260"
                                                         alt="">
                                                 @endif
-
-
                                             </div>
 
 
-                                            <div class="ml-4">
-                                                <a
-                                                    {{--ojo###  href="{{ route('admin.tuxedos.index', [$user]) }}">{{ $item->sku }}</a> --}}
-                                                    href="">{{ $item->sku }}</a>
+                                            <div class="ml-4 hidden sm:table-cell">
+                                                <a {{-- ojo###  href="{{ route('admin.tuxedos.index', [$user]) }}">{{ $item->sku }}</a> --}} href="">{{ $item->sku }}</a>
                                             </div>
 
                                         </div>
 
                                     </td>
                                     {{-- Qty --}}
-                                    <td class="py-1">
+                                    <td class="py-1 hidden sm:table-cell">
                                         <div>
                                             {{ $item->qty }}
                                         </div>
@@ -179,8 +171,6 @@
                                     {{-- Name del --}}
                                     <td class="py-1">
                                         <div>
-
-
                                             @if ($item->requisition)
                                                 <div>
                                                     <a class="font-bold"
@@ -191,9 +181,23 @@
                                                     SPECIAL ORDER
                                                 </div>
                                             @else
-                                                {{ Str::limit($item->name, 35) }}
-                                            @endif
+                                                <div>
+                                                    <div>
+                                                        {{ Str::limit($item->name, 35) }}
+                                                    </div>
+                                                    @if ($item->price != 0)
+                                                        <div class="sm:hidden text-right"> {{-- sm:hidden - Lo oculta cuando es large la pantalla --}}
+                                                            <p> $ {{ number_format($item->qty * $item->price, 2) }}</p>
+                                                        </div>
+                                                    @endif
+                                                    @if ($item->payment != 0)
+                                                        <div class="sm:hidden text-right"> {{-- sm:hidden - Lo oculta cuando es large la pantalla --}}
+                                                            <p> $ {{ number_format($item->payment, 2) }}</p>
+                                                        </div>
+                                                    @endif
 
+                                                </div>
+                                            @endif
 
 
                                             @if ($item->color != 'none' || $item->size || $item->bust || $item->waist)
@@ -212,23 +216,22 @@
                                         </div>
                                     </td>
 
-
                                     {{-- Qty --}}
-                                    <td class="py-1">
+                                    <td class="py-1 hidden sm:table-cell">
                                         <div class="text-right">
                                             <p> $ {{ $item->price }}</p>
                                         </div>
                                     </td>
 
                                     {{-- Qty --}}
-                                    <td class="py-1">
+                                    <td class="py-1 hidden sm:table-cell">
                                         <div class="text-right">
                                             <p> $ {{ $item->qty * $item->price }}</p>
                                         </div>
                                     </td>
 
                                     {{-- Qty --}}
-                                    <td class="py-1">
+                                    <td class="py-1 hidden sm:table-cell">
                                         <div class="text-right">
                                             @switch($item->status)
                                                 @case(3)
@@ -245,11 +248,9 @@
                                     </td>
 
 
-                                    {{-- Status --}}
-                                    <td class="py-1">
-                                        {{-- <button class="btn btn-danger btn-xs"
-                                            wire:click="delete_item({{ $item }})">X</button> --}}
-                                        <button class="btn btn-danger btn-xs"
+                                    {{-- Button - Delete(hide) --}}
+                                    <td class="pt-2">
+                                        <button class="btn btn-danger btn-xs px-2 py-1"
                                             wire:click="hide_item({{ $item }})">X</button>
                                     </td>
 
@@ -342,7 +343,8 @@
                                 {{-- Print Invoice - si sirve pero solo imprime sobre hoja de impresora normal,
                                     OJO este reporte se logra imprimir usando un controlador y no un componente de livewire --}}
 
-                                <a class="btn btn-blue w-full" href="{{ route('admin.pos.prninvoice', $transaction_id) }}"
+                                <a class="btn btn-blue w-full"
+                                    href="{{ route('admin.pos.prninvoice', $transaction_id) }}"
                                     class="text-indigo-600 hover:text-indigo-900">Print</a>
                             </div>
 
@@ -362,22 +364,23 @@
             </div>
 
             {{-- ***  LISTA DE ITEMS(productos) *** --}}
-            <div class="col-span-2 mr-6" x-data>
+            <div class="col-span-2" x-data>
 
-                <div class="bg-white rounde-lg shadow-lg px-4 py-2 mb-4">
+                <div class="bg-white rounde-lg shadow-lg px-2 py-2 mb-2">
 
-                    {{-- Buscador de productos--}}
-                    <div class="px-2 py-2 flex items-center gap-6">
+                    {{-- Buscador de productos --}}
+                    <div class="px-2 py-2 flex items-center">
 
-                        <input wire:keydown="limpiar_page" wire:model="search" class="form-control flex-1 shadow-sm" placeholder="Producto ...">
+                        <input wire:keydown="limpiar_page" wire:model="search" class="form-control flex-1 shadow-sm"
+                            placeholder="Producto ...">
                         {{-- <input wire:keydown="limpiar_page" wire:model="search" class="form-input flex-1 shadow-sm" placeholder="Ingrese el nombre de un curso...">  ORIGINAL --}}
 
-                       {{-- ojo### <a class="btn btn-danger ml-2" href="{{ route('admin.products.create') }}">Crear producto</a> --}}
+                        {{-- ojo### <a class="btn btn-danger ml-2" href="{{ route('admin.products.create') }}">Crear producto</a> --}}
 
 
                         {{-- OJO, ojo, ojo  MASTER CLASS - esto haceposible ver el modal para agregar una orden especial? --}}
                         {{-- MODAL PARA CREA ORDEN ESPECIAL --}}
-                    {{-- ojo###   @livewire('admin.pos.create-special-order') --}}
+                        {{-- ojo###   @livewire('admin.pos.create-special-order') --}}
 
                     </div>
 
@@ -385,18 +388,13 @@
                     <table class="table table-striped text-md"> {{-- Tamano del texto: (text-md) --}}
                         <thead>
                             <tr>
-                                <th>ID</th>
                                 <th>Product</th>
-                                <th>Price</th>
-                                <th>Category</th>
                             </tr>
                         </thead>
 
                         <tbody>
                             @foreach ($products as $product)
                                 <tr>
-
-                                    {{-- Sku --}}
                                     <td class="py-1">
                                         <div class="flex items-center">
 
@@ -422,7 +420,7 @@
 
                                             </div>
 
-                                            <div class="ml-4">
+                                            <div class="ml-4 hidden sm:table-cell">
                                                 {{ $product->sku }}
                                             </div>
 
@@ -433,15 +431,15 @@
                                     {{-- Name --}}
                                     <td class="py-1">
                                         <div>
-                                            {{ Str::limit($product->name, 20) }}
-                                     {{--       <p class="text-xs"> {{ $product->category->name }} /
-                                                {{ $product->subcategory->name }}</p>
-                                                --}}
+                                            {{ Str::limit($product->name, 30) }}
+
+                                            <div class=" text-right mt-1 sm:hidden">
+                                                <p> $ {{ $product->price }}</p>
+                                            </div>
                                         </div>
                                     </td>
 
-                                    {{-- Qty --}}
-                                    <td class="py-1">
+                                    <td class="py-1 hidden sm:table-cell">
                                         <div class="text-right">
                                             <p> $ {{ $product->price }}</p>
                                         </div>
@@ -450,20 +448,11 @@
                                     {{-- Add Item -- ORIGINAL - --}}
                                     <td class="py-1">
                                         <div class="col-span-1">
-                                            <a class="btn btn-blue w-full"
+                                            <a class="btn btn-blue w-full py-1 px-2"
                                                 wire:click="add_item({{ $product->id }})">Add</a>
                                         </div>
                                     </td>
 
-
-                                    {{-- Add Item NEW --}}
-                                    {{-- <td class="py-1">
-                                        <div class="col-span-1">
-                                            <a class="btn btn-blue w-full"
-                                                sweetalert2 paso 2/3
-                                                wire:click="$emit('add_itemx', [{{ $product->id }}, {{$user->id}}, {{ $transaction_id }}])">Add</a>
-                                        </div>
-                                    </td> --}}
                                 </tr>
                             @endforeach
 
