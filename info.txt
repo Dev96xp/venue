@@ -1,3 +1,5 @@
+Instale Spatie Laravel Backup :https://spatie.be/docs/laravel-backup/v8/installation-and-setup
+
 Instale: https://image.intervention.io/v3/introduction/installation, para cambiar el tamaño de la imagen
 Use a. composer require intervention/image-laravel
 Use b. php artisan vendor:publish --provider="Intervention\Image\Laravel\ServiceProvider"

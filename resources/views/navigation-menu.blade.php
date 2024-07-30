@@ -185,7 +185,7 @@
                                 {{-- SEGURIDAD - PERMISO --}}
                                 {{-- @can('Account') --}}
                                 {{-- MASTER CLASS - OJO Uso la ruta completa cuando uso route() --}}
-                                <x-responsive-nav-link href="{{ route('account.my-account') }}">
+                                <x-responsive-nav-link class="text-sm" href="{{ route('account.my-account') }}">
                                     My Account
                                 </x-responsive-nav-link>
                                 {{-- @endcan --}}
@@ -193,7 +193,7 @@
                                 {{-- SEGURIDAD - PERMISO --}}
                                 @can('Ver dashboard')
                                     {{-- MASTER CLASS - OJO Uso la ruta completa cuando uso route() --}}
-                                    <x-responsive-nav-link href="{{ route('admin.home') }}">
+                                    <x-responsive-nav-link class="text-sm" href="{{ route('admin.home') }}">
                                         Administrator
                                     </x-responsive-nav-link>
                                 @endcan
@@ -281,13 +281,13 @@
 
                     {{-- SEGURIDAD - PERMISO --}}
                     {{-- @can('Account') --}}
-                    <x-responsive-nav-link href="{{ route('account.my-account') }}">
+                    <x-responsive-nav-link class="text-sm" href="{{ route('account.my-account') }}">
                         My Account
                     </x-responsive-nav-link>
                     {{-- @endcan --}}
 
                     @can('Ver dashboard')
-                        <x-responsive-nav-link href="{{ route('admin.home') }}" :active="request()->routeIs('admin.home')">
+                        <x-responsive-nav-link class="text-sm" href="{{ route('admin.home') }}" :active="request()->routeIs('admin.home')">
                             Administrador
                         </x-responsive-nav-link>
                     @endcan

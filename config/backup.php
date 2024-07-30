@@ -102,6 +102,17 @@ return [
          */
         'database_dump_file_timestamp_format' => null,
 
+
+        /* AGREGUE ESTO PORQUE LE FALTABA, NO SE PORQUE PERO YA TRABAJA  . . . ojo ojo
+         * The base of the dump filename, either 'database' or 'connection'
+         *
+         * If 'database' (default), the dumped filename will contain the database name.
+         * If 'connection', the dumped filename will contain the connection name.
+         */
+        'database_dump_filename_base' => 'database',
+
+
+
         /*
          * The file extension used for the database dump files.
          *
@@ -146,13 +157,21 @@ return [
              * The disk names on which the backups will be stored.
              */
 
-            //  Lo modifique para realizar varios tipos de backups - - OJO OJO
+            //  Lo modifique para realizar varios tipos de backups - - - - - -  - OJO OJO
 
+            'disks' => [
+                'local',
+                'public'
+            ],
+
+            /*
             'disks' => [
                 'local',
                 'public',
                 'do'
             ],
+            */
+
         ],
 
         /*

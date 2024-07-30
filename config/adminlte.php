@@ -323,12 +323,12 @@ return [
         ],
 
         [
-            'text' => 'Pages set',
+            'text' => 'Pages',
             'url'  => '#',
             'icon' => 'fas fa-file-alt',
             'submenu' => [
                 [
-                    'text'      => 'Pages',
+                    'text'      => 'Pages Config',
                     'icon'      => 'far fa-images',
                     'route'     => 'admin.pages.index',
                     'active'    => ['admin/pages*']
