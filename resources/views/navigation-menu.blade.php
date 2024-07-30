@@ -21,22 +21,24 @@
             'route' => route('about'),
             'active' => request()->routeIs('about'),
         ],
-        // [
-        //     'name' => 'Equipment',
-        //     'route' => '#',
-        //     'active' => false,
-        // ],
-        // [
-        //     'name' => 'Invitation',
-        //     'route' => route('my-invite'),
-        //     'active' => request()->routeIs('my-invite'),
-        // ],
-        // [
-        //     'name' => 'Price',
-        //     'route' => route('price'),
-        //     'active' => request()->routeIs('price'),
-        // ],
+        /*
+         [
+             'name' => 'Equipment',
+             'route' => '#',
+             'active' => false,
+         ],
 
+         [
+             'name' => 'Invitation',
+             'route' => route('my-invite'),
+             'active' => request()->routeIs('my-invite'),
+         ],
+         [
+             'name' => 'Price',
+             'route' => route('price'),
+             'active' => request()->routeIs('price'),
+         ],
+*/
         // [
         //     'name' => 'About Us',
         //     'route' => route('about'),

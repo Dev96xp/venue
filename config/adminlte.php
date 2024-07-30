@@ -454,6 +454,21 @@ return [
             ],
         ],
         [
+            'text'        => 'CORTE DE CAJA',
+            'icon'        => 'fa-solid fa-boxes-packing',
+            'icon_color'  => 'blue',
+            'submenu'     => [
+
+                [
+                    'text'        => 'In/Out',
+                    'route'       => 'admin.corte.index',  // La ruta ala que apunta
+                    'icon'        => 'fa-solid fa-box-archive',
+                    'icon_color'  => 'blue',
+                ],
+
+            ]
+        ],
+        [
             'text' => 'Training',
             'icon' => 'fas fa-fw fa-user-cog',
             'route'     => 'admin.training.index',

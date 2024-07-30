@@ -15,6 +15,7 @@ use App\Http\Controllers\Admin\Event\EventController;
 use App\Http\Controllers\Admin\Product\ProductController;
 use App\Http\Controllers\Admin\Subcategory\SubcategoryController;
 use App\Http\Controllers\Admin\Training\TrainingController;
+use App\Http\Controllers\Admin\Book\BookController;
 
 use App\Http\Controllers\Admin\Event\EventCalendarController;
 use App\Http\Controllers\Admin\Page\PageController;
@@ -64,6 +65,12 @@ Route::get('events/{event_id}/print_report', [EventController::class,'print_repo
 Route::get('configuration/event', [ConfigurationEventController::class,'index'])->name('configuration.event.index');
 Route::get('schedule', [EventCalendarController::class,'index'])->name('schedule.index');
 
+
 // Route::get('products/index/{brand?}/{category?}', [ProductController::class,'index'])->middleware('can:Product Index')->name('products.index'); ORIGINAL
 Route::get('products/index/{brand?}/{category?}', [ProductController::class,'index'])->name('products.index'); //TEMPORAL
+
+
+// Corte de Caja
+Route::get('corte/index', [BookController::class,'index'])->name('corte.index');
+Route::get('corte/prnreport/{store_id}/{date1?}/{date2?}/{radio_select?}', [BookController::class,'prnreport'])->name('corte.prnreport');
 
