@@ -161,7 +161,8 @@ return [
 
             'disks' => [
                 'local',
-                'public'
+                'public',
+                'do'
             ],
 
             /*
