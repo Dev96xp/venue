@@ -6,7 +6,7 @@
         <h2 class="text-right text-2xl">Invoice: {{ Str::limit($transaction_id, 12) }}</h2>
 
         <h2 class="text-left text-md">Client:</h2>
-        <h2 class="text-left">{{ $user->name }} - {{ $user->phone }}
+        <h2 class="text-left"><span class="font-bold text-lg">{{ $user->name }}</span> - {{ $user->phone }}
         </h2>
         <div class="flex flex-row gap-10">
             <div class="basis-1/4">{{ $user->address }},
