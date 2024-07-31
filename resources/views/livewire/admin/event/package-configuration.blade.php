@@ -53,7 +53,7 @@
                                         <td>{{ $package->id }}</td>
                                         <td>{{ $package->code }}</td>
 
-                                        <td class="py-1 cursor-pointer"
+                                        <td class="cursor-pointer"
                                             wire:click="select_package({{ $package }})">
                                             <div class="font-bold">{{ $package->name }}</div>
                                         </td>

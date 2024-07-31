@@ -185,17 +185,17 @@
                                 {{-- SEGURIDAD - PERMISO --}}
                                 {{-- @can('Account') --}}
                                 {{-- MASTER CLASS - OJO Uso la ruta completa cuando uso route() --}}
-                                <x-responsive-nav-link class="text-sm" href="{{ route('account.my-account') }}">
+                                <x-dropdown-link href="{{ route('account.my-account') }}">
                                     My Account
-                                </x-responsive-nav-link>
+                                </x-dropdown-link>
                                 {{-- @endcan --}}
 
                                 {{-- SEGURIDAD - PERMISO --}}
                                 @can('Ver dashboard')
                                     {{-- MASTER CLASS - OJO Uso la ruta completa cuando uso route() --}}
-                                    <x-responsive-nav-link class="text-sm" href="{{ route('admin.home') }}">
+                                    <x-dropdown-link href="{{ route('admin.home') }}">
                                         Administrator
-                                    </x-responsive-nav-link>
+                                    </x-dropdown-link>
                                 @endcan
 
                                 @if (Laravel\Jetstream\Jetstream::hasApiFeatures())

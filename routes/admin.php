@@ -19,11 +19,15 @@ use App\Http\Controllers\Admin\Book\BookController;
 
 use App\Http\Controllers\Admin\Event\EventCalendarController;
 use App\Http\Controllers\Admin\Page\PageController;
+use App\Http\Controllers\Admin\Permission\PermissionController;
 
 Route::get('', [HomeController::class, 'index'])->name('home');
 
 Route::resource('dashboard',DashboardController::class)->names('dashboard');
 Route::resource('training',TrainingController::class)->names('training');
+
+// Cofiguraciones - Permissions
+Route::resource('permissions', PermissionController::class)->names('permissions');
 
 Route::resource('pages', PageController::class)->names('pages');
 Route::get('pages/{sectionx}/select_images', [PageController::class,'select_images'])->name('pages.select_images');

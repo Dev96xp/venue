@@ -356,7 +356,7 @@ return [
         //     'icon' => 'fas fa-fw fa-lock',
         // ],
         [
-            'text' => 'Clientes',
+            'text' => 'CLIENTES',
             'icon' => 'fas fa-fw fa-user-cog',
             'route'     => 'admin.users.index',
             'active'    => ['admin/users*']
@@ -426,7 +426,7 @@ return [
             ],
         ],
         [
-            'text' => 'Settings',
+            'text' => 'SETTINGS',
             'url'  => '#',
             'icon' => 'fas fa-fw fa-lock',
             'submenu' => [
@@ -449,6 +449,12 @@ return [
                     'route'       => 'admin.roles.index',
                     'icon'        => 'fas fa-fw fa-user-cog',
                     'active'      => ['admin/roles*']
+                ],
+                [
+                    'text'        => 'Settings 2',
+                    'route'       => 'admin.permissions.index',
+                    'icon'        => 'fas fa-fw fa-users',
+
                 ],
 
             ],
