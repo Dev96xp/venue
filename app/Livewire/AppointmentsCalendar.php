@@ -25,6 +25,7 @@ class AppointmentsCalendar extends LivewireCalendar
             ->whereDate('scheduled_at', '>=', $this->gridStartsAt)
             ->whereDate('scheduled_at', '<=', $this->gridEndsAt)
             ->where('store_id', $this->store_id)  //Lo agregue
+            ->where('status', "ACTIVE")  //Lo agregue
             ->get()
             ->map(function (Event $event) {
                 return [
