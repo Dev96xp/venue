@@ -357,14 +357,14 @@ return [
         // ],
         [
             'text' => 'CLIENTES',
-            'icon' => 'fas fa-fw fa-user-cog',
+            'icon' => 'fas fa-fw fa-user',
             'route'     => 'admin.users.index',
             'active'    => ['admin/users*']
         ],
         [
             'text' => 'PRODUCTS',
             'url'  => '#',
-            'icon' => 'fas fa-box-open',
+            'icon' => '',
             'submenu' => [
                 [
                     'text'        => 'Products',
@@ -402,7 +402,7 @@ return [
         [
             'text' => 'EVENTS',
             'url'  => '#',
-            'icon' => 'far fa-calendar',
+            'icon' => '',
             'submenu' => [
                 [
                     'text'      => 'Events',
@@ -426,40 +426,6 @@ return [
             ],
         ],
         [
-            'text' => 'SETTINGS',
-            'url'  => '#',
-            'icon' => 'fas fa-fw fa-lock',
-            'submenu' => [
-                [
-                    'text'      => 'Invitations',
-                    'icon'      => 'fas fa-fw fa-user-cog',
-                    'route'     => 'admin.invitations.index',
-                    'active'    => ['admin/invitations*']
-                ],
-                [
-                    'text'        => 'Lista de Sections',
-                    //'url'         => 'admin/pages',
-                    'route'       => 'admin.sections.index',
-                    'icon'        => 'fas fa-fw fa-user-cog',
-                    'active'      => ['admin/sections*']
-                ],
-                [
-                    'text'        => 'Lista de Roles',
-                    //'url'         => 'admin/pages',
-                    'route'       => 'admin.roles.index',
-                    'icon'        => 'fas fa-fw fa-user-cog',
-                    'active'      => ['admin/roles*']
-                ],
-                [
-                    'text'        => 'Settings 2',
-                    'route'       => 'admin.permissions.index',
-                    'icon'        => 'fas fa-fw fa-users',
-
-                ],
-
-            ],
-        ],
-        [
             'text'        => 'CORTE DE CAJA',
             'icon'        => 'fa-solid fa-boxes-packing',
             'icon_color'  => 'blue',
@@ -475,11 +441,47 @@ return [
             ]
         ],
         [
-            'text' => 'Training',
-            'icon' => 'fas fa-fw fa-user-cog',
+            'text' => 'TRAINING',
+            'icon' => '',
             'route'     => 'admin.training.index',
             'active'    => ['admin/training*']
         ],
+
+        [
+            'text' => 'SETTINGS',
+            'url'  => '#',
+            'icon' => '',
+            'submenu' => [
+                [
+                    'text'      => 'Invitations',
+                    'icon'      => 'fas fa-fw fa-user-cog',
+                    'route'     => 'admin.invitations.index',
+                    'active'    => ['admin/invitations*']
+                ],
+                [
+                    'text'        => 'Lista de Sections',
+                    //'url'         => 'admin/pages',
+                    'route'       => 'admin.sections.index',
+                    'icon'        => 'fas fa-fw fa-user-cog',
+                    'active'      => ['admin/sections*']
+                ],
+                [
+                    'text'        => 'Roles',
+                    //'url'         => 'admin/pages',
+                    'route'       => 'admin.roles.index',
+                    'icon'        => 'fas fa-fw fa-user-cog',
+                    'active'      => ['admin/roles*']
+                ],
+                [
+                    'text'        => 'Permissions',
+                    'route'       => 'admin.permissions.index',
+                    'icon'        => 'fas fa-fw fa-lock',
+
+                ],
+
+            ],
+        ],
+
         [
             'text'    => 'multilevel',
             'icon'    => 'fas fa-fw fa-share',
