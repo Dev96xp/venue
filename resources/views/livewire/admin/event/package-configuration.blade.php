@@ -49,7 +49,7 @@
                         <tbody>
                             @if ($packages->count())
                                 @foreach ($packages as $package)
-                                    <tr>
+                                    <tr wire:key="paquete-{{ $package->id }}"> {{-- SUPER IMPORTANTE --}}
                                         <td>{{ $package->id }}</td>
                                         <td>{{ $package->code }}</td>
 
@@ -59,10 +59,10 @@
                                         </td>
 
                                         <td>{{ $package->status }}</td>
-                                        {{-- <td>
-                                            @livewire('admin.permission.edit-permission', ['permission' => $permission],
-                                            key($permission->id))
-                                        </td> --}}
+                                        <td>
+                                            @livewire('admin.event.package-edit', ['package' => $package],
+                                            key($package->id))
+                                        </td>
                                     </tr>
                                 @endforeach
                             @else
