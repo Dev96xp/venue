@@ -4,7 +4,7 @@
 @section('codersfree', 'Dashboard')
 
 @section('content_header')
-    <h1>Select images para la seccion: {{ $product->name }}</h1>
+
 @stop
 
 {{-- INSTALAR DROPZONE BOX
