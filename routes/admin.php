@@ -72,7 +72,8 @@ Route::get('schedule', [EventCalendarController::class,'index'])->name('schedule
 
 // Route::get('products/index/{brand?}/{category?}', [ProductController::class,'index'])->middleware('can:Product Index')->name('products.index'); ORIGINAL
 Route::get('products/index/{brand?}/{category?}', [ProductController::class,'index'])->name('products.index'); //TEMPORAL
-
+Route::get('products/{product}/select_images', [ProductController::class,'select_images'])->name('products.select_images');
+Route::post('products/{product}/save_images/', [ProductController::class,'save_images'])->name('products.save_images');
 
 // Corte de Caja
 Route::get('corte/index', [BookController::class,'index'])->name('corte.index');

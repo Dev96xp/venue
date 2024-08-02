@@ -11,7 +11,7 @@
                     </thead>
                     <tbody class="divide-y divide-gray-200 bg-white">
 
-                        @foreach ($sectionx->images as $image)
+                        @foreach ($product->images as $image)
 
                             <tr wire:key="imagen-{{ $image->id }}"> {{-- SUPER IMPORTANTE --}}
                                 <td class="whitespace-nowrap py-1 pl-4 pr-3 text-sm sm:pl-0">

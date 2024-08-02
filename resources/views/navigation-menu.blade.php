@@ -21,6 +21,11 @@
             'route' => route('about'),
             'active' => request()->routeIs('about'),
         ],
+        [
+            'name' => 'Store',
+            'route' => route('store'),
+            'active' => request()->routeIs('store'),
+        ],
         /*
          [
              'name' => 'Equipment',
