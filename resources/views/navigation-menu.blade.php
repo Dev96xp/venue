@@ -43,7 +43,9 @@
              'route' => route('price'),
              'active' => request()->routeIs('price'),
          ],
-*/
+
+         */
+
         // [
         //     'name' => 'About Us',
         //     'route' => route('about'),

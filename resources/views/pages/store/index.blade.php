@@ -1,20 +1,8 @@
-<x-app-layout>
+<x-invitation-layout>
 
-    <!--
-  This example requires some changes to your config:
+    @livewire('pages.store.product-display')
 
-  ```
-  // tailwind.config.js
-  module.exports = {
-    // ...
-    plugins: [
-      // ...
-      require('@tailwindcss/aspect-ratio'),
-    ],
-  }
-  ```
--->
-    <div class="bg-white">
+    {{-- <div class="bg-white">
         <div class="py-16 sm:py-24 lg:mx-auto lg:max-w-7xl lg:px-8">
             <div class="flex items-center justify-between px-4 sm:px-6 lg:px-0">
                 <h2 class="text-2xl font-bold tracking-tight text-gray-900">Trending products</h2>
@@ -26,9 +14,6 @@
 
             <div class="relative mt-8">
                 <div class="relative -mb-6 w-full overflow-x-auto pb-6">
-
-
-
 
                     <ul role="list"
                         class="mx-4 inline-flex space-x-8 sm:mx-6 lg:mx-0 lg:grid lg:grid-cols-4 lg:gap-x-8 lg:space-x-0">
@@ -90,12 +75,8 @@
                             </li>
                         @endforeach
 
-                        <!-- More products... -->
+
                     </ul>
-
-
-
-
 
                 </div>
             </div>
@@ -107,7 +88,7 @@
                 </a>
             </div>
         </div>
-    </div>
+    </div> --}}
 
     <!-- Footer -->
     <footer class="mx-auto mt-40 max-w-7xl overflow-hidden px-6 pb-20 sm:mt-64 sm:pb-24 lg:px-8">
@@ -172,4 +153,4 @@
         <p class="mt-10 text-center text-xs leading-5 text-gray-500">&copy; 2024 THE PALACE HALL LLC, Inc. All rights
             reserved.</p>
     </footer>
-</x-app-layout>
+</x-invitation-layout>
