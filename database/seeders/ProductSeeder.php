@@ -79,13 +79,12 @@ class ProductSeeder extends Seeder
 
 
         // Genera 100 registros de prueba y los asigna al mismo tiempo a una variable
-        Product::factory(2)->create();
+        Product::factory(4)->create();
 
         $products = Product::all();
         //Se usa la variable para recorrer los registros delos productos
         // y asi generar, los id para las imagenes de estos cursos
         foreach ($products as $product) {
-
             // (Image) osea ImageFactory - CREA LAS IMAGENES PARA PRODUCTOS
             // crea 4 imagenes pro producto
             Image::factory(1)->create([
@@ -93,7 +92,6 @@ class ProductSeeder extends Seeder
                 'imageable_id' => $product->id,
                 'imageable_type' => 'App\Models\Product'
             ]);
-
         }
 
     }

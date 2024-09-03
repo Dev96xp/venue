@@ -19,11 +19,14 @@ class ProductDisplay extends Component
     // Esta variable ( $options ), es una arreglo de otras variables, para uso exclusivo
     // del carrito de compras
     public $options = [
-        'description' => 'esto solo es iuna prueba',
+        'description' => 'esto solo es una prueba',
         'sku' => '',
     ];
 
 
+    // Muesta solo los producto que tienen el status=3, que siginifica
+    // que fueron marcados para ser puestos en linea(publicados) y de estos solo se mostran 12
+    // los ultimos agregados
     public function mount(){
         $this->products = Product::where('status_product_id',3)->latest('id')->get()->take(12);
     }

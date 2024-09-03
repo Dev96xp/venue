@@ -92,6 +92,13 @@ class User extends Authenticatable
         return $this->hasMany(Event::class);
     }
 
+    public function ipxes()
+    {
+        return $this->hasMany(Ipx::class);
+    }
+
+
+
     // relacion UNO A MUCHOS INVERSA,
     public function store()
     {

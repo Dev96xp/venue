@@ -1,4 +1,7 @@
 <div class="py-8 max-w-7xl mx-auto"> {{-- CENTRADO --}}
+
+    {{-- USO: VENTA DE INVITACIONES 3/4 --}}
+
     <div class="container py-8 grid lg:grid-cols-2 xl:grid-cols-5 gap-6">
 
         {{-- USO: Pagina donde se proporciona la informacion del cliente
@@ -12,7 +15,7 @@
                     <x-input type="text" {{-- defer - Ayuda a NO usar el servidor cada vez que cambio una letra,
                                 SE ESPERA  aque presiones el boton, antes de actualizar la propiedad
                                 del componente con lo que esccribo en el formulario --}} wire:model.defer="contact"
-                        placeholder="Ingrese el nombre de la persona que recibira el producto" class="w-full" />
+                        placeholder="Name" class="w-full" />
                     {{-- Detecta los errores --}}
                     <x-input-error for="contact" />
                 </div>
@@ -20,7 +23,7 @@
                 <div class="mt-4">
                     <x-label value="Telefono de contacto [999.111.2222] / Contact phone" />
                     <x-input type="text" wire:model.defer="phone"
-                        placeholder="Ingrese un numero de telefono de contacto" class="w-full" />
+                        placeholder="Phone" class="w-full" />
                     {{-- Detecta los errores --}}
                     <x-input-error for="phone" />
                 </div>

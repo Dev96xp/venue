@@ -21,6 +21,7 @@
             'route' => route('about'),
             'active' => request()->routeIs('about'),
         ],
+
         [
             'name' => 'Store',
             'route' => route('store'),
@@ -38,13 +39,16 @@
              'route' => route('my-invite'),
              'active' => request()->routeIs('my-invite'),
          ],
-         [
-             'name' => 'Price',
-             'route' => route('price'),
-             'active' => request()->routeIs('price'),
-         ],
 
-         */
+
+
+        [
+            'name' => 'Price',
+            'route' => route('price'),
+            'active' => request()->routeIs('price'),
+        ],
+
+        */
 
         // [
         //     'name' => 'About Us',
@@ -172,9 +176,12 @@
                                         </button>
                                     </span>
                                 @endif
+
+
                             </x-slot>
 
                             <x-slot name="content">
+
                                 <!-- Account Management -->
                                 <div class="block px-4 py-2 text-xs text-gray-400">
                                     {{ __('Manage Account') }}

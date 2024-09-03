@@ -6,10 +6,12 @@ use App\Http\Controllers\Customer\CustomerController;
 use App\Http\Controllers\Customer\PriceController;
 use App\Http\Controllers\Gallery\GalleryController;
 use App\Http\Controllers\Pages\About\AboutController;
+use App\Http\Controllers\Pages\Store\OverviewController;
 use App\Http\Controllers\Pages\Testimonial\TestimonialController;
 use Gloudemans\Shoppingcart\Facades\Cart;
 use App\Livewire\Store\ShoppingCart;
 use App\Http\Controllers\Pages\Store\StoreController;
+use App\Livewire\Pages\Store\ProductOverview;
 
 /*
 |--------------------------------------------------------------------------
@@ -47,8 +49,19 @@ Route::get('testimonial', [TestimonialController::class, 'index'])->name('testim
 // PUBLICA - Para Gallery de fotos
 Route::get('about', [AboutController::class, 'index'])->name('about');  // *** PUBLICO ***//
 
+
+
 // PUBLICA - Para Store
 Route::get('store', [StoreController::class, 'index'])->name('store');  // *** PUBLICO ***//
+
+// Livewire - ANTES
+// Route::get('product-overview/{product}', ProductOverview::class)->name('product-overview');  // *** PUBLICO ***//
+
+// Normal - AHORA LO CAMBIE  .......
+Route::get('product-overview/{product}', [OverviewController::class, 'show'])->name('product-overview');  // ***aqui voy  PUBLICO ***//
+
+
+
 
 Route::middleware([
     'auth:sanctum',

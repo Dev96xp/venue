@@ -1,9 +1,4 @@
-<div class="py-2">
-    <!-- This example requires Tailwind CSS v2.0+ -->
-
-    {{-- ESTE ES UN COMPONENTE DE BLADE --}}
-
-    <h1 class="text-lg py-2">PRODUCTOS XP8</h1>
+<div class="py-2 px-1">
 
     <div class="grid grid-cols-2 gap-4">
         <div class="col-span-1">
@@ -129,19 +124,27 @@
                         </th>
                         <th scope="col"
                             class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                            Company
+                            Editar
                         </th>
                         <th scope="col"
                             class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                            Precio
+                            Photos
                         </th>
                         <th scope="col"
                             class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                            Precio Online
+                            Color
                         </th>
                         <th scope="col"
                             class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                            Calificacion
+                            Descuento
+                        </th>
+                        <th scope="col"
+                            class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                            Prece
+                        </th>
+                        <th scope="col"
+                            class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                            Online Price
                         </th>
                         <th scope="col"
                             class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
@@ -155,7 +158,7 @@
 
                 <tbody class="bg-white divide-y divide-gray-200">
                     @foreach ($products as $product)
-                        <tr>
+                        <tr wire:key="producto-{{ $product->id }}">
                             <td class="px-6 py-2 whitespace-nowrap">
                                 <div class="flex items-center">
 
@@ -201,13 +204,36 @@
                                             {{ $product->category->name }} / {{ $product->subcategory->name }} /
                                             {{-- xxx {{ $product->group->name }} --}}
                                         </div>
+                                        {{-- Colores por producto --}}
+                                        @if ($product->colors->count())
+                                            @foreach ($product->colors as $color)
+                                                <span class="text-xs">{{ $color->name }},</span>
+                                            @endforeach
+                                        @else
+                                            <div class="px-2 py-2">
+                                                No hay ningun color
+                                            </div>
+                                        @endif
 
                                     </div>
-
                             </td>
+
                             <td>
                                 {{-- PRODUCT NAME NEW --}}
                                 @livewire('admin.product.edit-product', ['product' => $product], key($product->id))
+                            </td>
+
+                            <td>
+                                <a class="inline-flex items-center rounded-md bg-blue-50 px-3 py-2 text-xs font-medium text-blue-700 ring-1 ring-inset ring-blue-600/20"
+                                    href="{{ route('admin.products.select_images', $product) }}">Photos</a>
+                            </td>
+
+                            <td>
+                                @livewire('admin.product.add-colors', ['product' => $product], key($product->id))
+                            </td>
+
+                            <td>
+                                @livewire('admin.size.create-size', ['product' => $product], key($product->id))
                             </td>
 
                             {{-- COMPANY --}}
@@ -215,7 +241,6 @@
                                 {{ $product->discount }} % - [ {{ $product->quantity }} ]
                                 <div class="font-bold text-sm text-gray-700">{{ $product->brand->name }}</div>
                             </td>
-
 
                             {{-- PRECIO DEL PRODUCTO --}}
                             <td class="px-6 py-4 whitespace-nowrap">
@@ -225,22 +250,12 @@
                                 <div class="text-sm text-gray-500">Precio Normal</div>
                             </td>
 
-
                             {{-- PRECIO DEL PRODUCTO EN WEB --}}
                             <td class="px-6 py-4 whitespace-nowrap">
                                 <div class="text-sm text-gray-900 flex items-center ">
                                     USD $ {{ $product->webprice }}
                                 </div>
                                 <div class="text-sm text-gray-500">Precio Online</div>
-                            </td>
-
-
-                            {{-- RATING DEL CURSO --}}
-                            <td class="px-6 py-4 whitespace-nowrap">
-                                <div class="text-sm text-gray-900 flex items-center ">
-                                </div>
-
-                                <div class="text-sm text-gray-500">Valoracion del producto</div>
                             </td>
 
 
@@ -274,10 +289,6 @@
                                 @endswitch
                             </td>
 
-                            <td width="10px">
-                                <a class="inline-flex items-center rounded-md bg-blue-50 px-2 py-1 text-xs font-medium text-blue-700 ring-1 ring-inset ring-blue-600/20"
-                                    href="{{ route('admin.products.select_images', $product) }}">Photos</a>
-                            </td>
 
                             {{-- Editar uya no se usa --}}
                             {{-- <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
@@ -299,7 +310,8 @@
                             </td> --}}
 
                             {{-- Select to Print label on DYMO PRINTERS --}}
-                            <td class="py-1 cursor-pointer text-sm" wire:click="select_product({{ $product->id }})">
+                            <td class="py-1 cursor-pointer text-sm ml-2"
+                                wire:click="select_product({{ $product->id }})">
                                 <div class="text-indigo-600 hover:text-indigo-900">
                                     Print
                                 </div>

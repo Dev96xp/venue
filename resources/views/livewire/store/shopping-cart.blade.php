@@ -1,4 +1,7 @@
 <div class="container py-8 max-w-7xl mx-auto">
+
+    {{-- USO: VENTA DE INVITACIONES 2/4 --}}
+
     <x-table-responsive>
         <div class="px-6 py-4 bg-white">
             <h1 class="text-lg font-semibold text-gray-700">CARRO DE COMPRA</h1>

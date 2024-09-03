@@ -66,8 +66,9 @@ class ProductController extends Controller
         $ruta = storage_path() . '/app/public/products/' . $nombre;   //Ruta completa con nombre
         // Solo checar - $ruta = storage_path() . '/app/public/products/' . $nombre;   //  Nueva ruta donde se gusradra el archivo
 
-        // 3#. Se modifica el tamaño del archivo y se guarda en la ruta apropiada
-        /* ********USO INTERVENSION Version 3  (https:.intervention.io)
+        // 3#. Se MODIFICA EL TAMAÑO DEL ARCHIVO y se guarda en la ruta apropiada
+
+        /*      USO INTERVENSION Version 3  (https:.intervention.io)
                 https://image.intervention.io/v3/introduction/installation
                 para cambiar su dimencion de altura conservando su proporcion,
                 para luego guardala en la ruta contenida*/
@@ -76,11 +77,6 @@ class ProductController extends Controller
             ->scale(height: 1200)               //Cambia su altura a 1200px y conserva proporcion
             ->save($ruta);                      //Guarda la imagen en la ruta establecida, en tus carpestas
 
-        // Guardo esta url en la tabla (file) YA NO SE VA A USAR
-        // File::create([
-        //     'user_id' => auth()->user()->id,
-        //     'url' => '/storage/images/sections/' . $nombre,
-        // ]);
 
         // 4#. Crea nuevo registro y guarda la cada nueva url en la tabla (images)
         $product->images()->create([

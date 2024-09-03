@@ -13,9 +13,19 @@ class StoreController extends Controller
      */
     public function index()
     {
-        $products = Product::where('status_product_id',3)->latest('id')->get()->take(12);
+        $products = Product::where('status_product_id', 3)->latest('id')->get()->take(12);
 
-        return view('pages.store.index',compact('products'));
+        return view('pages.store.page1.index', compact('products'));
+    }
+
+    /**
+     * Display a listing of the resource.
+     */
+    public function page2()
+    {
+        $products = Product::where('status_product_id', 3)->latest('id')->get()->take(12);
+
+        return view('pages.store.page2.index', compact('products'));
     }
 
     /**

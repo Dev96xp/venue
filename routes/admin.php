@@ -18,6 +18,7 @@ use App\Http\Controllers\Admin\Training\TrainingController;
 use App\Http\Controllers\Admin\Book\BookController;
 
 use App\Http\Controllers\Admin\Event\EventCalendarController;
+use App\Http\Controllers\Admin\Order\OrderController;
 use App\Http\Controllers\Admin\Page\PageController;
 use App\Http\Controllers\Admin\Permission\PermissionController;
 
@@ -50,17 +51,27 @@ Route::get('sections/{section}/select_files', [SectionController::class,'select_
 Route::post('sections/{section}/save_files', [SectionController::class,'save_files'])->name('sections.save_files');
 Route::resource('sections',SectionController::class)->names('sections');
 
-// POS
 
+//ORDERS ONLINE
+// MASTER CLASS  - IMPORTANTE
+// Recordar que la palabra admin, fue determinada como un prefijo, y esta presente en cada ruta, por tal razon
+// si el nombre de la ruta aqui es: (orders.index), esto realmente indica que, la ruta sera: (admin.orders.index), y asi
+// tendra que ser llamada desde donde se utilize o se mande llamar.
+
+Route::get('orders', [OrderController::class,'index'])->name('orders.index');   //(admin.orders.index)
+Route::get('orders/{order}', [OrderController::class,'show'])->name('orders.show');   //(admin.orders.show)
+
+// PRINT ORDER ONLINE
+Route::get('order/print/{order}', [OrderController::class,'print'])->name('order.print');   //(admin.orders.print)
+
+
+// POS
 Route::get('pos/order/{user}/index', [PosController::class,'index'])->name('pos.index');
 Route::get('pos/order/prninvoice/{transaction_id}', [PosController::class,'prninvoice'])->name('pos.prninvoice');
-
-
 
 Route::resource('brands', BrandController::class)->names('brands');
 Route::resource('categories', CategoryController::class)->names('categories');
 Route::resource('subcategories', SubcategoryController::class)->names('subcategories');
-
 
 // Events
 //Route::resource('schedules', ScheduleController::class)->names('schedules');   NO SE USA, SE CAMBIO POR EVENT
@@ -68,7 +79,6 @@ Route::resource('events', EventController::class)->names('events');
 Route::get('events/{event_id}/print_report', [EventController::class,'print_report'])->name('events.print_report');
 Route::get('configuration/event', [ConfigurationEventController::class,'index'])->name('configuration.event.index');
 Route::get('schedule', [EventCalendarController::class,'index'])->name('schedule.index');
-
 
 // Route::get('products/index/{brand?}/{category?}', [ProductController::class,'index'])->middleware('can:Product Index')->name('products.index'); ORIGINAL
 Route::get('products/index/{brand?}/{category?}', [ProductController::class,'index'])->name('products.index'); //TEMPORAL

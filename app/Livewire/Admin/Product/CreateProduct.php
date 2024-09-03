@@ -95,7 +95,7 @@ class CreateProduct extends Component
 
         //dd($this->slug);
 
-        // Crea un nuevo curso
+        // Crea un nuevo producto
         $product = Product::create([
             'model' => $this->model,
             'brand_id' => $this->brand_id,
@@ -112,6 +112,7 @@ class CreateProduct extends Component
             'wholesaleprice' => $this->wholesaleprice,
             'discount' => $this->discount,
             'description' => $this->description,
+            'group_id' => 1,  // Grupo de tallas por defult
         ]);
 
         // 5. Una vez usadas la porpiedades, limpia las propiedades (reset)

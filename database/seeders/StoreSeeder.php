@@ -20,7 +20,8 @@ class StoreSeeder extends Seeder
             'city' => 'Omaha',
             'state' =>  'NE',
             'phone' => '402-884-9950',
-            'zip' => '68144'
+            'zip' => '68144',
+            'code_ip' => '127.1.1.1',
         ]);
 
         Store::create([
@@ -29,7 +30,10 @@ class StoreSeeder extends Seeder
             'address' => '10000 California St Suite 1221, Omaha, NE 68114',
             'city' => 'Kansas',
             'state' =>  'MO',
-            'zip' => '68144'
+            'phone' => '402-884-9950',
+            'zip' => '68144',
+            'code_ip' => '127.1.1.1',
+
         ]);
 
 
@@ -38,7 +42,10 @@ class StoreSeeder extends Seeder
             'code' => 'southerhills',
             'address' => '4400 Sergeant Rd Ste 317, Sioux City, IA 51106',
             'city' => 'Sioux City',
-            'state' =>  'IA'
+            'state' =>  'IA',
+            'phone' => '402-884-9950',
+            'zip' => '68144',
+            'code_ip' => '127.1.1.1',
         ]);
 
         Store::create([
@@ -47,8 +54,9 @@ class StoreSeeder extends Seeder
             'address' => '315 West 3rd st, Grand Island, NE 68801',
             'city' => 'Grand Island',
             'state' =>  'NE',
-            'phone' => '308-746-4108',
-            'zip' => '68801'
+            'phone' => '402-884-9950',
+            'zip' => '68144',
+            'code_ip' => '127.1.1.1',
         ]);
 
         Store::create([
@@ -57,8 +65,9 @@ class StoreSeeder extends Seeder
             'address' => 'Conocido, Coral Gables, Florida 68801',
             'city' => 'Coral Gables',
             'state' =>  'FL',
-            'phone' => '308-746-4108',
-            'zip' => '68801'
+            'phone' => '402-884-9950',
+            'zip' => '68144',
+            'code_ip' => '127.1.1.1',
         ]);
 
         Store::create([
@@ -67,8 +76,9 @@ class StoreSeeder extends Seeder
             'address' => '315 West 3rd st, Grand Island, NE 68801',
             'city' => 'Conocido',
             'state' =>  'NE',
-            'phone' => '308-746-4108',
-            'zip' => '68801'
+            'phone' => '402-884-9950',
+            'zip' => '68144',
+            'code_ip' => '127.1.1.1',
         ]);
     }
 }

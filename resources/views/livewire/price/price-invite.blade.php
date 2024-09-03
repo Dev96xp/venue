@@ -1,6 +1,7 @@
 <div class="font-sans bg-gray-100">
 
-    <!-- pagina: INVITATIONS PRICING - LA LISTA DE LOS PAQUETES DE INVITACIONES -->
+    <!-- pagina: INVITATIONS PRICING - LA LISTA DE LOS PAQUETES DE INVITACIONES
+                 USO: VENTA DE INVITACIONES 1/4 -->
     <div>
         <div class="w-full mx-auto px-5 py-10 text-gray-600">
 

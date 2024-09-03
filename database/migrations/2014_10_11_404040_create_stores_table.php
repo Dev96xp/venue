@@ -20,8 +20,10 @@ return new class extends Migration
             $table->string('state');
             $table->string('zip')->nullable();
             $table->string('phone')->default('400-000-0000');
+            $table->string('email')->nullable();
             $table->string('code1')->nullable();
             $table->string('code2')->nullable();
+            $table->string('code_ip')->nullable();
             $table->timestamps();
         });
     }

@@ -14,6 +14,6 @@ class EventSeeder extends Seeder
     public function run(): void
     {
         // Genera 100 registros de prueba y los asigna al mismo tiempo a una variable
-        $products = Event::factory(20)->create();
+        $products = Event::factory(6)->create();
     }
 }

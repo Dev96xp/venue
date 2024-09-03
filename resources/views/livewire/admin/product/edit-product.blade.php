@@ -22,7 +22,8 @@
             <div class="grid grid-cols-3 gap-4 mb-3">
                 <div class="col-span-1">
                     <x-label value="Model" class="mb-1" />
-                    <x-input type="text" class="w-full text-blue-800 font-bold" wire:model.defer="productEdit.model" id="model"/>
+                    <x-input type="text" class="w-full text-blue-800 font-bold" wire:model.defer="productEdit.model"
+                        id="model" />
                     <x-input-error for="model" />
 
                 </div>
@@ -43,7 +44,8 @@
                 </div>
                 <div class="col-span-1">
                     <x-label value="Sku" class="mb-1" />
-                    <x-input readonly type="text" class="w-full bg-gray-100 text-blue-800 font-bold" wire:model.defer="productEdit.sku" id="sku" />
+                    <x-input readonly type="text" class="w-full bg-gray-100 text-blue-800 font-bold"
+                        wire:model.defer="productEdit.sku" id="sku" />
                     <x-input-error for="sku" />
                 </div>
             </div>
@@ -89,13 +91,15 @@
             <div class="grid grid-cols-2 gap-4 mb-3">
                 <div class="col-span-1">
                     <x-label value="Product Name" class="mb-1" />
-                    <x-input type="text" class="w-full text-blue-800 font-bold" wire:keyup='generateSlug' wire:model.live="productEdit.name" id="" />
+                    <x-input type="text" class="w-full text-blue-800 font-bold" wire:keyup='generateSlug'
+                        wire:model.live="productEdit.name" id="" />
                     <x-input-error for="name" />
                 </div>
 
                 <div class="col-span-1">
                     <x-label value="Slug" class="mb-1" />
-                    <x-input readonly type="text" class="w-full bg-gray-100" wire:model="productEdit.slug" id="" />
+                    <x-input readonly type="text" class="w-full bg-gray-100" wire:model="productEdit.slug"
+                        id="" />
                     <x-input-error for="slug" />
                 </div>
             </div>
@@ -113,12 +117,14 @@
                 </div>
                 <div class="col-span-1">
                     <x-label value="Wholesale USD" class="mb-1" />
-                    <x-input type="text" class="w-full" wire:model.defer="productEdit.wholesaleprice" id="wholesaleprice" />
+                    <x-input type="text" class="w-full" wire:model.defer="productEdit.wholesaleprice"
+                        id="wholesaleprice" />
                     <x-input-error for="wholesaleprice" />
                 </div>
                 <div class="col-span-1">
                     <x-label value="Suggeted USD" class="mb-1" />
-                    <x-input type="text" class="w-full" wire:model.defer="productEdit.suggestedprice" id="suggestedprice" />
+                    <x-input type="text" class="w-full" wire:model.defer="productEdit.suggestedprice"
+                        id="suggestedprice" />
                     <x-input-error for="suggestedprice" />
                 </div>
             </div>
@@ -161,6 +167,7 @@
         </x-slot>
 
         <x-slot name="footer">
+
             <x-secondary-button class="mr-4" wire:click="$set('open', false)">
                 Cancelar
             </x-secondary-button>

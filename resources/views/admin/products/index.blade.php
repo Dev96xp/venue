@@ -10,9 +10,7 @@
 @section('content')
 
 <x-admin-layout>
-    Probando ...
     @livewire('admin.product.products-index',['brand' => $brand, 'category' => $category])
-
 </x-admin-layout>
 
 @stop

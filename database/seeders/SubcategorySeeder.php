@@ -66,7 +66,22 @@ class SubcategorySeeder extends Seeder
                 'size' => true,
                 'brand_id' =>1
             ],
-
+            [
+                'category_id' => 5,
+                'name' => 'Hoodie Excel',
+                'slug' => str::slug('hoodie-excel'),
+                'color' => true,
+                'size' => true,
+                'brand_id' =>4
+            ],
+            [
+                'category_id' => 6,
+                'name' => 'Bags Formal',
+                'slug' => str::slug('bags-formal'),
+                'color' => true,
+                'size' => true,
+                'brand_id' =>4
+            ],
         ];
 
         foreach ($subcategories as $subcategory) {

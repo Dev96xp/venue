@@ -46,6 +46,34 @@ class CategorySeeder extends Seeder
                 'type_category_id' => 2,
                 'status_category_id' => 1,
             ],
+            [
+                'name' => 'Hoodie',
+                'slug' => str ::slug('hoodie'),
+                'icon' =>'<i class="fas fa-user-graduate"></i>',
+                'type_category_id' => 1,
+                'status_category_id' => 1,
+            ],
+            [
+                'name' => 'Bags',
+                'slug' => str ::slug('hoodie'),
+                'icon' =>'<i class="fas fa-user-graduate"></i>',
+                'type_category_id' => 1,
+                'status_category_id' => 1,
+            ],
+            [
+                'name' => 'Underware',
+                'slug' => str ::slug('underware'),
+                'icon' =>'<i class="fas fa-user-graduate"></i>',
+                'type_category_id' => 1,
+                'status_category_id' => 1,
+            ],
+            [
+                'name' => 'Tools',
+                'slug' => str ::slug('underware'),
+                'icon' =>'<i class="fas fa-user-graduate"></i>',
+                'type_category_id' => 1,
+                'status_category_id' => 1,
+            ],
 
             // [
             //     'name' => 'Paquetes de Salon Diamante',

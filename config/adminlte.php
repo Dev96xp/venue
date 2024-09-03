@@ -400,6 +400,19 @@ return [
             ],
         ],
         [
+            'text'        => 'ONLINE ORDERS',
+            'icon'        => 'fas fa-list-ol',
+            'can'         => 'Leer usuarios',   // SEGURIDAD - PERMISO
+            'submenu'     => [
+                [
+                    'text'        => 'orders',
+                    'route'       => 'admin.orders.index',  // La ruta ala que apunta
+                    'icon'        => 'fas fa-fw fa-cogs',
+                    'icon_color'  => 'blue',
+                ],
+            ]
+        ],
+        [
             'text' => 'EVENTS',
             'url'  => '#',
             'icon' => '',

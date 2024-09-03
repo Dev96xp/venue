@@ -35,10 +35,11 @@ class ProductFactory extends Factory
             'discount' =>$this->faker->randomElement([5,7,10,15,20]),
             'status'=> 3,
 
-            'brand_id' => 1,
-            'category_id' => 1,
+            'brand_id' => 4,
+            'category_id' => $this->faker->randomElement([5,6]),
             'subcategory_id' => 1,
-            'status_product_id'=> 1
+            'group_id' => 1,
+            'status_product_id'=> 3
         ];
     }
 }

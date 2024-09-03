@@ -72,7 +72,7 @@
                                 wire:loading.attr="disabled"
                                 {{-- Pero que esto SOLO ocurra cuando se este realizando el metodo: addItem --}}
                                 wire:target="addItem">
-                                Agregar al carrito de compras
+                                Add to bag
                             </button>
 
                         </li>

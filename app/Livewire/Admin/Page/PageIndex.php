@@ -38,8 +38,10 @@ class PageIndex extends Component
 
     public function delete_page(Page $page)
     {
+        // NO SE ESTA USANDO MOMENTANEAMENTE
+
         // Borra un registro especifico, sin importar nada (relacion uno a muchos)
-        $page->delete();
+        //$page->delete();
         //dd($item);
         // 4. En este caso para actualizar la lista de productos
         $this->dispatch('render-list');

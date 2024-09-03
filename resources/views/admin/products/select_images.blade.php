@@ -91,7 +91,7 @@ Parte 1 - Copiar links de css en (https://cdnjs.com/libraries/dropzone) y ponerl
             headers: {
                 'X-CSRF-TOKEN': "{{ csrf_token() }}"
             },
-            dictDefaultMessage: "Arrastre una imagen al recuadro", // 2. Mensaje por default
+            dictDefaultMessage: "Select image or take a photo", // 2. Mensaje por default
             acceptedFiles: 'image/*', // 3. Solo acepta imagenes
             paramName: 'file', // The name that will be used to transfer the file
             //maxFilesize: 3, // Maximo tamaño de la imagen en MEGAS

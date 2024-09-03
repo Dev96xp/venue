@@ -10,7 +10,6 @@ class HomeController extends Controller
 {
     public function __invoke()
     {
-
         $month_number = 7;
         $currentDate = now();
         $currentYear = date("Y");

@@ -10,8 +10,46 @@
             @csrf
 
             <div>
+                <x-label class="mb-4">
+                    Por favor llena el formato completamente / Please fill out this form completely
+                </x-label>
+                {{-- IMPORTANTE: Por default el ancho es la mitad --}}
                 <x-label for="name" value="{{ __('Name') }}" />
-                <x-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />
+                <x-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')"
+                    required autofocus autocomplete="name" />
+            </div>
+
+            <div class="mt-4">
+                <x-label for="address" value="{{ __('Address') }}" />
+                <x-input id="address" class="block mt-1 w-full" type="text" name="address" :value="old('address')"
+                    required />
+            </div>
+
+            <div class="mt-4 flex gap-2">
+                <div>
+                    <x-label for="city" value="{{ __('City') }}" />
+                    <x-input id="city" class="block mt-1" type="text" name="city"
+                        :value="old('city')" required />
+                </div>
+
+                <div>
+                    <x-label for="state" value="{{ __('State') }}" />
+                    <x-input id="state" class="block mt-1 w-full" type="text" name="state"
+                        :value="old('state')" required />
+                </div>
+
+                <div>
+                    <x-label for="zip" value="{{ __('Zip') }}" />
+                    <x-input id="zip" class="block mt-1 w-full" type="text" name="zip"
+                        :value="old('zip')" required />
+                </div>
+
+            </div>
+
+            <div class="mt-4">
+                <x-label for="phone" value="{{ __('Phone') }}" />
+                <x-input id="phone" class="block mt-1 w-full" type="text" name="phone" onkeydown="phoneNumberFormatter()" id="phone-number" :value="old('phone')"
+                    required />
             </div>
 
             <div class="mt-4">

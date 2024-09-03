@@ -1,5 +1,8 @@
 <div class="py-8 max-w-7xl mx-auto"> {{-- CENTRADO --}}
+
+    {{-- USO: VENTA DE INVITACIONES 4/4 --}}
     {{-- USO: PAGINA DONDE SE EJECUTA EL PAGO --}}
+
     <div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-5 gap-6 container py-8">
 
         <div class="order-2 lg:order-1 xl:col-span-3">

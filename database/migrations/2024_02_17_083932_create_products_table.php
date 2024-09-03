@@ -40,6 +40,9 @@ return new class extends Migration
             $table->unsignedBigInteger('subcategory_id');
             $table->foreign('subcategory_id')->references('id')->on('subcategories')->onDelete('cascade');
 
+            $table->unsignedBigInteger('group_id');
+            $table->foreign('group_id')->references('id')->on('groups')->onDelete('cascade');
+
             $table->unsignedBigInteger('status_product_id');
             $table->foreign('status_product_id')->references('id')->on('status_products')->onDelete('cascade');
 

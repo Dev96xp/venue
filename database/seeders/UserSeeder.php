@@ -17,7 +17,7 @@ class UserSeeder extends Seeder
 
         $user = User::create([
             'name' => 'David Martinez',
-            'cus_id' => '2020-1001',
+            'cus_id' => '2024-1001',
             'email' => 'dm.images@hotmail.com',
             'password' => bcrypt('12345612'),
             'phone' => '13087464927',
@@ -29,7 +29,7 @@ class UserSeeder extends Seeder
 
         $user = User::create([
             'name' => 'Martha Hermosillo',
-            'cus_id' => '2020-1003',
+            'cus_id' => '2024-1002',
             'email' => 'm.hermosillo@hotmail.com',
             'password' => bcrypt('123456789'),
             'phone' => '13087464108',
@@ -41,8 +41,19 @@ class UserSeeder extends Seeder
 
         $user = User::create([
             'name' => 'Vanessa Jovanna',
-            'cus_id' => '2020-1002',
+            'cus_id' => '2024-1003',
             'email' => 'vanessaj@gmail.com',
+            'password' => bcrypt('123456123'),
+            'phone' => '13087464108',
+            'store_id' => 1,
+        ]);
+        // Asignacion de administrador
+        $user->assignRole('Customer');
+
+        $user = User::create([
+            'name' => 'Online user sin registro',
+            'cus_id' => '2024-1004',
+            'email' => 'onlineuser@gmail.com',
             'password' => bcrypt('123456123'),
             'phone' => '13087464108',
             'store_id' => 1,
