@@ -143,4 +143,37 @@ class ProductsIndex extends Component
         $this->emitTo('admin.admin.products-index', 'alerta');
     }
 
+    public function update_status($prod_id)
+    {
+
+        $product = Product::find($prod_id);
+
+        //dd($product->status_product->id);
+
+        switch ($product->status_product_id) {
+                // Si es 1 lo cambio a 2
+            case '1':
+                $product->status_product_id = 2;
+                $product->save();
+                break;
+            case '2':
+                // Si es 2 lo cambio a 3
+                $product->status_product_id = 3;
+                $product->save();
+                break;
+            case '3':
+                // Si es 3 lo cambio a 1
+                $product->status_product_id = 1;
+                $product->save();
+                break;
+            default:
+                # code...
+                break;
+        }
+
+        // MASTER CLASS - REFRESCA al componente por tanto la vista tambien.
+        //$this->$items_venue = $this->$items_venue->fresh();
+    }
+
+
 }

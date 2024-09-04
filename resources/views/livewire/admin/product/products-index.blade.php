@@ -220,7 +220,7 @@
 
                             <td>
                                 {{-- PRODUCT NAME NEW --}}
-                                @livewire('admin.product.edit-product', ['product' => $product], key($product->id))
+                                @livewire('admin.product.edit-product', ['product' => $product], key('edit-product'.$product->id))
                             </td>
 
                             <td>
@@ -229,11 +229,11 @@
                             </td>
 
                             <td>
-                                @livewire('admin.product.add-colors', ['product' => $product], key($product->id))
+                                @livewire('admin.product.add-colors', ['product' => $product], key('add-colors'.$product->id))
                             </td>
 
                             <td>
-                                @livewire('admin.size.create-size', ['product' => $product], key($product->id))
+                                @livewire('admin.size.create-size', ['product' => $product], key('create-size'.$product->id))
                             </td>
 
                             {{-- COMPANY --}}
@@ -263,25 +263,28 @@
                             {{-- STATUS DEL CURSO --}}
                             <td class="px-6 py-4 whitespace-nowrap">
 
-                                @switch($product->status_product->id)
+                                @switch($product->status_product_id)
                                     @case(1)
-                                        <span
-                                            class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-red-100 text-red-800">
-                                            {{ $product->status_product->name }}
+                                        <span>
+                                            <buttons class="btn btn-orange ml-2 px-2 py-0 font-normal text-white text-sm"
+                                                wire:click="update_status({{ $product->id }})">
+                                                {{ $product->status_product->name }}</buttons>
                                         </span>
                                     @break
 
                                     @case(2)
-                                        <span
-                                            class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-yellow-100 text-yellow-800">
-                                            {{ $product->status_product->name }}
+                                        <span>
+                                            <buttons class="btn btn-blue ml-2 px-2 py-0 font-normal text-white text-sm"
+                                                wire:click="update_status({{ $product->id }})">
+                                                {{ $product->status_product->name }}</buttons>
                                         </span>
                                     @break
 
                                     @case(3)
-                                        <span
-                                            class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
-                                            {{ $product->status_product->name }}
+                                        <span>
+                                            <buttons class="btn btn-green ml-2 px-2 py-0 font-normal text-white text-sm"
+                                                wire:click="update_status({{ $product->id }})">
+                                                {{ $product->status_product->name }}</buttons>
                                         </span>
                                     @break
 
