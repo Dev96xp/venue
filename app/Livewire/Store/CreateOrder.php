@@ -7,7 +7,7 @@ use App\Models\City;
 use App\Models\District;
 use App\Models\Order;
 use App\Models\State;
-use App\Models\store;
+use App\Models\Store;
 use Gloudemans\Shoppingcart\Facades\Cart;
 
 class CreateOrder extends Component
@@ -47,7 +47,7 @@ class CreateOrder extends Component
         $this->states = State::all();
         $this->cities = City::all();  // OJO - PARA MODIFICAR SI ES NECESARIO PARA shippin_cost
         $this->districts = District::all();
-        $this->stores = store::all();
+        $this->stores = Store::all();
     }
 
 
