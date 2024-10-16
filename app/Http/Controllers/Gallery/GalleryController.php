@@ -21,5 +21,6 @@ class GalleryController extends Controller
         $sectionxes = $pages->sectionxes;
 
         return view('pages.gallery.index', compact('sectionxes'));
+        //return view('pages.accordion.index');
     }
 }

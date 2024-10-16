@@ -1,4 +1,5 @@
 @php
+
     // 1 - Nuevos menus
     $nav_links = [
         [
@@ -91,6 +92,12 @@
                             {{ $nav_link['name'] }}
                         </x-nav-link>
                     @endforeach
+
+                    {{-- @foreach ($nav_links2 as $nav_link)
+                        <x-nav-link href="{{ $nav_link['route'] }}" :active="$nav_link['active']">
+                            {{ $nav_link['name'] }}
+                        </x-nav-link>
+                    @endforeach --}}
 
                 </div>
             </div>

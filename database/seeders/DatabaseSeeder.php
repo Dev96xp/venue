@@ -78,6 +78,10 @@ class DatabaseSeeder extends Seeder
         $this->call(FeatureSeeder::class);
         $this->call(BrandSeeder::class);
         $this->call(CategorySeeder::class);
+
+        $this->call(TaxSeeder::class);
+        $this->call(ImpostSeeder::class);
+
         $this->call(SubcategorySeeder::class);
         $this->call(StatusProductSeeder::class);
         $this->call(SizeSeeder::class);
@@ -114,7 +118,7 @@ class DatabaseSeeder extends Seeder
         $this->call(PageSeeder::class);  //Crea solo 3
         $this->call(SectionxSeeder::class);  //Crea solo 3
 
-        $this->call(ColorSeeder::class);  //Crea solo 3
+        $this->call(ColorSeeder::class);
 
 
     }

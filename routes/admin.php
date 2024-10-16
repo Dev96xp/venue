@@ -18,9 +18,11 @@ use App\Http\Controllers\Admin\Training\TrainingController;
 use App\Http\Controllers\Admin\Book\BookController;
 
 use App\Http\Controllers\Admin\Event\EventCalendarController;
+use App\Http\Controllers\Admin\Impost\ImpostController;
 use App\Http\Controllers\Admin\Order\OrderController;
 use App\Http\Controllers\Admin\Page\PageController;
 use App\Http\Controllers\Admin\Permission\PermissionController;
+use App\Models\Impost;
 
 Route::get('', [HomeController::class, 'index'])->name('home');
 
@@ -72,6 +74,7 @@ Route::get('pos/order/prninvoice/{transaction_id}', [PosController::class,'prnin
 Route::resource('brands', BrandController::class)->names('brands');
 Route::resource('categories', CategoryController::class)->names('categories');
 Route::resource('subcategories', SubcategoryController::class)->names('subcategories');
+Route::resource('imposts', ImpostController::class)->names('imposts');
 
 // Events
 //Route::resource('schedules', ScheduleController::class)->names('schedules');   NO SE USA, SE CAMBIO POR EVENT

@@ -19,7 +19,7 @@
                         <tr>
                             <th scope="col"
                                 class="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 sm:pl-0">Name</th>
-                            <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Title
+                            <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Route/Active
                             </th>
                             <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Status
                             </th>
@@ -42,14 +42,14 @@
                                         </div>
                                         <div class="ml-4">
                                             <div class="font-bold {{ $selecionado == $page->name ? 'text-blue-500 text-md' : '' }}">{{ $page->name }} </div>
-                                            <div class="text-gray-500">lindsay.walton@example.com</div>
+                                            <div class="text-gray-500">{{ $page->description }}</div>
                                         </div>
                                     </div>
                                 </td>
 
                                 <td class="whitespace-nowrap px-3 py-1 text-sm text-gray-500">
-                                    <div class="text-gray-900">Front-end Developer</div>
-                                    <div class="text-gray-500">Optimization</div>
+                                    <div class="text-gray-900">{{ $page->route }}</div>
+                                    <div class="text-gray-500">{{ $page->active }}</div>
                                 </td>
 
                                 <td class="whitespace-nowrap px-3 py-1 text-sm text-gray-500">

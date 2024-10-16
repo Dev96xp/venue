@@ -22,15 +22,18 @@ class SubcategorySeeder extends Seeder
                 'name' => 'Vizcaya',
                 'slug' => str::slug('vizcaya'),
                 'color' => true,
-                'brand_id' => 1
+                'brand_id' => 1,
+                'impost_id' => 1,
             ],
 
             [
                 'category_id' => 1,
                 'name' => 'Valencia',
                 'slug' => str::slug('valencia'),
-                'brand_id' => 1
-
+                'color' => true,
+                'size' => true,
+                'brand_id' => 1,
+                'impost_id' => 1,
             ],
 
             //Categoria - Prom dress (id=2)
@@ -40,7 +43,8 @@ class SubcategorySeeder extends Seeder
                 'slug' => str::slug('long-dress'),
                 'color' => true,
                 'size' => true,
-                'brand_id' => 1
+                'brand_id' => 1,
+                'impost_id' => 1,
             ],
             [
                 'category_id' => 2,
@@ -48,7 +52,8 @@ class SubcategorySeeder extends Seeder
                 'slug' => str::slug('short-dress'),
                 'color' => true,
                 'size' => true,
-                'brand_id' => 1
+                'brand_id' => 1,
+                'impost_id' => 1,
             ],
             [
                 'category_id' => 3,
@@ -56,7 +61,8 @@ class SubcategorySeeder extends Seeder
                 'slug' => str::slug('paquetes-2022'),
                 'color' => true,
                 'size' => true,
-                'brand_id' =>1
+                'brand_id' =>1,
+                'impost_id' => 1,
             ],
             [
                 'category_id' => 4,
@@ -64,7 +70,8 @@ class SubcategorySeeder extends Seeder
                 'slug' => str::slug('eventos-oakview'),
                 'color' => true,
                 'size' => true,
-                'brand_id' =>1
+                'brand_id' =>1,
+                'impost_id' => 1,
             ],
             [
                 'category_id' => 5,
@@ -72,7 +79,8 @@ class SubcategorySeeder extends Seeder
                 'slug' => str::slug('hoodie-excel'),
                 'color' => true,
                 'size' => true,
-                'brand_id' =>4
+                'brand_id' =>4,
+                'impost_id' => 1,
             ],
             [
                 'category_id' => 6,
@@ -80,7 +88,8 @@ class SubcategorySeeder extends Seeder
                 'slug' => str::slug('bags-formal'),
                 'color' => true,
                 'size' => true,
-                'brand_id' =>4
+                'brand_id' =>4,
+                'impost_id' => 1,
             ],
         ];
 

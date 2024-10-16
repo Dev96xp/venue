@@ -395,7 +395,13 @@ return [
                     'icon_color'  => 'blue',
                     //'can'         => 'Subcategories index',          // SEGURIDAD - PERMISO
                 ],
-
+                [
+                    'text'        => 'Impost',
+                    'route'       => 'admin.imposts.index',    // La ruta ala que apunta
+                    'icon'        => 'fas fa-fw fa-user-cog',
+                    'icon_color'  => 'blue',
+                    //'can'         => 'Subcategories index',          // SEGURIDAD - PERMISO
+                ],
 
             ],
         ],

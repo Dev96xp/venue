@@ -48,6 +48,12 @@ return new class extends Migration
             $table->unsignedBigInteger('brand_id');
             $table->foreign('brand_id')->references('id')->on('brands')->onDelete('cascade');
 
+            $table->unsignedBigInteger('impost_id')->nullable();
+            // EN CASO DE QUE SE ELIMINE UN REGISTRO DE LA TABLA: IMPUESTO,
+            // EN ESTA TABLA: SUBCATEGORIAS EL REGISTRO QUE APUNTA A ELLA
+            // NO SERA BORRADO, SOLO SERA CONVERTIDO A NULO.
+            $table->foreign('impost_id')->references('id')->on('imposts')->onDelete('set null');
+
             $table->timestamps();
         });
     }

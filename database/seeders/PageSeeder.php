@@ -14,19 +14,39 @@ class PageSeeder extends Seeder
     public function run(): void
     {
         Page::create([
-            'name' => 'Page 1 - Home',
+            'name' => 'Home',
+            'description' => 'Page 1 - Home',
+            'route' => 'home',
+            'active' => 'home',
+            'status' => 'ACTIVE',
+
+        ]);
+        Page::create([
+            'name' => 'Gallery',
+            'description' => 'Page 2 - Gallery',
+            'route' => 'gallery',
+            'active' => 'gallery',
             'status' => 'ACTIVE',
         ]);
         Page::create([
-            'name' => 'Page 2 - Gallery',
+            'name' => 'Testimonials',
+            'description' => 'Page 3 - Testimonials',
+            'route' => 'testimonial',
+            'active' => 'testimonial',
             'status' => 'ACTIVE',
         ]);
         Page::create([
-            'name' => 'Page 3 - Testimonils',
+            'name' => 'About',
+            'description' => 'Page 4 - About',
+            'route' => 'about',
+            'active' => 'about',
             'status' => 'ACTIVE',
         ]);
         Page::create([
-            'name' => 'Page 4 - About',
+            'name' => 'Store',
+            'description' => 'Page 5 - Store',
+            'route' => 'store',
+            'active' => 'store',
             'status' => 'ACTIVE',
         ]);
     }
