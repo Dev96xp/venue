@@ -23,4 +23,24 @@ class StatusItem extends Model
     {
         return $this->hasMany(ItemsDecoration::class);
     }
+
+    public function items_cleanings()
+    {
+        return $this->hasMany(ItemsCleaning::class);
+    }
+
+    // public function items_venues()
+    // {
+    //     return $this->hasMany(ItemsVenue::class);
+    // }
+
+    public function items_foods()
+    {
+        return $this->hasMany(ItemsFood::class);
+    }
+
+    public function items_musics()
+    {
+        return $this->hasMany(ItemsMusic::class);
+    }
 }

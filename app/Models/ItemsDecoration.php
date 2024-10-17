@@ -21,6 +21,6 @@ class ItemsDecoration extends Model
     // RELACION UNO A MUCHOS INVERSA
     public function status_items()
     {
-        return $this->belongsTo(StatusItemsVenue::class);
+        return $this->belongsTo(StatusItem::class);
     }
 }

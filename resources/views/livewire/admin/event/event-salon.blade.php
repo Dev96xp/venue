@@ -49,12 +49,12 @@
 
                                 <div class="mr-2">
 
-                                    @switch($item->status_items_venue_id)
+                                    @switch($item->status_items_id)
                                         @case(1)
                                             <span>
                                                 <buttons class="btn btn-orange ml-2 px-2 py-0 font-normal text-white text-sm"
                                                     wire:click="update_status({{ $item }})">
-                                                    {{ $item->status_items_venue->name }}</buttons>
+                                                    {{ $item->status_items->name }}</buttons>
                                             </span>
                                         @break
 
@@ -62,7 +62,7 @@
                                             <span>
                                                 <buttons class="btn btn-blue ml-2 px-2 py-0 font-normal text-white text-sm"
                                                     wire:click="update_status({{ $item }})">
-                                                    {{ $item->status_items_venue->name }}</buttons>
+                                                    {{ $item->status_items->name }}</buttons>
                                             </span>
                                         @break
 
@@ -70,7 +70,7 @@
                                             <span>
                                                 <buttons class="btn btn-green ml-2 px-2 py-0 font-normal text-white text-sm"
                                                     wire:click="update_status({{ $item }})">
-                                                    {{ $item->status_items_venue->name }}</buttons>
+                                                    {{ $item->status_items->name }}</buttons>
                                             </span>
                                         @break
 
@@ -78,7 +78,7 @@
                                             <span>
                                                 <buttons class="btn btn-red ml-2 px-2 py-0 font-normal text-white text-sm"
                                                     wire:click="update_status({{ $item }})">
-                                                    {{ $item->status_items_venue->name }}</buttons>
+                                                    {{ $item->status_items->name }}</buttons>
                                             </span>
                                         @break
 

@@ -26,8 +26,11 @@ return new class extends Migration
             $table->unsignedBigInteger('venue_id');
             $table->foreign('venue_id')->references('id')->on('venues')->onDelete('cascade');
 
-            $table->unsignedBigInteger('status_items_venue_id');
-            $table->foreign('status_items_venue_id')->references('id')->on('status_items_venues')->onDelete('cascade');
+            // $table->unsignedBigInteger('status_items_venue_id');        ANTES
+            // $table->foreign('status_items_venue_id')->references('id')->on('status_items_venues')->onDelete('cascade');
+
+            $table->unsignedBigInteger('status_items_id');
+            $table->foreign('status_items_id')->references('id')->on('status_items')->onDelete('cascade');
 
             $table->timestamps();
         });

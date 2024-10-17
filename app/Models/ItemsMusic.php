@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class ItemsVenue extends Model
+class ItemsMusic extends Model
 {
     use HasFactory;
 
@@ -13,16 +13,14 @@ class ItemsVenue extends Model
     protected $guarded = ['id'];
 
     // relacion UNO A MUCHOS INVERSA,
-    public function venue()
+    public function music()
     {
-        return $this->belongsTo(Venue::class);
+        return $this->belongsTo(Music::class);
     }
 
     // RELACION UNO A MUCHOS INVERSA
     public function status_items()
     {
         return $this->belongsTo(StatusItem::class);
-        // return $this->belongsTo(StatusItemsVenue::class);  ORIGINAL
     }
-
 }

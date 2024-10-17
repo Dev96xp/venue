@@ -75,7 +75,7 @@ class EventSalon extends Component
                 'name' => $this->name,
                 'description' => $this->description,
                 'status' => 'open',
-                'status_items_venue_id' => 1,
+                'status_items_id' => 1,
                 'executive_id' => auth()->user()->id, // Ejecutivo de ventas
                 'venue_id' => $this->venue_id,
             ]);
@@ -86,31 +86,64 @@ class EventSalon extends Component
         $this->reset(['name', 'description', 'venue_id']);
     }
 
+    public function update_status_test(ItemsDrink $items_drink)
+    {
+        $items_drink = ItemsDrink::find($items_drink->id);
+
+        //dd($items_drink->status_items_drink_id);
+        switch ($items_drink->status_items_id) {
+                // Si es 1 lo cambio a 2
+            case '1':
+                $items_drink->status_items_id = 2;
+                $items_drink->save();
+                break;
+            case '2':
+                // Si es 2 lo cambio a 3
+                $items_drink->status_items_id = 3;
+                $items_drink->save();
+                break;
+            case '3':
+                // Si es 3 lo cambio a 4
+                $items_drink->status_items_id = 4;
+                $items_drink->save();
+                break;
+            case '4':
+                // Si es 4 lo cambio a 1
+                $items_drink->status_items_id = 1;
+                $items_drink->save();
+                break;
+            default:
+                # code...
+                break;
+        }
+
+    }
+
     public function update_status(ItemsVenue $items_venue)
     {
         $items_venue = ItemsVenue::find($items_venue->id);
 
         //dd($items_venue->status_items_venue_id);
-        switch ($items_venue->status_items_venue_id) {
+        switch ($items_venue->status_items_id) {
                 // Si es 1 lo cambio a 2
             case '1':
-                $items_venue->status_items_venue_id = 2;
+                $items_venue->status_items_id = 2;
                 $items_venue->save();
                 //dd($items_venue->status_items_venue_id);
                 break;
             case '2':
                 // Si es 2 lo cambio a 3
-                $items_venue->status_items_venue_id = 3;
+                $items_venue->status_items_id = 3;
                 $items_venue->save();
                 break;
             case '3':
                 // Si es 3 lo cambio a 4
-                $items_venue->status_items_venue_id = 4;
+                $items_venue->status_items_id = 4;
                 $items_venue->save();
                 break;
             case '4':
                 // Si es 4 lo cambio a 1
-                $items_venue->status_items_venue_id = 1;
+                $items_venue->status_items_id = 1;
                 $items_venue->save();
                 break;
             default:

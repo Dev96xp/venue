@@ -19,28 +19,28 @@ class ItemsVenueSeeder extends Seeder
             'description' => 'wherever 1',
             'status' => 'active',
             'venue_id' => 1,
-            'status_items_venue_id' => 3,
+            'status_items_id' => 3,
         ]);
         ItemsVenue::create([
             'name' => 'name 2',
             'description' => 'wherever 2',
             'status' => 'active',
             'venue_id' => 1,
-            'status_items_venue_id' => 3,
+            'status_items_id' => 3,
         ]);
         ItemsVenue::create([
             'name' => 'name 3',
             'description' => 'wherever 3',
             'status' => 'active',
             'venue_id' => 1,
-            'status_items_venue_id' => 3,
+            'status_items_id' => 3,
         ]);
         ItemsVenue::create([
             'name' => 'name 4',
             'description' => 'wherever 4',
             'status' => 'active',
             'venue_id' => 1,
-            'status_items_venue_id' => 3,
+            'status_items_id' => 3,
         ]);
 
         ItemsVenue::create([
@@ -48,28 +48,28 @@ class ItemsVenueSeeder extends Seeder
             'description' => 'wherever AAA',
             'status' => 'active',
             'venue_id' => 2,
-            'status_items_venue_id' => 3,
+            'status_items_id' => 3,
         ]);
         ItemsVenue::create([
             'name' => 'name B',
             'description' => 'wherever BBB',
             'status' => 'active',
             'venue_id' => 2,
-            'status_items_venue_id' => 3,
+            'status_items_id' => 3,
         ]);
         ItemsVenue::create([
             'name' => 'name C',
             'description' => 'wherever CCC',
             'status' => 'active',
             'venue_id' => 2,
-            'status_items_venue_id' => 3,
+            'status_items_id' => 3,
         ]);
         ItemsVenue::create([
             'name' => 'name D',
             'description' => 'wherever DDD',
             'status' => 'active',
             'venue_id' => 2,
-            'status_items_venue_id' => 3,
+            'status_items_id' => 3,
         ]);
     }
 }

@@ -51,4 +51,15 @@ class Event extends Model
     {
         return $this->hasOne(Cleaning::class);
     }
+
+    public function food()
+    {
+        return $this->hasOne(Food::class);
+    }
+
+    public function music()
+    {
+        return $this->hasOne(Music::class);
+    }
+
 }
