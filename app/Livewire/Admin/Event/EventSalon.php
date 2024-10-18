@@ -86,39 +86,6 @@ class EventSalon extends Component
         $this->reset(['name', 'description', 'venue_id']);
     }
 
-    public function update_status_test(ItemsDrink $items_drink)
-    {
-        $items_drink = ItemsDrink::find($items_drink->id);
-
-        //dd($items_drink->status_items_drink_id);
-        switch ($items_drink->status_items_id) {
-                // Si es 1 lo cambio a 2
-            case '1':
-                $items_drink->status_items_id = 2;
-                $items_drink->save();
-                break;
-            case '2':
-                // Si es 2 lo cambio a 3
-                $items_drink->status_items_id = 3;
-                $items_drink->save();
-                break;
-            case '3':
-                // Si es 3 lo cambio a 4
-                $items_drink->status_items_id = 4;
-                $items_drink->save();
-                break;
-            case '4':
-                // Si es 4 lo cambio a 1
-                $items_drink->status_items_id = 1;
-                $items_drink->save();
-                break;
-            default:
-                # code...
-                break;
-        }
-
-    }
-
     public function update_status(ItemsVenue $items_venue)
     {
         $items_venue = ItemsVenue::find($items_venue->id);

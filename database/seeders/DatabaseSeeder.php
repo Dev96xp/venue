@@ -53,6 +53,8 @@ class DatabaseSeeder extends Seeder
         Storage::deleteDirectory('public/subcategories');
         Storage::makeDirectory('public/subcategories');
 
+        $this->call(BusinessSeeder::class);
+
         $this->call(StoreSeeder::class);
         // IDS
         $this->call(IdsSeeder::class);

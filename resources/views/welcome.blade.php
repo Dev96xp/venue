@@ -20,13 +20,12 @@
 
             <div class="w-full md:w-3/4 lg:w-3/4">
                 {{-- APLICANDO UNA CONDICIONAL PARA CLASES --}}
-                <p class="text-black text-6xl md:text-8xl lg:text-8xl py-6" style="font-family: Sche">THE PALACE HALL</p>
+                <p class="text-black text-6xl md:text-8xl lg:text-8xl py-6" style="font-family: Sche">{{ $business->name }}</p>
                 <p class="text-white text-2xl md:text-5xl lg:text-5xl font-bold mb-60" style="font-family: Montserrat">
-                    Experiance and aptitude of our team
+                    {{ $business->slogan }}
                 </p>
                 <p class="text-black font-bold text-3xl mt-2 mb-4" style="font-family: Montserrat">
-                    Perfect for hosting Weddings, Receptions, Corporate Events, Private Celebrations and
-                    More!
+                    {{ $business->description }}
                 </p>
 
 
