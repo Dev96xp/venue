@@ -24,19 +24,33 @@
                 @if ($galleryOfCarouselPrincipal)
                     {{-- @foreach ($sectionxes as $section) --}}
                     @foreach ($galleryOfCarouselPrincipal as $image)
-                        <div class="carousel-item @if ($loop->first) active @endif max-h-80 lg:max-h-none w-full"> {{-- Determina la altura segun el dispositivo (max-h-80 lg:max-h-none) --}}
+                        <div
+                            class="carousel-item @if ($loop->first) active @endif max-h-80 lg:max-h-none w-full">
+                            {{-- Determina la altura segun el dispositivo (max-h-80 lg:max-h-none) --}}
 
-                            <img class="bg-cover w-full" src="{{ Storage::url($image->url) }}" alt="{{ $image->id }}">
+                            <img class="bg-cover w-full" src="{{ Storage::url($image->url) }}"
+                                alt="{{ $image->id }}">
 
                             <div class="container">
                                 <div class="carousel-caption text-left">
-                                    <h1 class="text-4xl lg:text-6xl mb-1" style="font-family: Sche">{{ $business->name }}</h1>
-                                    <p class="mb-2">Deteniendo el arte en el tiempo creando una imagenes autenticas obras de
+                                    <h1 class="text-4xl lg:text-6xl mb-1" style="font-family: Sche">
+                                        {{ $business->name }}</h1>
+                                    <p class="mb-2">Deteniendo el arte en el tiempo creando una imagenes autenticas
+                                        obras de
                                         arte.
                                         La luz permite ver los colores nosotros lo capturamos
                                     </p>
-                                    <p><a href="{{ route('register') }}" class="btn btn-lg btn-primary" href="#" role="button">Sign up
-                                            today</a></p>
+
+                                    @auth
+                                    @else
+                                        <p><a href="{{ route('register') }}" class="btn btn-lg btn-gray" href="#"
+                                                role="button">Sign up
+                                                today</a></p>
+                                    @endauth
+
+
+
+
 
                                 </div>
                             </div>
@@ -102,13 +116,39 @@
                         capture the perfect shot for your brand.
 
                         Let’s create something amazing together!</p>
-                        <p>{{ $business->name }}</p>
-                        <p>{{ $business->phone }}</p>
-                        <p>{{ $business->email }}</p>
+                    <p>{{ $business->name }}</p>
+                    <p>{{ $business->phone }}</p>
+                    <p>{{ $business->email }}</p>
                     {{-- <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p> --}}
                 </div><!-- /.col-lg-4 -->
             </div><!-- /.row -->
+        </div>
 
+
+        {{-- MASTER CLASS - PARALLAX EFFECT - (bg-fixed bg-center bg-no-repeat bg-cover)
+                                         min-h-screen - OCUPA TODA LA ALTURA DE PANTALLA
+                                         opacity-75 - Detremina la opacity Inicial
+                                         hover:opacity-100 - Elimina el opacity --}
+            {{-- foot Image ParallaxImage1 --}}
+        <section class="mt-16 opacity-75 relative bg-fixed bg-cover bg-center bg-no-repeat hover:opacity-100"
+            style="background-image: url('{{ Storage::url($parallaxImage1) }}')">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-48">
+                <div class="w-full md:w-3/4 lg:w-1/2">
+                    <h1 class="text-white text-bold text-6xl py-6 justify-center font-Playfair Display SC">Working
+                        with
+                        Love</h1>
+                    {{-- <h1 class="text-white text-bold text-4xl">
+                        Means
+                    </h1>
+                    <p class="text-white font-bold text-lg mt-2 mb-4 backdrop-brightness-5">
+                        Easy Access to Decorating Experts Ensuring Quality Outputs from Concept to Completion
+                    </p> --}}
+
+                </div>
+            </div>
+        </section>
+
+        <div class="container marketing">
 
             <!-- START THE FEATURETTES -->
 
@@ -160,6 +200,29 @@
             <!-- /END THE FEATURETTES -->
 
         </div><!-- /.container -->
+
+
+        {{-- MASTER CLASS - PARALLAX EFFECT - (bg-fixed bg-center bg-no-repeat bg-cover)
+                                         min-h-screen - OCUPA TODA LA ALTURA DE PANTALLA
+                                         opacity-75 - Detremina la opacity Inicial
+                                         hover:opacity-100 - Elimina el opacity --}
+        {{-- foot Image ParallaxImage2 --}}
+        <section class="mt-16 opacity-75 relative bg-fixed bg-cover bg-center bg-no-repeat hover:opacity-100"
+            style="background-image: url('{{ Storage::url($parallaxImage2) }}')">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-48">
+                <div class="w-full md:w-3/4 lg:w-1/2">
+                    <h1 class="text-white text-bold text-6xl py-6 justify-center font-Playfair Display SC">Working with
+                        Love</h1>
+                    {{-- <h1 class="text-white text-bold text-4xl">
+                        Means
+                    </h1>
+                    <p class="text-white font-bold text-lg mt-2 mb-4 backdrop-brightness-5">
+                        Easy Access to Decorating Experts Ensuring Quality Outputs from Concept to Completion
+                    </p> --}}
+
+                </div>
+            </div>
+        </section>
 
 
         <!-- FOOTER -->

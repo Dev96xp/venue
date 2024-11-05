@@ -8,31 +8,32 @@
             'active' => request()->routeIs('home'),
         ],
         [
+            'name' => 'Photography',
+            'route' => route('photography'),
+            'active' => request()->routeIs('photography'),
+        ],
+        [
             'name' => 'Gallery',
             'route' => route('gallery'),
             'active' => request()->routeIs('gallery'),
         ],
-        [
-            'name' => 'Testimonials',
-            'route' => route('testimonial'),
-            'active' => request()->routeIs('testimonial'),
-        ],
+        // [
+        //     'name' => 'Testimonials',
+        //     'route' => route('testimonial'),
+        //     'active' => request()->routeIs('testimonial'),
+        // ],
         [
             'name' => 'About',
             'route' => route('about'),
             'active' => request()->routeIs('about'),
         ],
 
-        [
-            'name' => 'Store',
-            'route' => route('store'),
-            'active' => request()->routeIs('store'),
-        ],
-        [
-            'name' => 'Photography',
-            'route' => route('photography'),
-            'active' => request()->routeIs('photography'),
-        ],
+        // [
+        //     'name' => 'Store',
+        //     'route' => route('store'),
+        //     'active' => request()->routeIs('store'),
+        // ],
+
         /*
          [
              'name' => 'Equipment',

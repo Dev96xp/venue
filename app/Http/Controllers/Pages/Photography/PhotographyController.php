@@ -37,6 +37,9 @@ class PhotographyController extends Controller
         $blog2 = '';
         $blog3 = '';
 
+        $parallaxImage1 = '';
+        $parallaxImage2 = '';
+
         foreach ($sectionxes as $section) {
             foreach ($section->images as $image) {
                 switch ($image->location) {
@@ -61,6 +64,15 @@ class PhotographyController extends Controller
                     case 'blog3':
                         $blog3 = $image->url;
                         break;
+                    case 'blog4':
+                        $blog4 = $image->url;
+                        break;
+                    case 'parallaxImage1':
+                        $parallaxImage1 = $image->url;
+                        break;
+                    case 'parallaxImage2':
+                        $parallaxImage2 = $image->url;
+                        break;
                     default:
                         # code...
                         break;
@@ -79,6 +91,8 @@ class PhotographyController extends Controller
             'blog1',
             'blog2',
             'blog3',
+            'parallaxImage1',
+            'parallaxImage2',
         ));
     }
 

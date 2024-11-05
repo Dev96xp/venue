@@ -32,6 +32,7 @@ use App\Livewire\Pages\Store\ProductOverview;
 
 Route::get('/', HomeController::class)->name('home');
 
+
 //########## My Palace Ivitation ##############
 // PUBLICA
 Route::get('my-invite', [CustomerController::class, 'index'])->name('my-invite');  // *** PUBLICO ***//
