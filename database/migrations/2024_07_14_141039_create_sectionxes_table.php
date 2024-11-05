@@ -14,6 +14,8 @@ return new class extends Migration
         Schema::create('sectionxes', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->text('note')->nullable();
+            $table->text('description')->nullable();
             $table->text('status');
 
             $table->unsignedBigInteger('page_id');

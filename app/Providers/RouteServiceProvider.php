@@ -57,6 +57,12 @@ class RouteServiceProvider extends ServiceProvider
                 ->prefix('account')
                 ->namespace($this->namespace)
                 ->group(base_path('routes/account.php'));
+
+            Route::middleware('web', 'auth')
+                ->name('photography.')    //Las ruta va a comenzar con (photography.)
+                ->prefix('photography')
+                ->namespace($this->namespace)
+                ->group(base_path('routes/photography.php'));
         });
     }
 }

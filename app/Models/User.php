@@ -97,6 +97,10 @@ class User extends Authenticatable
         return $this->hasMany(Ipx::class);
     }
 
+    public function galleries()
+    {
+        return $this->hasMany(Gallery::class);
+    }
 
 
     // relacion UNO A MUCHOS INVERSA,
@@ -110,4 +114,6 @@ class User extends Authenticatable
     {
         return $this->hasOne('App\Models\Account');
     }
+
+
 }

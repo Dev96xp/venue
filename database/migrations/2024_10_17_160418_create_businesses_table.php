@@ -52,10 +52,25 @@ return new class extends Migration
             $table->text('article3')->nullable();
             $table->text('article4')->nullable();
 
+            $table->text('image')->nullable();
+            $table->text('image2')->nullable();
+            $table->text('image3')->nullable();
+            $table->text('image4')->nullable();
+
             $table->string('link')->nullable();
             $table->string('link2')->nullable();
             $table->string('link3')->nullable();
             $table->string('link4')->nullable();
+            $table->string('link5')->nullable();
+            $table->string('link6')->nullable();
+
+            $table->string('color')->nullable();
+            $table->string('color2')->nullable();
+            $table->string('color3')->nullable();
+            $table->string('color4')->nullable();
+            $table->string('color5')->nullable();
+            $table->string('color6')->nullable();
+            $table->string('color7')->nullable();
 
             $table->string('status')->default('active');;
             $table->timestamps();

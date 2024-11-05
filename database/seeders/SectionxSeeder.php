@@ -16,25 +16,30 @@ class SectionxSeeder extends Seeder
         Sectionx::create([
             'name' => 'Head Image',
             'status' => 'ACTIVE',
+            'note' => 'key - headImage',
             'page_id' => 1,
         ]);
         Sectionx::create([
             'name' => 'At your service',
+            'note' => 'keys - article1, article2, article3, article4',
             'status' => 'ACTIVE',
             'page_id' => 1,
         ]);
         Sectionx::create([
             'name' => 'Where are work',
+            'note' => 'key - whereIWork',
             'status' => 'ACTIVE',
             'page_id' => 1,
         ]);
         Sectionx::create([
-            'name' => 'Seccion X - Big image',
+            'name' => 'Seccion X - Big foot image',
+            'note' => 'key - footImage1',
             'status' => 'ACTIVE',
             'page_id' => 1,
         ]);
         Sectionx::create([
             'name' => 'Gallery',
+            'note' => 'no key',
             'status' => 'ACTIVE',
             'page_id' => 2,
         ]);
@@ -47,6 +52,26 @@ class SectionxSeeder extends Seeder
             'name' => 'About',
             'status' => 'ACTIVE',
             'page_id' => 4,
+        ]);
+
+
+        Sectionx::create([
+            'name' => 'Photography',
+            'note' => 'no key',
+            'status' => 'ACTIVE',
+            'page_id' => 6,
+        ]);
+        Sectionx::create([
+            'name' => 'Heading',
+            'note' => 'Key code: heading1, heading2, heading3, heading4',
+            'status' => 'ACTIVE',
+            'page_id' => 6,
+        ]);
+        Sectionx::create([
+            'name' => 'Blogs',
+            'note' => 'Key code: blog1, blog2, blog3',
+            'status' => 'ACTIVE',
+            'page_id' => 6,
         ]);
     }
 }

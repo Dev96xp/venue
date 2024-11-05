@@ -4,6 +4,10 @@
 @import "forms.css"; */
 @import "nav.css";
 @import "buttons.css";
+@import "bootstrap.min.css";
+@import "carousel.css";
+@import "lightbox.css";
+
 
 @tailwind base;
 @tailwind components;

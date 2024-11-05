@@ -8,7 +8,7 @@
 
     </div>
 
-    <x-dialog-modal wire:model="open" class="py-6">
+    <x-dialog-modal wire:model="open" class="py-6" maxWidth="2xl">
 
         <x-slot name='title'>
             Editar Imagen
@@ -28,6 +28,19 @@
                 <div class="col-span-1">
 
                 </div>
+            </div>
+            <div class="grid grid-cols-3 gap-4 mb-2">
+                <div class="col-span-2">
+                    <x-label value="Description" />
+                    <textarea wire:model.defer="imageEdit.description" type="text" cols="20" rows="5" class="w-full"></textarea>
+
+                    {{-- Revisa por alhun error de validacion --}}
+                    <x-input-error for="imageEdit.description" />
+                </div>
+                <div class="col-span-1">
+
+                </div>
+
             </div>
 
         </x-slot>

@@ -49,5 +49,13 @@ class PageSeeder extends Seeder
             'active' => 'store',
             'status' => 'ACTIVE',
         ]);
+
+        Page::create([
+            'name' => 'Photography',
+            'description' => 'Page 6 - Photography',
+            'route' => 'photography',
+            'active' => 'photography',
+            'status' => 'ACTIVE',
+        ]);
     }
 }

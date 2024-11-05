@@ -31,6 +31,11 @@
     @apply bg-blue-400 hover:bg-blue-300;
 }
 
+.btn-fuchsia{
+    @apply bg-fuchsia-400 hover:bg-fuchsia-300;
+}
+
+
 .btn-green{
     @apply bg-green-400 hover:bg-green-200;
 }

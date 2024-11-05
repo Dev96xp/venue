@@ -1,6 +1,53 @@
 <x-app-layout>
+
+    {{-- <style>
+
+        .container {
+            width: 100%;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+
+        }
+
+        .content {
+            text-align: center;
+
+            position: absolute;
+            right: center;
+            bottom: 20px;
+        }
+
+        .content h1 {
+            font-size: 95px;
+            color: #fff;
+            margin-bottom: 50px;
+        }
+
+        .content a {
+            font-size: 23px;
+            color: #fff;
+            text-decoration: none;
+            border: 2px solid #fff;
+            padding: 15px 25px;
+            border-radius: 50px;
+            transition: 0.3s
+        }
+
+        .background-clip {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            z-index: -1;
+        }
+    </style> --}}
+
+
     {{-- USO: PAGINA PRINCIPAL - HOME NO 1 --}}
-    {{-- SECCTION 1 - Head Image  IMAGEN PRINCIPAL --}}
+    {{-- SECCTION 1 - Head Image  IMAGEN PRINCIPAL, style="display:none" --}}
     <section>
 
         {{-- Moño --}}
@@ -20,7 +67,8 @@
 
             <div class="w-full md:w-3/4 lg:w-3/4">
                 {{-- APLICANDO UNA CONDICIONAL PARA CLASES --}}
-                <p class="text-black text-6xl md:text-8xl lg:text-8xl py-6" style="font-family: Sche">{{ $business->name }}</p>
+                <p class="text-black text-6xl md:text-8xl lg:text-8xl py-6" style="font-family: Sche">
+                    {{ $business->name }}</p>
                 <p class="text-white text-2xl md:text-5xl lg:text-5xl font-bold mb-60" style="font-family: Montserrat">
                     {{ $business->slogan }}
                 </p>
@@ -51,17 +99,45 @@
     </section> --}}
 
     {{-- VIDEO --}}
-    {{-- <section>
-        <video id="my-video" class="video-js" controls preload="auto" width="auto" height="600" data-setup="{}" autoplay="off">
-            <source src="/img/video/morilee.mp4" type='video/mp4'>
-        </video>
-        <div class="media">
-            <div class="media-body">
-                <iframe width="560" height="315" src="/img/video/morilee.mp4" frameborder="0" allowfullscreen>
-                </iframe>
+    <section>
+
+        {{-- MASTER CLASS - metodo 3" autoplay loop muted plays-inline"
+        <div class="container w-full">
+            <video autoplay loop muted plays-inline class="w-full">
+                <source src="/img/home/video_bodas.mp4" type='video/mp4'>
+            </video>
+
+            <div class="content">
+                <h1>THE PALACE HALL</h1>
+                <a href="#">Star Lerning</a>
             </div>
         </div>
-    </section> --}
+         --}}
+
+
+
+        {{-- <div class="w-full h-full bg-white flex center justify-center">
+            <div class="center">
+                <h1 class="text-black text-6xl md:text-8xl lg:text-8xl py-6" style="font-family: Sche">{{ $business->name }}</h1>
+            </div>
+        </div> --}}
+
+
+        {{-- <video id="my-video" class="video-js w-full" controls preload="auto" width="auto" height="600" data-setup="{}" autoplay="on">
+            <p class="text-black text-6xl md:text-8xl lg:text-8xl py-6" style="font-family: Sche">{{ $business->name }}</p>
+            <source src="/img/home/video_bodas.mp4" type='video/mp4'>
+
+        </video> --}}
+
+        {{-- <div class="media">
+            <div class="media-body">
+                <iframe width="560" height="315" src="/img/home/video_bodas.mp4" frameborder="0" allowfullscreen>
+                </iframe>
+            </div>
+        </div> --}}
+
+
+    </section>
 
 
     {{-- SECCTION 2 - At your service - Contenido con 4 articulos --}}
@@ -97,8 +173,7 @@
             {{-- ARTICULO 2 --}}
             <article>
                 <figure>
-                    <img class="rounded-xl lg:h-40 w-full object-cover opacity-75"
-                        src="{{ Storage::url($article2) }}"
+                    <img class="rounded-xl lg:h-40 w-full object-cover opacity-75" src="{{ Storage::url($article2) }}"
                         alt="article2">
                     <header class="mt-2">
                         <a href="#">
@@ -120,7 +195,7 @@
                 <figure>
                     <a href="gallery">
                         <img class="rounded-xl lg:h-40 w-full object-cover opacity-75"
-                        src="{{ Storage::url($article3) }}" alt="article3">
+                            src="{{ Storage::url($article3) }}" alt="article3">
                     </a>
                     <header class="mt-2">
                         <a href="gallery">
@@ -143,8 +218,8 @@
                 <figure>
                     {{-- <img class="rounded-xl lg:h-40 w-full object-cover opacity-75"
                         src="{{ asset('img/home/DSC_3035.jpg') }}" alt=""> --}}
-                    <img class="rounded-xl lg:h-40 w-full object-cover opacity-75"
-                        src="{{ Storage::url($article4) }}" alt="article4">
+                    <img class="rounded-xl lg:h-40 w-full object-cover opacity-75" src="{{ Storage::url($article4) }}"
+                        alt="article4">
 
                     <header class="mt-2">
                         <h1 class="text-center text-xl text-gray-700">Professional and Bueatifull</h1>
@@ -197,8 +272,7 @@
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-3 gap-x-6 gap-y-8">
 
             <div class="col-span-1 mt-12 opacity-75 hover:opacity-100">
-                <img src="{{ Storage::url($whereIWork) }}" alt="whereIWork" class="rounded-md"
-                    style="width:100%">
+                <img src="{{ Storage::url($whereIWork) }}" alt="whereIWork" class="rounded-md" style="width:100%">
             </div>
 
             <div class="col-span-2">
@@ -208,18 +282,18 @@
                 </div>
 
                 <div class="ml-24">
-                    <h3 class="">THE PALACE HALL</h3>
-                    <p class="">3001 South 144th Street, Omaha, NE 68144</p>
+                    <h3 class="">{{ $business->name }}</h3>
+                    <p class="">{{ $business->address . ' ' . $business->city . ' ' . $business->zip }}</p>
                 </div>
 
                 <i class="far fa-map-marked hover:text-neutral-800 text-3xl mr-6"></i>
                 Chicago, Nebraska, Iowa, Kansas, Missouri, Miami, South Dakota, US.<br>
 
-                <i class="fa fa-phone fa-fw hover:text-neutral-800 text-3xl mr-6"></i> Phone: +00
-                308.746.4108 / 402.884.9950<br>
+                <i class="fa fa-phone fa-fw hover:text-neutral-800 text-3xl mr-6"></i> Phone: +1
+                {{ $business->phone }} / {{ $business->phone2 }}<br>
 
                 <i class="fa fa-envelope fa-fw hover:text-neutral-800 text-3xl mr-6 mb-4"></i> Email:
-                thepalace15@gmail.com<br>
+                {{ $business->email }}<br>
 
                 {{-- <p>Swing by for a cup of <i class="fa fa-coffee"></i>, or leave me a note</p> --}}
 
@@ -332,12 +406,11 @@
         </div>
     </section>
 
-
     {{-- Footer --}}
     <section>
         <!-- component -->
-        {{-- <div class="flex items-end w-full min-h-screen bg-white">  ORIGINAL--}}
-            <div class="flex items-end w-full bg-white">
+        {{-- <div class="flex items-end w-full min-h-screen bg-white">  ORIGINAL --}}
+        <div class="flex items-end w-full bg-white">
             <footer class="w-full text-gray-700 bg-gray-100 body-font">
                 <div
                     class="container flex flex-col flex-wrap px-5 py-24 mx-auto md:items-center lg:items-start md:flex-row md:flex-no-wrap">
@@ -351,11 +424,11 @@
                                     fill-rule="nonzero" />
                             </svg>
                         </a> --}}
-                        <p class="font-bold text-xl">THE PALACE</p>
+                        <p class="font-bold text-xl">{{ $business->name }}</p>
                         <p class="mt-2 text-sm text-gray-500">Design, Code and Ship!</p>
                         <div class="mt-4">
                             <span class="inline-flex justify-center mt-2 sm:ml-auto sm:mt-0 sm:justify-start">
-                                <a href="https://www.facebook.com/profile.php?id=100004629788695"
+                                <a href="{{ $business->link }}"
                                     class="text-gray-500 cursor-pointer hover:text-gray-700">
                                     <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round"
                                         stroke-width="2" class="w-8 h-8" viewBox="0 0 24 24">
@@ -370,7 +443,8 @@
                                         </path>
                                     </svg>
                                 </a>
-                                <a class="ml-3 text-gray-500 cursor-pointer hover:text-gray-700">
+                                <a href="{{ $business->link2 }}"
+                                    class="ml-3 text-gray-500 cursor-pointer hover:text-gray-700">
                                     <svg fill="none" stroke="currentColor" stroke-linecap="round"
                                         stroke-linejoin="round" stroke-width="2" class="w-8 h-8"
                                         viewBox="0 0 24 24">
@@ -379,7 +453,8 @@
                                         <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
                                     </svg>
                                 </a>
-                                <a class="ml-3 text-gray-500 cursor-pointer hover:text-gray-700">
+                                <a href="{{ $business->link3 }}"
+                                    class="ml-3 text-gray-500 cursor-pointer hover:text-gray-700">
                                     <svg fill="currentColor" stroke="currentColor" stroke-linecap="round"
                                         stroke-linejoin="round" stroke-width="0" class="w-5 h-5"
                                         viewBox="0 0 24 24">
@@ -450,7 +525,8 @@
                                     <a class="text-gray-500 cursor-pointer hover:text-gray-900">Request a Quote</a>
                                 </li>
                                 <li class="mt-3">
-                                    <a class="text-gray-500 cursor-pointer hover:text-gray-900">+308-746-4108</a>
+                                    <a
+                                        class="text-gray-500 cursor-pointer hover:text-gray-900">{{ $business->phone }}</a>
                                 </li>
                             </nav>
                         </div>
@@ -458,10 +534,12 @@
                 </div>
                 <div class="bg-gray-300">
                     <div class="container px-5 py-4 mx-auto">
-                        <p class="text-sm text-gray-700 capitalize xl:text-center">Nucleus-Technologies © 2024 All
+                        <p class="text-sm text-gray-700 capitalize xl:text-center">Powered by Nucleus-Technologies ©
+                            2024 All
                             rights reserved </p>
-                        <p class="text-sm text-gray-700 capitalize lg:text-center">The Palace Hall is a Trademark with
-                            Copyright 2024 The Palace Hall. </p>
+                        <p class="text-sm text-gray-700 capitalize lg:text-center">{{ $business->name }} is a
+                            Trademark with
+                            Copyright 2024 {{ $business->name }}. </p>
                     </div>
                 </div>
             </footer>

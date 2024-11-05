@@ -16,11 +16,10 @@ class GalleryController extends Controller
         // Es un helper, que obtiene y registra un nuevo ip address(visitante nr)
         get_ip_address($request);
 
-        $pages = Page::find(2);
+        $pages = Page::find(2);     // Por defult #2 es para solo para gallery
+
 
         $sectionxes = $pages->sectionxes;
-
         return view('pages.gallery.index', compact('sectionxes'));
-        //return view('pages.accordion.index');
     }
 }

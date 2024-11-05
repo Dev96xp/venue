@@ -16,12 +16,14 @@ use App\Http\Controllers\Admin\Product\ProductController;
 use App\Http\Controllers\Admin\Subcategory\SubcategoryController;
 use App\Http\Controllers\Admin\Training\TrainingController;
 use App\Http\Controllers\Admin\Book\BookController;
-
+use App\Http\Controllers\Admin\Business\BusinessController;
 use App\Http\Controllers\Admin\Event\EventCalendarController;
 use App\Http\Controllers\Admin\Impost\ImpostController;
 use App\Http\Controllers\Admin\Order\OrderController;
 use App\Http\Controllers\Admin\Page\PageController;
 use App\Http\Controllers\Admin\Permission\PermissionController;
+use App\Http\Controllers\Admin\Proof\ProofController;
+use App\Models\Business;
 use App\Models\Impost;
 
 Route::get('', [HomeController::class, 'index'])->name('home');
@@ -34,7 +36,15 @@ Route::resource('permissions', PermissionController::class)->names('permissions'
 
 Route::resource('pages', PageController::class)->names('pages');
 Route::get('pages/{sectionx}/select_images', [PageController::class,'select_images'])->name('pages.select_images');
-Route::post('pages/{sectionx}/save_images/', [PageController::class,'save_images'])->name('pages.save_images');
+Route::post('pages/{sectionx}/save_images/', [PageController::class,'save_images'])->name('pages.save_images'); //Dropzone
+
+Route::resource('proof', ProofController::class)->names('proof');
+Route::post('proof/{gallery}/save_images/', [ProofController::class,'save_images'])->name('proof.save_images');
+Route::get('proof/{gallery}/upload_images', [ProofController::class,'upload_images'])->name('proof.upload_images'); //Dropzone
+
+Route::resource('business', BusinessController::class)->names('business');
+Route::post('business/{business}/update/', [BusinessController::class,'update'])->name('business.update');
+
 
 Route::resource('users',UserController::class)->names('users');
 Route::resource('invitations',InvitationController::class)->names('invitations');

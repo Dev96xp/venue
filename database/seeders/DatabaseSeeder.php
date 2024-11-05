@@ -53,6 +53,9 @@ class DatabaseSeeder extends Seeder
         Storage::deleteDirectory('public/subcategories');
         Storage::makeDirectory('public/subcategories');
 
+        Storage::deleteDirectory('public/galleries');
+        Storage::makeDirectory('public/galleries');
+
         $this->call(BusinessSeeder::class);
 
         $this->call(StoreSeeder::class);
@@ -121,6 +124,8 @@ class DatabaseSeeder extends Seeder
         $this->call(SectionxSeeder::class);  //Crea solo 3
 
         $this->call(ColorSeeder::class);
+
+        $this->call(GallerySeeder::class);
 
 
     }

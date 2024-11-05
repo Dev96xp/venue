@@ -36,6 +36,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Scheherazade+New&display=swap" rel="stylesheet">
 
+
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
@@ -47,15 +48,15 @@
     {{-- Date Picker Part 1/4 --}}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 
-
     <!-- Styles -->
     @livewireStyles
     @livewireCalendarScripts
 
-    {{-- Formatea EL PHONE NUMBER --}}
+    {{-- Formatea EL PHONE NUMBER      ojo ojo --}}
     <script src="{{ asset('js/format_phone_numbercsd.js') }}"></script>
 
     @yield('css') {{-- Agrege esto para DropZone --}}
+
 </head>
 
 <body class="font-sans antialiased">
@@ -99,12 +100,15 @@
         flatpickr('#datep')
     </script>
 
+
+
     {{-- MASTER CLASS - @stack('script') - Sirve para recibir un script que viene desde un
     componente de Livewire enviado por un - @push('script') y lo inserta en esta plantilla
     para que se ejecute y trabaje.
     En este caso tenemos uno que viene desde:( livewire.admin.user.create-user.blade.php)
     que contiene lo de crear un user. --}}
     @stack('script')
+    @stack('js') {{-- Supuestamente se esta usando para SweetAlert2 --}}
 
 </body>
 

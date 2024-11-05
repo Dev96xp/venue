@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Image;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -17,6 +18,9 @@ return new class extends Migration
             $table->string('url');
             $table->string('model')->nullable();
             $table->string('location')->nullable();
+            $table->text('description')->nullable();
+            $table->text('note')->nullable();
+            $table->enum('status', [Image::INACTIVE, Image::ACTIVE, Image::PENDING])->default(Image::INACTIVE);
             // tabla polimorfica
             $table->unsignedBigInteger('imageable_id');
             $table->string('imageable_type');

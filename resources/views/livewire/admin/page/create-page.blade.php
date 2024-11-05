@@ -12,7 +12,7 @@
 
 
     {{-- Modal --}}
-    <x-dialog-modal wire:model="open">
+    <x-dialog-modal wire:model="open" maxWidth="2xl">
         <x-slot name="title">
             Create page
             {{-- {{ $section->name }} --}}
@@ -29,11 +29,40 @@
                 </div>
 
                 <div class="col-span-1">
-
+                    <x-label value="Route" class="mb-1" />
+                    <x-input type="text" class="w-full" wire:model="route"
+                        id="" />
+                    <x-input-error for="route" />
                 </div>
             </div>
 
+            <div class="grid grid-cols-2 gap-4 mb-3">
+                <div class="col-span-1">
+                    <x-label value="Description" class="mb-1" />
+                    <x-input type="text" class="w-full" wire:model="description"
+                        id="" />
+                    <x-input-error for="description" />
+                </div>
 
+                <div class="col-span-1">
+                    <x-label value="Status" class="mb-1" />
+                    <x-input type="text" class="w-full" wire:model="status"
+                        id="" />
+                    <x-input-error for="status" />
+                </div>
+            </div>
+            <div class="grid grid-cols-2 gap-4 mb-3">
+                <div class="col-span-1">
+                    <x-label value="Active" class="mb-1" />
+                    <x-input type="text" class="w-full" wire:model="active"
+                        id="" />
+                    <x-input-error for="active" />
+                </div>
+
+                <div class="col-span-1">
+
+                </div>
+            </div>
         </x-slot>
 
         <x-slot name="footer">

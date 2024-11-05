@@ -315,17 +315,12 @@ return [
             'can'  => 'manage-blog',
         ],
         [
-            'text'        => 'pages',
-            'url'         => 'admin/pages',
-            'icon'        => 'far fa-fw fa-file',
-            'label'       => 4,
-            'label_color' => 'success',
-        ],
-
-        [
-            'text' => 'Pages',
+            'text' => 'PAGES',
             'url'  => '#',
             'icon' => 'fas fa-file-alt',
+            'icon_color'  => 'orange',
+            'label'       => 2,
+            'label_color' => 'success',
             'submenu' => [
                 [
                     'text'      => 'Pages Config',
@@ -333,14 +328,39 @@ return [
                     'route'     => 'admin.pages.index',
                     'active'    => ['admin/pages*']
                 ],
+                [
+                    'text'      => 'Business Cfg.',
+                    'icon'      => 'far fa-images',
+                    'route'     => 'admin.business.index',
+                    'active'    => ['admin/business*']
+                ],
+            ],
+        ],
+
+        [
+            'text' => 'PROOFING',
+            'url'  => '#',
+            'icon' => 'far fa-image',
+            'icon_color'  => 'yellow',
+            'label'       => 1,
+            'label_color' => 'success',
+            'submenu' => [
+                [
+                    'text'      => 'Upload Images',
+                    'icon'      => 'far fa-images',
+                    'route'     => 'admin.proof.index',
+                    'active'    => ['admin/proof*']
+                ],
+
             ],
         ],
 
         ['header' => 'account_settings'],
 
         [
-            'text' => 'Dashboard',
+            'text' => 'DASHBOARD',
             'icon' => 'fas fa-server',
+            'icon_color'  => 'blue',
             'route'     => 'admin.dashboard.index',
             'active'    => ['admin/dashboard*']
         ],
@@ -358,13 +378,17 @@ return [
         [
             'text' => 'CLIENTES',
             'icon' => 'fas fa-fw fa-user',
+            'icon_color'  => 'pink',
             'route'     => 'admin.users.index',
             'active'    => ['admin/users*']
         ],
         [
             'text' => 'PRODUCTS',
             'url'  => '#',
-            'icon' => '',
+            'icon' => 'fab fa-product-hunt',
+            'icon_color'  => 'green',
+            'label'       => 5,
+            'label_color' => 'success',
             'submenu' => [
                 [
                     'text'        => 'Products',
@@ -408,7 +432,10 @@ return [
         [
             'text'        => 'ONLINE ORDERS',
             'icon'        => 'fas fa-list-ol',
+            'icon_color'  => 'yellow',
             'can'         => 'Leer usuarios',   // SEGURIDAD - PERMISO
+            'label'       => 1,
+            'label_color' => 'success',
             'submenu'     => [
                 [
                     'text'        => 'orders',
@@ -421,7 +448,10 @@ return [
         [
             'text' => 'EVENTS',
             'url'  => '#',
-            'icon' => '',
+            'icon' => 'far fa-calendar-alt',
+            'icon_color'  => 'yellow',
+            'label'       => 3,
+            'label_color' => 'success',
             'submenu' => [
                 [
                     'text'      => 'Events',
@@ -446,8 +476,10 @@ return [
         ],
         [
             'text'        => 'CORTE DE CAJA',
-            'icon'        => 'fa-solid fa-boxes-packing',
+            'icon'        => 'fas fa-credit-card',
             'icon_color'  => 'blue',
+            'label'       => 1,
+            'label_color' => 'success',
             'submenu'     => [
 
                 [
@@ -469,7 +501,10 @@ return [
         [
             'text' => 'SETTINGS',
             'url'  => '#',
-            'icon' => '',
+            'icon' => 'fas fa-cogs',
+            'icon_color'  => 'orange',
+            'label'       => 4,
+            'label_color' => 'success',
             'submenu' => [
                 [
                     'text'      => 'Invitations',

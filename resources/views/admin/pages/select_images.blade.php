@@ -1,10 +1,11 @@
-{{-- Se estiende l aplantilla LTEAdmin para administrador --}}
 @extends('adminlte::page')
 
 @section('codersfree', 'Dashboard')
 
+{{-- DESPLIEGA LAS IMAGENES PERTENECIENTES A UN ENTIDAD --}}
 @section('content_header')
-    <h1>Select images para la seccion: {{ $sectionx->name }}</h1>
+    <h1>Select images para la seccion: {{ $sectionx->name }} </h1>
+    <div>Special notes: {{ $sectionx->note }}</div>
 @stop
 
 {{-- INSTALAR DROPZONE

@@ -7,8 +7,14 @@ use Illuminate\Database\Eloquent\Model;
 
 class Image extends Model
 {
+
     //Asignacion masiva
     protected $guarded = ['id'];
+
+    use HasFactory;
+    const INACTIVE = 1;     // Usados para la proof y galleries tablas
+    const ACTIVE = 2;
+    const PENDING = 3;
 
     use HasFactory;
 

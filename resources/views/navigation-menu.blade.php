@@ -28,6 +28,11 @@
             'route' => route('store'),
             'active' => request()->routeIs('store'),
         ],
+        [
+            'name' => 'Photography',
+            'route' => route('photography'),
+            'active' => request()->routeIs('photography'),
+        ],
         /*
          [
              'name' => 'Equipment',
@@ -211,6 +216,10 @@
                                 </x-dropdown-link>
                                 {{-- @endcan --}}
 
+                                <x-dropdown-link href="{{ route('photography.my-images') }}">
+                                    My Images
+                                </x-dropdown-link>
+
                                 {{-- SEGURIDAD - PERMISO --}}
                                 @can('Ver dashboard')
                                     {{-- MASTER CLASS - OJO Uso la ruta completa cuando uso route() --}}
@@ -306,6 +315,14 @@
                         My Account
                     </x-responsive-nav-link>
                     {{-- @endcan --}}
+
+                    {{-- SEGURIDAD - PERMISO --}}
+                    {{-- @can('Photography') --}}
+                    <x-responsive-nav-link class="text-sm" href="{{ route('photography.my-images') }}">
+                        My Images
+                    </x-responsive-nav-link>
+                    {{-- @endcan --}}
+
 
                     @can('Ver dashboard')
                         <x-responsive-nav-link class="text-sm" href="{{ route('admin.home') }}" :active="request()->routeIs('admin.home')">

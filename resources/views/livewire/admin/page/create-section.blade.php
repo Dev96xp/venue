@@ -9,7 +9,7 @@
 
 
     {{-- Modal --}}
-    <x-dialog-modal wire:model="open">
+    <x-dialog-modal wire:model="open" photography maxWidth="2xl">
         <x-slot name="title">
             Add section
             {{-- {{ $section->name }} --}}
@@ -29,7 +29,17 @@
 
                 </div>
             </div>
+            <div class="grid grid-cols-3 gap-4 mb-3">
+                <div class="col-span-2">
+                    <x-label value="Note" class="mb-1" />
+                    <textarea type="text" class="w-full" type="text" cols="20" rows="5" wire:model="note" id=""></textarea>
+                    <x-input-error for="note" />
+                </div>
 
+                <div class="col-span-1">
+
+                </div>
+            </div>
 
         </x-slot>
 

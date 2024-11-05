@@ -30,3 +30,10 @@ Use https://github.com/omnia-digital/livewire-calendar, igual que el anterior pe
 
 Use: http://flexslider.woothemes.com/basic-carousel.html, para el carrusel de productos
 
+Use: https://getbootstrap.com/docs/4.0/examples/carousel/, para el carousel de photos
+
+Tome parte de este codigo pero no lo instale completo
+     https://github.com/lokesh/lightbox2
+
+Use: SweetAlert2 en livewire component, para proofing-admin     , https://sweetalert2.github.io/#examples
+

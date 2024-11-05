@@ -8,14 +8,21 @@ use Livewire\Component;
 class CreatePage extends Component
 {
     public $open = false;
-    public $name;
+    public $name, $description, $route, $active, $status;
 
     // MASTER CLASS
     // SUPER IMPORTATNTE ESTAS REGLAS DE VALIDACION,
     // PARA QUE LOS VALORES APARESCAN EN EL FORMULARIO
     // ESTO ME PERMITIRA USAR LAS PROPIEDADES DEL OBJETO EN EL FORMULARIO
+
+
+
     protected $rules = [
         'name' => 'required|max:30',
+        'description' => 'required',
+        'route' => 'required',
+        'active' => 'required',
+        'status' => 'required',
     ];
 
     public function render()
@@ -32,6 +39,10 @@ class CreatePage extends Component
         $page = Page::create([
             'name' => $this->name,
             'status' => 'Active',
+            'description' => $this->description,
+            'route' => $this->route,
+            'active' => $this->active,
+            'status' => $this->status,
         ]);
 
         // 3. Reset Variable - Una vez usadas la porpiedades, limpia las propiedades (reset)

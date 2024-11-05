@@ -16,7 +16,7 @@ class AccountController extends Controller
         $user = auth()->user();
         $account_id = $user->account->id;
         $account = Account::find($account_id);
-        return view('account.index',compact('account'));
+        return view('dropdown.account.index',compact('account'));
     }
 
     /**
