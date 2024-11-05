@@ -73,5 +73,12 @@ class SectionxSeeder extends Seeder
             'status' => 'ACTIVE',
             'page_id' => 6,
         ]);
+        Sectionx::create([
+            'name' => 'Parallax Images',
+            'note' => 'key = parallaxImage1, parallaxImage2',
+            'status' => 'ACTIVE',
+            'page_id' => 6,
+        ]);
+
     }
 }
