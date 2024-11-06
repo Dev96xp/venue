@@ -126,7 +126,7 @@
 
                                 @can('User edit')
                                     <td width="10px">
-                                        <a class="btn btn-primary" href="{{ route('admin.users.edit', $user) }}">Editar</a>
+                                        <a class="btn btn-primary py-1" href="{{ route('admin.users.edit', $user) }}">Editar</a>
                                     </td>
                                 @endcan
 

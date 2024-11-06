@@ -14,8 +14,8 @@ class DashboardController extends Controller
     public function index()
     {
         // Obtener todos los usuarios que son administradores
-        //$users = User::role('Admin')->get();
-        $users = User::all();
+        $users = User::role('Admin')->get();
+        //$users = User::all();
 
         return view('admin.dashboard.index',compact('users'));
     }

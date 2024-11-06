@@ -142,7 +142,7 @@ class RoleController extends Controller
     public function destroy(Role $role)
     {
         // NO elimina los roles de administrador y de desarrollador
-        if ($role->name == 'Admin' || $role->name == 'Developer') {
+        if ($role->name == 'Admin' || $role->name == 'Developer' || $role->name == 'Master'|| $role->name == 'Customer') {
             return redirect()->route('admin.roles.index')->with('info', 'El rol NO se puede eliminar');
             # nada
         } else {

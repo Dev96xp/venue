@@ -16,7 +16,7 @@ class UserSeeder extends Seeder
         // Registro ingresado manualmente
 
         $user = User::create([
-            'name' => 'David Martinez',
+            'name' => 'Nucleos Industries',
             'cus_id' => '2024-1001',
             'email' => 'dm.images@hotmail.com',
             'password' => bcrypt('12345612'),

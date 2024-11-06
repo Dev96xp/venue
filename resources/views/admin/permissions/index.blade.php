@@ -3,7 +3,7 @@
 @section('codersfree', 'Dashboard')
 
 @section('content_header')
-    <h1>PERMISSIONS SETTINGS</h1>
+    <h1>PERMISSIONS SETTINGS x</h1>
 @stop
 
 @section('content')
@@ -13,8 +13,9 @@
     <x-admin-layout>
 
         <div class="grid grid-cols-6 gap-6">
+
             <div class="col-span-2">
-                {{-- @livewire('admin.permission.permission-index') --}}
+                @livewire('admin.permission.permission-index')
             </div>
 
             <div class="col-span-2">
