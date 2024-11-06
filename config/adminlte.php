@@ -433,7 +433,7 @@ return [
             'text'        => 'ONLINE ORDERS',
             'icon'        => 'fas fa-list-ol',
             'icon_color'  => 'yellow',
-            'can'         => 'Leer usuarios',   // SEGURIDAD - PERMISO
+            'can'         => 'Dashborad online orders',   // SEGURIDAD - PERMISO
             'label'       => 1,
             'label_color' => 'success',
             'submenu'     => [
@@ -450,6 +450,7 @@ return [
             'url'  => '#',
             'icon' => 'far fa-calendar-alt',
             'icon_color'  => 'yellow',
+            'can'         => 'Dashborad events',   // SEGURIDAD - PERMISO
             'label'       => 3,
             'label_color' => 'success',
             'submenu' => [
@@ -478,6 +479,7 @@ return [
             'text'        => 'CORTE DE CAJA',
             'icon'        => 'fas fa-credit-card',
             'icon_color'  => 'blue',
+            'can'         => 'Dashborad cashier',   // SEGURIDAD - PERMISO
             'label'       => 1,
             'label_color' => 'success',
             'submenu'     => [
@@ -503,6 +505,7 @@ return [
             'url'  => '#',
             'icon' => 'fas fa-cogs',
             'icon_color'  => 'orange',
+            'can'         => 'Dashborad settings',   // SEGURIDAD - PERMISO
             'label'       => 4,
             'label_color' => 'success',
             'submenu' => [
