@@ -270,5 +270,23 @@ class PermissionSeeder extends Seeder
         Permission::create(['name' => 'Configuration Pack delete',]);
         //116
         Permission::create(['name' => 'Configuration Pack open1',]);
+
+        //117
+        Permission::create(['name' => 'Dashborad online orders',]);
+        //118
+        Permission::create(['name' => 'Dashborad events',]);
+        //119
+        Permission::create(['name' => 'Dashborad settings',]);
+        //120
+        Permission::create(['name' => 'Dashborad cashier',]);
+        //121
+        Permission::create(['name' => 'Dashborad Open1',]);
+        //122
+        Permission::create(['name' => 'Dashborad Open2',]);
+        //123
+        Permission::create(['name' => 'Dashborad Open3',]);
+        //124
+        Permission::create(['name' => 'Dashborad Open4',]);
+
     }
 }

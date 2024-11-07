@@ -98,21 +98,27 @@
           </picture>
     </section> --}}
 
+
+
     {{-- VIDEO --}}
     <section>
 
-        {{-- MASTER CLASS - metodo 3" autoplay loop muted plays-inline"
-        <div class="container w-full">
+        {{-- MASTER CLASS - metodo 3" autoplay loop muted plays-inline" autoplay="on"--}}
+        {{-- <div class="w-full relative">
             <video autoplay loop muted plays-inline class="w-full">
-                <source src="/img/home/video_bodas.mp4" type='video/mp4'>
+                <source src="/img/home/Video_bodas.mp4" type='video/mp4'>
             </video>
 
-            <div class="content">
-                <h1>THE PALACE HALL</h1>
-                <a href="#">Star Lerning</a>
+            <div class="content absolute bottom-4 md:bottom-6 lg:bottom-6 left-10 lg:left-40 ">
+                <p class="text-black text-3xl sm:text-8xl lg:text-8xl pt-6 pb-2" style="font-family: Sche">
+                    {{ $business->name }}</p>
+                <p class="text-white text-xl md:text-5xl lg:text-5xl font-bold lg:mb-60" style="font-family: Montserrat">
+                    {{ $business->slogan }}
+                </p>
+
             </div>
-        </div>
-         --}}
+        </div> --}}
+
 
 
 
@@ -123,15 +129,15 @@
         </div> --}}
 
 
+        {{-- Very good Metodo --}}
         {{-- <video id="my-video" class="video-js w-full" controls preload="auto" width="auto" height="600" data-setup="{}" autoplay="on">
             <p class="text-black text-6xl md:text-8xl lg:text-8xl py-6" style="font-family: Sche">{{ $business->name }}</p>
-            <source src="/img/home/video_bodas.mp4" type='video/mp4'>
-
+            <source src="" type='video/mp4'>
         </video> --}}
 
         {{-- <div class="media">
             <div class="media-body">
-                <iframe width="560" height="315" src="/img/home/video_bodas.mp4" frameborder="0" allowfullscreen>
+                <iframe width="560" height="315" src="" frameborder="0" allowfullscreen>
                 </iframe>
             </div>
         </div> --}}
