@@ -149,7 +149,7 @@
     {{-- SECCTION 2 - At your service - Contenido con 4 articulos --}}
     <section class="mt-6">
         <h1 class="text-gray-800 text-center text-4xl mb-6 font-bold"
-            style="my-6 font-family: proxima-nova, sans-serif;font-weight: 800;font-style: normal">AT YOUR SERVICE</h1>
+            style="my-6 font-family: proxima-nova, sans-serif;font-weight: 800;font-style: normal">AT YOUR SERVICE xp</h1>
         <div
             class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-8">
             {{-- ARTICULO 1 --}}
