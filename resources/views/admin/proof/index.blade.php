@@ -16,6 +16,12 @@
             <div class="col-span-2">
                 @livewire('admin.proof.gallery-index')      {{-- Aqui es donde se suben la fotos --}}
             </div>
+            <div class="col-span-2">
+
+            </div>
+            <div class="col-span-2">
+                @livewire('admin.proof.selected-photos')      {{-- Aqui es donde se suben la fotos --}}
+            </div>
         </div>
 
     </x-admin-layout>

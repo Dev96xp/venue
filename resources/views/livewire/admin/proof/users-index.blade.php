@@ -40,7 +40,8 @@
                     <thead>
                         <tr>
                             <th scope="col"
-                                class="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 sm:pl-0">Cliente name</th>
+                                class="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 sm:pl-0">Cliente
+                                name</th>
                             <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">
                             </th>
                             <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">
@@ -63,8 +64,8 @@
                                             <div
                                                 class="font-bold {{ $selecionado == $user->name ? 'text-blue-500 text-md' : '' }}">
                                                 {{ $user->name }} </div>
-                                                <div class="text-gray-900">{{ $user->addres }}</div>
-                                                <div class="text-gray-500">{{ $user->city }}, {{ $user->zip }}</div>
+                                            <div class="text-gray-900">{{ $user->addres }}</div>
+                                            <div class="text-gray-500">{{ $user->city }}, {{ $user->zip }}</div>
                                         </div>
                                     </div>
                                 </td>
@@ -80,6 +81,10 @@
 
                     </tbody>
                 </table>
+                {{-- Esto pone los links de navegacion de la pagina, en la parte de abajo --}}
+                <div class="px-6 py-4">
+                    {{ $users->links() }}
+                </div>
             </div>
         </div>
     </div>

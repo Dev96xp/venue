@@ -46,13 +46,14 @@
                                             @else
                                             @endif
 
-                                            <div class="ml-4">
+                                            <div class="ml-4" wire:click="select_gallery({{ $gallery }})">
                                                 <div
-                                                    class="font-bold {{ $selecionado == $gallery->name ? 'text-blue-500 text-md' : '' }}">
+                                                    class="font-bold {{ $galleria_selecionada == $gallery->name ? 'text-green-500 text-md' : '' }}">
                                                     {{ $gallery->name }} </div>
                                             </div>
                                         </div>
                                     </td>
+
                                     <td class="whitespace-nowrap px-3 py-1 text-sm text-gray-500">
                                         <div class="text-gray-900 font-bold">{{ $gallery->code }}</div>
                                     </td>

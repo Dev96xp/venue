@@ -13,7 +13,7 @@ class GalleryIndex extends Component
 {
 
     public $galleries;
-    public $selecionado;
+    public $galleria_selecionada;
     public $user;
     public $user_id;
 
@@ -68,4 +68,15 @@ class GalleryIndex extends Component
 
         //$this->gallery = $this->gallery->fresh();
     }
+
+    public function select_gallery(Gallery $gallery)
+    {
+
+        $this->galleria_selecionada = $gallery->name;
+
+        $this->dispatch('send-gallery', gallery: $gallery);  // ENVIO EL PAQUETE SELECIONADO POR EL USUARIO
+        //$this->dispatch('post-created', title: $post->title);  ESTE ES SOLO UN EJEMPLO
+
+    }
+
 }
