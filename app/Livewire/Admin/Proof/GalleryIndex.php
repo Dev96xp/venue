@@ -79,4 +79,36 @@ class GalleryIndex extends Component
 
     }
 
+    public function update_status($gallery_id)
+    {
+
+        $gallery = Gallery::find($gallery_id);
+
+        //dd($product->status_product->id);
+
+        switch ($gallery->status) {
+                // Si es ACTIVE lo cambio a VIEW
+            case 'ACTIVE':
+                $gallery->status = 'VIEW';
+                $gallery->save();
+                break;
+            case 'VIEW':
+                // Si es VIEW lo cambio a HIDE
+                $gallery->status = 'HIDE';
+                $gallery->save();
+                break;
+            case 'HIDE':
+                // Si es HIDE lo cambio a ACTIVE
+                $gallery->status = 'ACTIVE';
+                $gallery->save();
+                break;
+            default:
+                # code...
+                break;
+        }
+
+        // MASTER CLASS - REFRESCA al componente por tanto la vista tambien.
+        //$this->$items_venue = $this->$items_venue->fresh();
+    }
+
 }

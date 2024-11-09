@@ -1,8 +1,9 @@
-<div>
+<div class="mb-10">
     <div class="px-4 sm:px-6 lg:px-8">
         <div class="sm:flex sm:items-center">
             <div class="sm:flex-auto">
-                <h1 class="text-base font-semibold leading-6 text-gray-900">Galleries for <span class="text-blue">{{ $user->name }}</span></h1>
+                <h1 class="text-base font-semibold leading-6 text-gray-900">Galleries for <span
+                        class="text-blue">{{ $user->name }}</span></h1>
 
             </div>
             <div class="mt-4 sm:ml-16 sm:mt-0 sm:flex-none">
@@ -66,8 +67,39 @@
                                     </td>
                                     {{-- @endcan --}}
 
-                                    <td class="whitespace-nowrap px-3 py-1 text-sm text-gray-500">
+                                    {{-- <td class="whitespace-nowrap px-3 py-1 text-sm text-gray-500">
                                         <div class="text-gray-900">{{ $gallery->status }}</div>
+                                    </td> --}}
+
+                                    <td class="px-6 py-4 whitespace-nowrap">
+
+                                        @switch($gallery->status)
+                                            @case('ACTIVE')
+                                                <span>
+                                                    <buttons class="btn btn-green ml-2 px-2 py-0 font-normal text-white text-sm"
+                                                        wire:click="update_status({{ $gallery->id }})">
+                                                        {{ $gallery->status }}</buttons>
+                                                </span>
+                                            @break
+
+                                            @case('VIEW')
+                                                <span>
+                                                    <buttons class="btn btn-blue ml-2 px-2 py-0 font-normal text-white text-sm"
+                                                        wire:click="update_status({{ $gallery->id }})">
+                                                        {{ $gallery->status}}</buttons>
+                                                </span>
+                                            @break
+
+                                            @case('HIDE')
+                                                <span>
+                                                    <buttons class="btn btn-orange ml-2 px-2 py-0 font-normal text-white text-sm"
+                                                        wire:click="update_status({{ $gallery->id }})">
+                                                        {{ $gallery->status }}</buttons>
+                                                </span>
+                                            @break
+
+                                            @default
+                                        @endswitch
                                     </td>
 
                                     {{-- @can('Upload images') --}}
