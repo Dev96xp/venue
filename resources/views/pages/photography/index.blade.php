@@ -33,9 +33,10 @@
 
                             <div class="container">
                                 <div class="carousel-caption text-left">
-                                    <h1 class="text-4xl lg:text-6xl mb-1" style="font-family: Sche">
+                                    <h1 class="text-4xl lg:text-6xl mb-1 font-extrabold"
+                                        style="font-family: Montserrat">
                                         {{ $business->name }}</h1>
-                                    <p class="mb-2">Deteniendo el arte en el tiempo creando una imagenes autenticas
+                                    <p class="mb-2">Deteniendo el arte en el tiempo, creando videos como autenticas
                                         obras de
                                         arte.
                                         La luz permite ver los colores nosotros lo capturamos
@@ -47,10 +48,6 @@
                                                 role="button">Sign up
                                                 today</a></p>
                                     @endauth
-
-
-
-
 
                                 </div>
                             </div>

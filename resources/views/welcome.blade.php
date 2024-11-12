@@ -61,31 +61,27 @@
         <div class="w-full mx-auto px-4 sm:px-6 lg:px-64 py-40 opacity-75 relative bg-center bg-no-repeat bg-cover hover:opacity-100"
             style="background-image: url('{{ asset('img/gallery/25003786-6b3c-453e-9885-5d275016dbb7.jpg') }}')">        --}}
 
-        <div class="w-full mx-auto px-4 sm:px-6 lg:px-64 py-40 opacity-75 relative bg-center bg-no-repeat bg-cover hover:opacity-100"
+        <div class="w-full h-screen mx-auto px-4 sm:px-6 lg:px-64 py-40 lg:py-52 opacity-75 relative bg-center bg-no-repeat bg-cover hover:opacity-100"
             style="background-image: url('{{ Storage::url($headImage) }}')">
 
 
-            <div class="w-full md:w-3/4 lg:w-3/4">
+
+
+            <div class="absolute left-10 lg:left-20 bottom-20">
                 {{-- APLICANDO UNA CONDICIONAL PARA CLASES --}}
-                <p class="text-black text-6xl md:text-8xl lg:text-8xl py-6" style="font-family: Sche">
+                <p class="text-gray-400 font-bold text-5xl md:text-8xl lg:text-8xl py-6" style="font-family: Montserrat">
                     {{ $business->name }}</p>
-                <p class="text-white text-2xl md:text-5xl lg:text-5xl font-bold mb-60" style="font-family: Montserrat">
+                <p class="text-white text-xl md:text-5xl lg:text-5xl font-bold" style="font-family: Montserrat">
                     {{ $business->slogan }}
                 </p>
-                <p class="text-black font-bold text-3xl mt-2 mb-4" style="font-family: Montserrat">
+                <p class="text-black font-bold text-xl mt-2 mb-4" style="font-family: Montserrat">
                     {{ $business->description }}
                 </p>
 
-
-                {{-- OCULTE EL BUSCADOR TEMPORALMENTE --}}
-                {{-- @livewire('search') --}}
-
-
-                {{-- COVER --}}
-                <div class="absolute right-10 bottom-2">
-                    <p class="text-white font-bold" style="font-family: Montserrat"></p>
-                </div>
+                {{-- COVER Creditos
+                <p class="text-white font-bold" style="font-family: Montserrat"></p> --}}
             </div>
+
         </div>
 
     </section>
@@ -103,7 +99,7 @@
     {{-- VIDEO --}}
     <section>
 
-        {{-- MASTER CLASS - metodo 3" autoplay loop muted plays-inline" autoplay="on"--}}
+        {{-- MASTER CLASS - metodo 3" autoplay loop muted plays-inline" autoplay="on" --}}
         {{-- <div class="w-full relative">
             <video autoplay loop muted plays-inline class="w-full">
                 <source src="/img/home/Video_bodas.mp4" type='video/mp4'>
@@ -149,7 +145,8 @@
     {{-- SECCTION 2 - At your service - Contenido con 4 articulos --}}
     <section class="mt-6">
         <h1 class="text-gray-800 text-center text-4xl mb-6 font-bold"
-            style="my-6 font-family: proxima-nova, sans-serif;font-weight: 800;font-style: normal">AT YOUR SERVICE xp</h1>
+            style="my-6 font-family: proxima-nova, sans-serif;font-weight: 800;font-style: normal">AT YOUR SERVICE xp
+        </h1>
         <div
             class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-8">
             {{-- ARTICULO 1 --}}
