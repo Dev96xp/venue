@@ -69,7 +69,7 @@
 
             <div class="absolute left-10 lg:left-20 bottom-20">
                 {{-- APLICANDO UNA CONDICIONAL PARA CLASES --}}
-                <p class="text-gray-400 font-bold text-5xl md:text-8xl lg:text-8xl py-6" style="font-family: Montserrat">
+                <p class="text-gray-200 font-bold text-5xl md:text-8xl lg:text-8xl py-6" style="font-family: Montserrat">
                     {{ $business->name }}</p>
                 <p class="text-white text-xl md:text-5xl lg:text-5xl font-bold" style="font-family: Montserrat">
                     {{ $business->slogan }}
