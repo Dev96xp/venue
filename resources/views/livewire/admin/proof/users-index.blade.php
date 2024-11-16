@@ -65,7 +65,7 @@
                                                 class="font-bold {{ $selecionado == $user->name ? 'text-blue-500 text-md' : '' }}">
                                                 {{ $user->name }} </div>
                                             <div class="text-gray-900">{{ $user->addres }}</div>
-                                            <div class="text-gray-500">{{ $user->city }}, {{ $user->zip }}</div>
+                                            <div class="text-gray-500">{{ $user->phone }} - {{ $user->city }}, {{ $user->zip }}</div>
                                         </div>
                                     </div>
                                 </td>
