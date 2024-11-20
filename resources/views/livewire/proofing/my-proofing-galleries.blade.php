@@ -30,19 +30,27 @@
                             @switch($image->status)
                                 @case(1)
                                     <span>
-                                        <buttons
+                                        <i
+                                        wire:click="update_proof_status({{ $image->id }})"class="far fa-heart text-gray-200 text-3xl coursor-pointer absolute bottom-2 right-2"></i>
+
+                                        {{-- <buttons
                                             class="btn btn-orange ml-2 px-2 py-0 absolute bottom-2 right-2 font-normal text-white text-sm"
                                             wire:click="update_proof_status({{ $image->id }})">
-                                            ?</buttons>
+                                            ?</buttons> --}}
                                     </span>
                                 @break
 
                                 @case(2)
                                     <span>
-                                        <buttons
+
+                                        <i
+                                        wire:click="update_proof_status({{ $image->id }})"class="fas fa-heart text-pink-500 text-3xl coursor-pointer absolute bottom-2 right-2"></i>
+
+
+                                        {{-- <buttons
                                             class="btn btn-fuchsia ml-2 px-2 py-0 absolute bottom-2 right-2 font-normal text-white text-sm"
                                             wire:click="update_proof_status({{ $image->id }})">
-                                            Selected</buttons>
+                                            Selected</buttons> --}}
                                     </span>
                                 @break
 

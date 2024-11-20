@@ -36,6 +36,9 @@
     font-family: 'Sacramento', cursive;
     font-family: 'Tangerine', cursive; --}}
 
+    {{-- Font Awesome --}}
+    <link rel="stylesheet" href="{{ asset('vendor/fontawesome-free/css/all.min.css') }}">
+
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
