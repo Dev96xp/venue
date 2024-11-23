@@ -158,8 +158,8 @@
                         for years to come."</p>
                 </div>
                 <div class="col-md-5">
-                    <img class="featurette-image img-fluid mx-auto" src="{{ Storage::url($blog1) }}"
-                        alt="Generic placeholder image">
+                    <img class="featurette-image img-fluid mx-auto" src="{{ Storage::url($blog1p) }}"
+                        alt="blog1p">
                 </div>
             </div>
 
@@ -167,13 +167,13 @@
 
             <div class="row featurette">
                 <div class="col-md-7 order-md-2">
-                    <h2 class="featurette-heading">Personal<span class="text-muted">Touch</span></h2>
+                    <h2 class="featurette-heading">Personal<span class="text-muted"> Touch</span></h2>
                     <p class="lead">"Every session is tailored to reflect your unique personality and story, ensuring
                         that your photos truly represent you."</p>
                 </div>
                 <div class="col-md-5 order-md-1">
-                    <img class="featurette-image img-fluid mx-auto" src="{{ Storage::url($blog2) }}"
-                        alt="Generic placeholder image">
+                    <img class="featurette-image img-fluid mx-auto" src="{{ Storage::url($blog2p) }}"
+                        alt="blog2p">
                 </div>
             </div>
 
@@ -181,14 +181,14 @@
 
             <div class="row featurette">
                 <div class="col-md-7">
-                    <h2 class="featurette-heading">Attention<span class="text-muted">to Detail</span>
+                    <h2 class="featurette-heading">Attention<span class="text-muted"> to Detail</span>
                     </h2>
                     <p class="lead">"I pay close attention to the little details, from lighting to composition, to
                         create stunning images that stand out."</p>
                 </div>
                 <div class="col-md-5">
-                    <img class="featurette-image img-fluid mx-auto" src="{{ Storage::url($blog3) }}"
-                        alt="Generic placeholder image">
+                    <img class="featurette-image img-fluid mx-auto" src="{{ Storage::url($blog3p) }}"
+                        alt="blog3p">
                 </div>
             </div>
 

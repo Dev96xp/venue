@@ -19,11 +19,11 @@ class PhotographyController extends Controller
         // Es un helper, que obtiene y registra un nuevo ip address(visitante nr)
         get_ip_address($request);
 
-        $pages = Page::find(6);     // Por defult #6 es para photography gallery
+        $pages = Page::find(6);     // Por defult #6 es para la pagina photography
 
-        $sectionxes = $pages->sectionxes;
+        $sectionxes = $pages->sectionxes;   // Por defult un apagina incluye varias sectiones
 
-        // Se obtiene la primera section solamente para usarla en el carousel principal
+        // Se obtiene la PRIMERA section solamente para usarla en el carousel principal
         $galleryOfCarouselPrincipal = $sectionxes->first()->images;       // imagenes para el carrousel principal
 
         //dd($galleryPrincipal);
@@ -33,12 +33,14 @@ class PhotographyController extends Controller
         $heading3 = '';
         $heading4 = '';
 
-        $blog1 = '';
-        $blog2 = '';
-        $blog3 = '';
+        $blog1p = '';
+        $blog2p = '';
+        $blog3p = '';
 
         $parallaxImage1 = '';
         $parallaxImage2 = '';
+
+
 
         foreach ($sectionxes as $section) {
             foreach ($section->images as $image) {
@@ -55,17 +57,17 @@ class PhotographyController extends Controller
                     case 'heading4':
                         $article4 = $image->url;
                         break;
-                    case 'blog1':
-                        $blog1 = $image->url;
+                    case 'blog1p':
+                        $blog1p = $image->url;
                         break;
-                    case 'blog2':
-                        $blog2 = $image->url;
+                    case 'blog2p':
+                        $blog2p = $image->url;
                         break;
-                    case 'blog3':
-                        $blog3 = $image->url;
+                    case 'blog3p':
+                        $blog3p = $image->url;
                         break;
-                    case 'blog4':
-                        $blog4 = $image->url;
+                    case 'blog4p':
+                        $blog4p = $image->url;
                         break;
                     case 'parallaxImage1':
                         $parallaxImage1 = $image->url;
@@ -80,6 +82,7 @@ class PhotographyController extends Controller
             }
         }
 
+
         return view('pages.photography.index', compact(
             'business',
             'galleryOfCarouselPrincipal',
@@ -88,9 +91,9 @@ class PhotographyController extends Controller
             'heading2',
             'heading3',
             'heading4',
-            'blog1',
-            'blog2',
-            'blog3',
+            'blog1p',
+            'blog2p',
+            'blog3p',
             'parallaxImage1',
             'parallaxImage2',
         ));
