@@ -94,7 +94,6 @@
                         images that exceed your expectations.".</p>
                     {{-- <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p> --}}
                 </div><!-- /.col-lg-4 -->
-
                 <div class="col-lg-4">
                     <img class="mx-auto mb-3" src="{{ Storage::url($heading3) }}" alt="Generic placeholder image"
                         width="400" height="200">
@@ -145,6 +144,7 @@
             </div>
         </section>
 
+        {{-- Marketing with  IMAGES --}}
         <div class="container marketing">
 
             <!-- START THE FEATURETTES -->
@@ -158,8 +158,7 @@
                         for years to come."</p>
                 </div>
                 <div class="col-md-5">
-                    <img class="featurette-image img-fluid mx-auto" src="{{ Storage::url($blog1p) }}"
-                        alt="blog1p">
+                    <img class="featurette-image img-fluid mx-auto" src="{{ Storage::url($blog1p) }}" alt="blog1p">
                 </div>
             </div>
 
@@ -172,8 +171,7 @@
                         that your photos truly represent you."</p>
                 </div>
                 <div class="col-md-5 order-md-1">
-                    <img class="featurette-image img-fluid mx-auto" src="{{ Storage::url($blog2p) }}"
-                        alt="blog2p">
+                    <img class="featurette-image img-fluid mx-auto" src="{{ Storage::url($blog2p) }}" alt="blog2p">
                 </div>
             </div>
 
@@ -187,8 +185,62 @@
                         create stunning images that stand out."</p>
                 </div>
                 <div class="col-md-5">
-                    <img class="featurette-image img-fluid mx-auto" src="{{ Storage::url($blog3p) }}"
-                        alt="blog3p">
+                    <img class="featurette-image img-fluid mx-auto" src="{{ Storage::url($blog3p) }}" alt="blog3p">
+                </div>
+            </div>
+
+            <hr class="featurette-divider">
+
+            <!-- /END THE FEATURETTES -->
+
+        </div><!-- /.container -->
+
+
+
+        {{-- Marketing with  VIDEO --}}
+        <div class="container marketing">
+
+            <!-- START THE FEATURETTES -->
+
+            <hr class="featurette-divider">
+
+            <div class="row featurette">
+                <div class="col-md-7">
+                    <h2 class="featurette-heading">Capturing <span class="text-muted">Moments on Video</span></h2>
+                    <p class="lead">"Para nosotros el detalle es lo que cuenta, sobre todo hacer lucir tu hermoso vestido y tenerlo
+                        en video para verlo y volverlo a ver cuantas veces quieras, por eso es muy importante usar lo ultimo tecnologia
+                        para la filmacion"</p>
+                </div>
+                <div class="col-md-5">
+
+                    {{-- Add controls=0 to NOT display controls in the video player.
+                    controls=0 - Player controls does not display.
+                    controls=1 (default) - Player controls is displayed. --}}
+
+                    <iframe width="600" height="400" src="https://www.youtube.com/embed/z1pbhHgB79Q"
+                    title="promo"
+                    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
+                </div>
+            </div>
+
+            <hr class="featurette-divider">
+
+            <div class="row featurette">
+                <div class="col-md-7 order-md-2">
+                    <h2 class="featurette-heading">Personal<span class="text-muted"> Touch</span></h2>
+                    <p class="lead">"Nos encanta la gran variedad de temas sobre quinceañeras que existen,
+                        una de nuestras favoritas es la de Charro, una tradicion muy Mexicana y lucen espectaculares,
+                        mas cuando usamos drones para la filmacion"</p>
+                </div>
+
+                <div class="col-md-5 order-md-1">
+                    <iframe width="600" height="400" src="https://www.youtube.com/embed/BvG8zgC106s"
+                    title="Adrianna XV"
+                    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
             </div>
 
