@@ -14,6 +14,7 @@ use App\Models\page;
 use App\Models\Payment;
 use App\Models\Schedule;
 use App\Models\Sectionx;
+use App\Models\Tag;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Storage;
 
@@ -126,6 +127,9 @@ class DatabaseSeeder extends Seeder
         $this->call(ColorSeeder::class);
 
         $this->call(GallerySeeder::class);
+
+        $this->call(TagSeeder::class);
+        $this->call(PostSeeder::class);
 
 
     }

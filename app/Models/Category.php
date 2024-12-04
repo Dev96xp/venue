@@ -28,6 +28,11 @@ class Category extends Model
         return $this->hasMany(Business::class);
     }
 
+    public function posts()
+    {
+        return $this->hasMany(Post::class);
+    }
+
     // RELACION UNO A MUCHOS INVERSA
     public function status_category()
     {

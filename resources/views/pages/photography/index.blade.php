@@ -81,15 +81,22 @@
                     <img class="mx-auto mb-3" src="{{ Storage::url($heading1) }}" alt="Generic placeholder image"
                         width="400" height="200">
 
-                    <h2>Creating Memories</h2>
-                    <p>"My goal is to help you create lasting memories that evoke emotions and tell your story for
-                        generations."</p>
+                    <h2 class="text-xl font-bold">Conservando nuestros recuerdos</h2>
+
+                    <p>"Tenemos paquetes de video y fotografia con todo incluido, se puede seleccionar el que mas se
+                        adapte a tu presupuesto. Tambien existen paquetes de fotografia o solo video, todas la
+                        impresiones se realizan en materiales de la mas alta calidad."</p>
+                    <p> Llamanos por cualquier pregunta respecto a nuestro trabajo
+
+                        PALACE PRODUCTIONS 308-627-9989</p>
+
+
                     {{-- <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p> --}}
                 </div><!-- /.col-lg-4 -->
                 <div class="col-lg-4">
                     <img class="mx-auto mb-3" src="{{ Storage::url($heading2) }}" alt="Generic placeholder image"
                         width="400" height="200">
-                    <h2>Professional Expertise</h2>
+                    <h2 class="text-xl font-bold">Professional Expertise</h2>
                     <p>"With my experience and passion for photography, you can trust that you'll receive high-quality
                         images that exceed your expectations.".</p>
                     {{-- <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p> --}}
@@ -97,7 +104,7 @@
                 <div class="col-lg-4">
                     <img class="mx-auto mb-3" src="{{ Storage::url($heading3) }}" alt="Generic placeholder image"
                         width="400" height="200">
-                    <h2>"Elevate Your Brand with Stunning Photography!"</h2>
+                    <h2 class="text-xl font-bold">"Elevate Your Brand with Stunning Photography!"</h2>
                     <p>
                         Are you looking to showcase your business in the best light? Whether it’s professional
                         headshots, product photography, or captivating images for your website and marketing materials,
@@ -153,7 +160,7 @@
 
             <div class="row featurette">
                 <div class="col-md-7">
-                    <h2 class="featurette-heading">Capturing <span class="text-muted">Moments</span></h2>
+                    <h2 class="featurette-heading text-2xl mb-2">Capturing <span class="text-muted">Moments</span></h2>
                     <p class="lead">"I love freezing beautiful moments in time, creating images that you can treasure
                         for years to come."</p>
                 </div>
@@ -166,7 +173,7 @@
 
             <div class="row featurette">
                 <div class="col-md-7 order-md-2">
-                    <h2 class="featurette-heading">Personal<span class="text-muted"> Touch</span></h2>
+                    <h2 class="featurette-heading text-2xl mb-2">Personal<span class="text-muted"> Touch</span></h2>
                     <p class="lead">"Every session is tailored to reflect your unique personality and story, ensuring
                         that your photos truly represent you."</p>
                 </div>
@@ -179,7 +186,7 @@
 
             <div class="row featurette">
                 <div class="col-md-7">
-                    <h2 class="featurette-heading">Attention<span class="text-muted"> to Detail</span>
+                    <h2 class="featurette-heading text-2xl mb-2">Attention<span class="text-muted"> to Detail</span>
                     </h2>
                     <p class="lead">"I pay close attention to the little details, from lighting to composition, to
                         create stunning images that stand out."</p>
@@ -206,9 +213,12 @@
 
             <div class="row featurette">
                 <div class="col-md-7">
-                    <h2 class="featurette-heading">Capturing <span class="text-muted">Moments on Video</span></h2>
-                    <p class="lead">"Para nosotros el detalle es lo que cuenta, sobre todo hacer lucir tu hermoso vestido y tenerlo
-                        en video para verlo y volverlo a ver cuantas veces quieras, por eso es muy importante usar lo ultimo tecnologia
+                    <h1 class="featurette-heading text-2xl mb-2">Capturing <span class="text-muted">Moments on
+                            Video</span></h1>
+                    <p class="lead">"Para nosotros el detalle es lo que cuenta, sobre todo hacer lucir tu hermoso
+                        vestido y tenerlo
+                        en video para verlo y volverlo a ver cuantas veces quieras, por eso es muy importante usar lo
+                        ultimo tecnologia
                         para la filmacion"</p>
                 </div>
                 <div class="col-md-5">
@@ -217,10 +227,10 @@
                     controls=0 - Player controls does not display.
                     controls=1 (default) - Player controls is displayed. --}}
 
-                    <iframe width="600" height="400" src="https://www.youtube.com/embed/z1pbhHgB79Q"
-                    title="promo"
-                    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe class="w-full h-96" src="https://www.youtube.com/embed/z1pbhHgB79Q" title="promo"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 
                 </div>
@@ -230,17 +240,17 @@
 
             <div class="row featurette">
                 <div class="col-md-7 order-md-2">
-                    <h2 class="featurette-heading">Personal<span class="text-muted"> Touch</span></h2>
+                    <h2 class="featurette-heading text-2xl mb-2">Personal<span class="text-muted"> Touch</span></h2>
                     <p class="lead">"Nos encanta la gran variedad de temas sobre quinceañeras que existen,
                         una de nuestras favoritas es la de Charro, una tradicion muy Mexicana y lucen espectaculares,
                         mas cuando usamos drones para la filmacion"</p>
                 </div>
 
                 <div class="col-md-5 order-md-1">
-                    <iframe width="600" height="400" src="https://www.youtube.com/embed/BvG8zgC106s"
-                    title="Adrianna XV"
-                    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe class="w-full h-96" src="https://www.youtube.com/embed/BvG8zgC106s" title="Adrianna XV"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
             </div>
 

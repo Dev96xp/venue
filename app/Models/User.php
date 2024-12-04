@@ -102,6 +102,10 @@ class User extends Authenticatable
         return $this->hasMany(Gallery::class);
     }
 
+    public function posts()
+    {
+        return $this->hasMany(Post::class);
+    }
 
     // relacion UNO A MUCHOS INVERSA,
     public function store()

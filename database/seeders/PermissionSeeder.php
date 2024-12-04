@@ -287,6 +287,14 @@ class PermissionSeeder extends Seeder
         Permission::create(['name' => 'Dashborad Open3',]);
         //124
         Permission::create(['name' => 'Dashborad Open4',]);
+        //121
+        Permission::create(['name' => 'Dashborad Open5',]);
+        //122
+        Permission::create(['name' => 'Dashborad Open6',]);
+        //123
+        Permission::create(['name' => 'Dashborad Open7',]);
+        //124
+        Permission::create(['name' => 'Dashborad Open8',]);
 
     }
 }

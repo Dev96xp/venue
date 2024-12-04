@@ -124,9 +124,10 @@
                                     @livewire('admin.user.edit-user', ['user' => $user], key($user->id))
                                 </td>
 
+                                {{-- Aqui se agrega el ROLE a un usuario --}}
                                 @can('User edit')
                                     <td width="10px">
-                                        <a class="btn btn-primary py-1" href="{{ route('admin.users.edit', $user) }}">Editar</a>
+                                        <a class="btn btn-primary py-1" href="{{ route('admin.users.edit', $user) }}">Roles</a>
                                     </td>
                                 @endcan
 
