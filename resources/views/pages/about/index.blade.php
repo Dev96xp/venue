@@ -201,7 +201,7 @@
             </div>
 
             <!-- Logo cloud -->
-            <div class="relative isolate -z-10 mt-32 sm:mt-48">
+            <div class="relative isolate -z-10 mt-32 sm:mt-48" style="display:none">
                 <div
                     class="absolute inset-x-0 top-1/2 -z-10 flex -translate-y-1/2 justify-center overflow-hidden [mask-image:radial-gradient(50%_45%_at_50%_55%,white,transparent)]">
                     <svg class="h-[40rem] w-[80rem] flex-none stroke-gray-200" aria-hidden="true">
@@ -243,7 +243,7 @@
             </div>
 
             <!-- Team section -->
-            <div class="mx-auto mt-32 max-w-7xl px-6 sm:mt-48 lg:px-8">
+            <div class="mx-auto mt-32 max-w-7xl px-6 sm:mt-48 lg:px-8" style="display:none">
                 <div class="mx-auto max-w-2xl lg:mx-0">
                     <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Our team</h2>
                     <p class="mt-6 text-lg leading-8 text-gray-600">Sit facilis neque ab nulla vel. Cum eos in
@@ -266,7 +266,7 @@
             </div>
 
             <!-- Blog section -->
-            <div class="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
+            <div class="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8" style="display:none">
                 <div class="mx-auto max-w-2xl lg:mx-0 lg:max-w-none">
                     <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">From the blog</h2>
                     <p class="mt-2 text-lg leading-8 text-gray-600">Vel dolorem qui facilis soluta sint aspernatur
