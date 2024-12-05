@@ -273,17 +273,13 @@
 
     {{-- Location --}}
     <section class="mt-12">
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-3 gap-x-6 gap-y-8">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-3 gap-x-6 gap-y-8">
 
             <div class="col-span-1 mt-12 opacity-75 hover:opacity-100">
                 <img src="{{ Storage::url($whereIWork) }}" alt="whereIWork" class="rounded-md" style="width:100%">
             </div>
 
             <div class="col-span-2">
-                <div class="ml-24 mb-4">
-                    <h3 class="">WHERE I WORK</h3>
-                    <p class=""><em>I'd love your visit!</em></p>
-                </div>
 
                 <div class="ml-24">
                     <h3 class="">{{ $business->name }}</h3>
