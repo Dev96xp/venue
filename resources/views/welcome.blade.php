@@ -263,11 +263,11 @@
 
 
     {{-- CALENDAR de fechas disponibles --}}
-    {{-- <section>
+    <section>
         <div>
             @livewire('availability-calendar')
         </div>
-    </section> --}}
+    </section>
 
 
     {{-- Location --}}
