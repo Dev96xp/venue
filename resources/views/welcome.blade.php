@@ -145,8 +145,9 @@
     {{-- SECCTION 2 - At your service - Contenido con 4 articulos --}}
     <section class="mt-6">
         <h1 class="text-gray-800 text-center text-4xl mb-6 font-bold"
-            style="my-6 font-family: proxima-nova, sans-serif;font-weight: 800;font-style: normal">AT YOUR SERVICE xp
+            style="my-6 font-family: proxima-nova, sans-serif;font-weight: 800;font-style: normal">AT YOUR SERVICE
         </h1>
+
         <div
             class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-8">
             {{-- ARTICULO 1 --}}
@@ -155,7 +156,7 @@
                     {{-- <img class="rounded-xl lg:h-40 w-full object-cover opacity-75"     ORIGINAL - ANTES
                         src="{{ asset('img/home/DSC_3035.jpg') }}" alt=""> --}}
 
-                    <a href="gallery"><img class="rounded-xl lg:h-40 w-full object-cover opacity-75"
+                    <a href="gallery"><img class="rounded-md lg:h-40 w-full object-cover opacity-75"
                             src="{{ Storage::url($article1) }}" alt="article1"></a>
 
                     <header class="mt-2">
