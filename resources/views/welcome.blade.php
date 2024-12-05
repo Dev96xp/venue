@@ -275,11 +275,11 @@
     <section class="mt-12">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-3 gap-x-6 gap-y-8">
 
-            <div class="col-span-1 mt-12 opacity-75 hover:opacity-100">
+            <div class="col-span-1 mt-8 opacity-75 hover:opacity-100">
                 <img src="{{ Storage::url($whereIWork) }}" alt="whereIWork" class="rounded-md" style="width:100%">
             </div>
 
-            <div class="col-span-2">
+            <div class="col-span-2 ml-4">
 
                 <div class="ml-24 mt-16">
                     <h3 class="">{{ $business->name }}</h3>
