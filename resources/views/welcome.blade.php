@@ -286,8 +286,8 @@
                     <p class="">{{ $business->address . ' ' . $business->city . ' ' . $business->zip }}</p>
                 </div>
 
-                <i class="fa-solid fa-globe hover:text-neutral-800 text-3xl mr-6"></i>
-                Chicago, Nebraska, Iowa, Kansas, Missouri, Miami, South Dakota, US.<br>
+                <i class="far fa-map-marked hover:text-neutral-800 text-3xl mr-6"></i>
+                  Chicago, Nebraska, Iowa, Kansas, Missouri, Miami, South Dakota, US.<br>
 
                 <i class="fa fa-phone fa-fw hover:text-neutral-800 text-3xl mr-6"></i> Phone: +1
                 {{ $business->phone }} / {{ $business->phone2 }}<br>
