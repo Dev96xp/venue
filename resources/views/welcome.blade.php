@@ -314,7 +314,7 @@
                                          hover:opacity-100 - Elimina el opacity --}}
 
     {{-- footImagen1 --}}
-    <section class="mt-16 opacity-75 relative bg-cover bg-center bg-no-repeat hover:opacity-100"
+    <section class="mt-16 opacity-75 relative bg-fixed bg-cover bg-center bg-no-repeat hover:opacity-100"
         style="background-image: url('{{ Storage::url($footImage1) }}')">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-48">
             <div class="w-full md:w-3/4 lg:w-1/2">
