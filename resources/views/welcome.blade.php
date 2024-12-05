@@ -281,7 +281,7 @@
 
             <div class="col-span-2">
 
-                <div class="ml-24 mt-18">
+                <div class="ml-24 mt-16">
                     <h3 class="">{{ $business->name }}</h3>
                     <p class="">{{ $business->address . ' ' . $business->city . ' ' . $business->zip }}</p>
                 </div>
