@@ -149,7 +149,7 @@
         </h1>
 
         <div
-            class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-8">
+            class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-8">
             {{-- ARTICULO 1 --}}
             <article>
                 <figure>
@@ -177,7 +177,7 @@
             {{-- ARTICULO 2 --}}
             <article>
                 <figure>
-                    <img class="rounded-xl lg:h-40 w-full object-cover opacity-75" src="{{ Storage::url($article2) }}"
+                    <img class="rounded-md lg:h-40 w-full object-cover opacity-75" src="{{ Storage::url($article2) }}"
                         alt="article2">
                     <header class="mt-2">
                         <a href="#">
@@ -198,7 +198,7 @@
             <article>
                 <figure>
                     <a href="gallery">
-                        <img class="rounded-xl lg:h-40 w-full object-cover opacity-75"
+                        <img class="rounded-md lg:h-40 w-full object-cover opacity-75"
                             src="{{ Storage::url($article3) }}" alt="article3">
                     </a>
                     <header class="mt-2">
@@ -222,7 +222,7 @@
                 <figure>
                     {{-- <img class="rounded-xl lg:h-40 w-full object-cover opacity-75"
                         src="{{ asset('img/home/DSC_3035.jpg') }}" alt=""> --}}
-                    <img class="rounded-xl lg:h-40 w-full object-cover opacity-75" src="{{ Storage::url($article4) }}"
+                    <img class="rounded-md lg:h-40 w-full object-cover opacity-75" src="{{ Storage::url($article4) }}"
                         alt="article4">
 
                     <header class="mt-2">
