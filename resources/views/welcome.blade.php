@@ -282,7 +282,7 @@
             <div class="col-span-2 ml-4">
 
                 <div class="ml-24 mt-16">
-                    <h3 class=""><span class="text-xl ">{{ $business->name }}</span></h3>
+                    <h1 class=""><span class="text-xl ">{{ $business->name }}</span></h1>
                     <p class="">{{ $business->address . ' ' . $business->city . ' ' . $business->zip }}</p>
                 </div>
 
