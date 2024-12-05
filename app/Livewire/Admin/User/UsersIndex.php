@@ -47,7 +47,7 @@ class UsersIndex extends Component
         $users = User::where('store_id', $this->store_id)
             ->where('name', 'LIKE', '%' . $this->search . '%')
             ->orderBy($this->sort, $this->direction)
-            ->paginate(5);
+            ->paginate(16);
 
         $stores = Store::all();
 
