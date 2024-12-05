@@ -262,6 +262,22 @@
         </div>
     </section>
 
+    {{-- FullImage 2 --}}
+    <section class="mt-16 opacity-75 relative bg-fixed bg-cover bg-center bg-no-repeat hover:opacity-100"
+        style="background-image: url('{{ Storage::url($fullImage2) }}')">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-48">
+            <div class="w-full md:w-3/4 lg:w-1/2">
+                <h1 class="text-white text-bold text-6xl py-6 justify-center font-Playfair Display SC">Relax and comfort for your events</h1>
+                {{-- <h1 class="text-white text-bold text-4xl">
+                    Means
+                </h1>
+                <p class="text-white font-bold text-lg mt-2 mb-4 backdrop-brightness-5">
+                    Easy Access to Decorating Experts Ensuring Quality Outputs from Concept to Completion
+                </p> --}}
+
+            </div>
+        </div>
+    </section>
 
     {{-- CALENDAR de fechas disponibles --}}
     <section>
@@ -271,7 +287,7 @@
     </section>
 
 
-    {{-- Location --}}
+    {{-- Location and Address --}}
     <section class="mt-12">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-3 gap-x-6 gap-y-8">
 
@@ -287,7 +303,7 @@
                 </div>
 
                 <i class="far fa-map-marked hover:text-neutral-800 text-3xl mr-6"></i>
-                  Chicago, Nebraska, Iowa, Kansas, Missouri, Miami, South Dakota, US.<br>
+                Chicago, Nebraska, Iowa, Kansas, Missouri, Miami, South Dakota, US.<br>
 
                 <i class="fa fa-phone fa-fw hover:text-neutral-800 text-3xl mr-6"></i> Phone: +1
                 {{ $business->phone }} / {{ $business->phone2 }}<br>

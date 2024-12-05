@@ -35,6 +35,7 @@ class HomeController extends Controller
         $article3 = '';
         $article4 = '';
         $footImage1 = '';
+        $fullImage2 = '';
 
         $whereIWork ='';
 
@@ -62,8 +63,8 @@ class HomeController extends Controller
                     case 'footImage1':
                         $footImage1 = $image->url;
                         break;
-                    case 'open2':
-                        $open2 = $image->url;
+                    case 'fullImage2':
+                        $fullImage2 = $image->url;
                         break;
 
                     default:
@@ -83,6 +84,7 @@ class HomeController extends Controller
             'article3',
             'article4',
             'whereIWork',
+            'fullImage2',
             'footImage1',
             'currentDate',
             'currentYear',
