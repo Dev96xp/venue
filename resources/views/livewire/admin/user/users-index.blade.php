@@ -118,6 +118,13 @@
                                         </span>
                                     </div>
                                 </td>
+                                <td>
+                                    <div class="text-blue">
+                                        @foreach ($user->ipxes as $ipx)
+                                            {{ $ipx->ip }},
+                                        @endforeach
+                                    </div>
+                                </td>
 
                                 {{-- LIVEWIRE --}} {{-- BOTON - SI SIRVE PERO NO SE USA EN ESTE MOMENTO, PARA EDITAR CLIENTE --}}
                                 <td class="py-1" width="10px">
