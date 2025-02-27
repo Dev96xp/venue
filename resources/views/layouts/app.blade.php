@@ -36,6 +36,10 @@
     font-family: 'Sacramento', cursive;
     font-family: 'Tangerine', cursive; --}}
 
+    {{-- Java Script, lo agregue solo para hacer pruebas con chatgpt --}}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+
     {{-- Font Awesome --}}
     <link rel="stylesheet" href="{{ asset('vendor/fontawesome-free/css/all.min.css') }}">
 

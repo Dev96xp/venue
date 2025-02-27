@@ -44,7 +44,7 @@ class SelectedPhotos extends Component
         $images = Image::where('imageable_type', 'App\Models\Gallery')
             ->where('imageable_id', $this->gallery_id)
             ->where('status', 2)    // Significa que el usuario seleciono esta imagen para revelar
-            ->paginate(12);
+            ->get();
 
         return view('livewire.admin.proof.selected-photos', compact('images'));
     }

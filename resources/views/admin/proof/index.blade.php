@@ -15,7 +15,8 @@
             </div>
             <div class="col-span-2">
                 @livewire('admin.proof.gallery-index')      {{-- Aqui es donde se suben la fotos --}}
-                @livewire('admin.proof.selected-photos')      {{-- Aqui es donde se suben la fotos --}}
+                @livewire('admin.proof.selected-photos')      {{-- Aqui es donde se muestran las fotos selecionadas
+                                                                    por el cliente --}}
             </div>
 
         </div>

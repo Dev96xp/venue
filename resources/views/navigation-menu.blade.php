@@ -34,6 +34,17 @@
             'active' => request()->routeIs('store'),
         ],
 
+        [
+            'name' => 'Chat GTP',
+            'route' => route('chatv'),
+            'active' => request()->routeIs('chatv'),
+        ],
+        [
+            'name' => 'OPENAI',
+            'route' => route('openai'),
+            'active' => request()->routeIs('openai'),
+        ],
+
         /*
          [
              'name' => 'Equipment',

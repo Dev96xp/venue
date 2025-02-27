@@ -39,3 +39,9 @@ Tome parte de este codigo pero no lo instale completo
 
 Use: SweetAlert2 en livewire component, para proofing-admin     , https://sweetalert2.github.io/#examples
 
+Use: https://github.com/rossedlin/chat-gpt-laravel/tree/youtube,  para Chat GPT   (https://www.youtube.com/watch?v=-TsIg_F6er0)
+
+Use: https://github.com/openai-php/laravel, de nunomaduro para usar     OPEN AI, EN  DIC 2024  (https://www.youtube.com/watch?v=IQm8vlmr7fU)
+
+Use: Laracasts https://github.com/openai-php/laravel, de nunomaduro para usar, EN ENERO 2025 (https://www.youtube.com/watch?v=vmE12J3hiqg&t=54s)
+

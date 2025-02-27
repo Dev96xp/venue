@@ -6,6 +6,8 @@ use App\Http\Controllers\Customer\CustomerController;
 use App\Http\Controllers\Customer\PriceController;
 use App\Http\Controllers\Gallery\GalleryController;
 use App\Http\Controllers\Pages\About\AboutController;
+use App\Http\Controllers\Pages\Ai\AiController;
+use App\Http\Controllers\Pages\Chat\ChatController;
 use App\Http\Controllers\Pages\Photography\PhotographyController;
 use App\Http\Controllers\Pages\Store\OverviewController;
 use App\Http\Controllers\Pages\Testimonial\TestimonialController;
@@ -13,6 +15,8 @@ use Gloudemans\Shoppingcart\Facades\Cart;
 use App\Livewire\Store\ShoppingCart;
 use App\Http\Controllers\Pages\Store\StoreController;
 use App\Livewire\Pages\Store\ProductOverview;
+
+use OpenAI\Laravel\Facades\OpenAI;
 
 /*
 |--------------------------------------------------------------------------
@@ -66,6 +70,25 @@ Route::get('product-overview/{product}', [OverviewController::class, 'show'])->n
 
 
 
+// PUBLICA - Para ChatGPT - 1
+Route::get('chatv', function () {
+    return view('pages.chatgpt.index');
+})->name('chatv');
+
+Route::post('/chat', ChatController::class);
+
+
+
+// PUBLICA - Para OPEN AI - 3
+Route::get('/openai', [AiController::class, 'index'])->name('openai');
+Route::post('/ai/make_request/', [AiController::class,'make_request'])->name('make_request');
+
+// PUBLICA - Para OPEN AI - 4
+
+
+
+
+
 
 Route::middleware([
     'auth:sanctum',
@@ -85,5 +108,3 @@ Route::get('shopping-cart', ShoppingCart::class)->name('shopping-cart');
 Route::get('prueba', function () {
     Cart::destroy();
 });
-
-
