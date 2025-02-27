@@ -1,6 +1,6 @@
 <div>
     <div class="sm:flex-auto">
-        <h1 class="text-base font-semibold leading-6 text-gray-900">Imagenes selecionadas por el cliente<</h1>
+        <h1 class="text-base font-semibold leading-6 text-gray-900">Imagenes selecionadas por el cliente</h1>
 
     </div>
     {{-- Un simple grid de tres columnas --}}
