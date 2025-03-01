@@ -4,7 +4,7 @@
 
     </div>
     {{-- Un simple grid de tres columnas --}}
-    <div class="grid grid-cols-3">
+    <div class="grid grid-cols-3 mb-20">
 
         @foreach ($images as $image)
             <div class="ml-2 mt-2">
