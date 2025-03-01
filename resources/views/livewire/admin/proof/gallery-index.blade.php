@@ -67,9 +67,9 @@
                                     </td>
                                     {{-- @endcan --}}
 
-                                    {{-- <td class="whitespace-nowrap px-3 py-1 text-sm text-gray-500">
+                                    <td class="whitespace-nowrap px-3 py-1 text-sm text-gray-500">
                                         <div class="text-gray-900">{{ $gallery->status }}</div>
-                                    </td> --}}
+                                    </td>
 
                                     <td class="px-6 py-4 whitespace-nowrap">
 
