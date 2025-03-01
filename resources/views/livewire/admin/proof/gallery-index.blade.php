@@ -80,7 +80,7 @@
 
                                             @case('VIEW')
                                                 <span>
-                                                    <buttons class="btn btn-blue ml-2 px-2 py-0 font-normal text-white text-sm"
+                                                    <buttons class="btn btn-blue ml-2 px-2 py-0 font-normal text-grenn text-sm"
                                                         wire:click="update_status({{ $gallery->id }})">
                                                         {{ $gallery->status}}</buttons>
                                                 </span>
@@ -88,7 +88,7 @@
 
                                             @case('HIDE')
                                                 <span>
-                                                    <buttons class="btn btn-orange ml-2 px-2 py-0 font-normal text-white text-sm"
+                                                    <buttons class="btn btn-orange ml-2 px-2 py-0 font-normal text-gray text-sm"
                                                         wire:click="update_status({{ $gallery->id }})">
                                                         {{ $gallery->status }}</buttons>
                                                 </span>
