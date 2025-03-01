@@ -65,18 +65,14 @@
                                         class="relative text-red-600 hover:text-red-900 whitespace-nowrap py-1 pl-3 pr-4 text-right text-sm font-medium sm:pr-0">
                                         Delete
                                     </td>
-                                    {{-- @endcan --}}
 
-                                    {{-- <td class="whitespace-nowrap px-3 py-1 text-sm text-gray-500">
-                                        <div class="text-gray-900">{{ $gallery->status }}</div>
-                                    </td> --}}
 
                                     <td class="px-6 py-4 whitespace-nowrap">
 
                                         @switch($gallery->status)
                                             @case('ACTIVE')
                                                 <span>
-                                                    <buttons class="btn btn-green ml-2 px-2 py-0 font-normal text-white text-sm"
+                                                    <buttons class="btn btn-green ml-2 px-2 py-0 font-normal text-blue text-sm"
                                                         wire:click="update_status({{ $gallery->id }})">
                                                         {{ $gallery->status }}</buttons>
                                                 </span>
