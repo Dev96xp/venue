@@ -21,6 +21,7 @@ class AppointmentsCalendar extends LivewireCalendar
     // METODO  2
     public function events(): Collection
     {
+        // AQUI SE LE PROPORCIONA LOS DATOS, AL CALENDARIO
         return Event::query()
             ->whereDate('scheduled_at', '>=', $this->gridStartsAt)
             ->whereDate('scheduled_at', '<=', $this->gridEndsAt)

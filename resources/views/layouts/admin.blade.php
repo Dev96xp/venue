@@ -50,7 +50,10 @@
 
     <!-- Styles -->
     @livewireStyles
-    @livewireCalendarScripts
+    @livewireCalendarScripts    {{-- Lo agregue para que funcione el calendario de Livewire --}}
+
+
+    {{-- Agrege esto para DropZone --}}
 
     {{-- Formatea EL PHONE NUMBER      ojo ojo --}}
     <script src="{{ asset('js/format_phone_numbercsd.js') }}"></script>

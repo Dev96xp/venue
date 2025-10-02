@@ -12,6 +12,8 @@
 
     <x-admin-layout>
 
+        {{-- Aqui comienza el CALENDARIO --}}
+
         <livewire:appointments-calendar week-starts-at="0"
             {{-- :day-click-enabled="false" --}}
             {{-- :event-click-enabled="false" --}}

@@ -25,7 +25,9 @@ Use: https://github.com/Laraveles/spanish
 
 Use: Paypal (Segun video de codersfree, para Ecommerce)
 
+     Calendario
 Use: https://github.com/asantibanez/livewire-calendar
+
 Use https://github.com/omnia-digital/livewire-calendar, igual que el anterior pero actulizado con livewire 3.0
 
 Use: http://flexslider.woothemes.com/basic-carousel.html, para el carrusel de productos
@@ -45,3 +47,5 @@ Use: https://github.com/openai-php/laravel, de nunomaduro para usar     OPEN AI,
 
 Use: Laracasts https://github.com/openai-php/laravel, de nunomaduro para usar, EN ENERO 2025 (https://www.youtube.com/watch?v=vmE12J3hiqg&t=54s)
 
+Use: composer require laraveljutsu/zap, desde https://github.com/ludoguenet/laravel-zap, pra hacer los schedule, las citas,
+NOTA : tube conflito con la tabla schedule por que ya existia, por el momento la probare en otro projecto

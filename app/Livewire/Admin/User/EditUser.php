@@ -16,6 +16,9 @@ class EditUser extends Component
     public $user_id;
     public $stores;
 
+    // MASTER CLASS
+    // 1. Definimos las reglas de validacion para los campos del formulario
+    // Se utiliza la propiedad Validate para definir las reglas de validacion
 
     #[Validate('required|max:60')]
     public $name;
@@ -29,10 +32,14 @@ class EditUser extends Component
     public $zip;
     #[Validate('required|max:2')]
     public $state;
+    // Se define la validacion para el email, se puede agregar unique, si se desea validar que no se repita
     #[Validate('required|')]
     public $email;
+    // Se define la tienda a la que pertenece el usuario
     #[Validate('required|')]
     public $store_id;
+
+
 
     public function mount(User $user){
 
@@ -67,6 +74,7 @@ class EditUser extends Component
     // en la propiedad tuxedo, se actualice en la base de datos
 
     public function update(){
+
 
         $this->validate();  //Validar los valores
         $this->user->name = $this->name;

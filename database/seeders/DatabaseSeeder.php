@@ -12,6 +12,7 @@ use App\Models\Feature;
 use App\Models\Invitation;
 use App\Models\page;
 use App\Models\Payment;
+use App\Models\Photoshot;
 use App\Models\Schedule;
 use App\Models\Sectionx;
 use App\Models\Tag;
@@ -131,6 +132,7 @@ class DatabaseSeeder extends Seeder
         $this->call(TagSeeder::class);
         $this->call(PostSeeder::class);
 
-
+        $this->call(PhotopackSeeder::class);
+        $this->call(PhotoshotSeeder::class);
     }
 }

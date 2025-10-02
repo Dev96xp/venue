@@ -91,6 +91,8 @@ Route::resource('imposts', ImpostController::class)->names('imposts');
 Route::resource('events', EventController::class)->names('events');
 Route::get('events/{event_id}/print_report', [EventController::class,'print_report'])->name('events.print_report');
 Route::get('configuration/event', [ConfigurationEventController::class,'index'])->name('configuration.event.index');
+
+// Calendario de Eventos
 Route::get('schedule', [EventCalendarController::class,'index'])->name('schedule.index');
 
 // Route::get('products/index/{brand?}/{category?}', [ProductController::class,'index'])->middleware('can:Product Index')->name('products.index'); ORIGINAL

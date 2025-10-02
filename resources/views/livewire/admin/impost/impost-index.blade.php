@@ -19,7 +19,7 @@
                                         class="py-3.5 pl-3 pr-3 text-left text-sm font-semibold text-gray-900 sm:pl-0">
                                         Imposts</th>
 
-                                    <th class="text-left text-sm font-semibold">Total</th>
+                                    <th class="text-left text-sm font-semibold">Total tax</th>
                                 </tr>
 
                             </thead>
@@ -51,7 +51,7 @@
                                                     @endphp
                                                 @endforeach
                                             </div>
-                                            <div class="text-gray-900 font-bold">{{ $total_tax }}</div>
+                                            <div class="text-gray-900 font-bold">{{ $total_tax }} %</div>
                                         </td>
 
                                         <td wire:click="del_impost({{ $impost }})"

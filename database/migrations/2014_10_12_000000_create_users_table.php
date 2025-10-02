@@ -15,13 +15,14 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('cus_id')->default(0);
-            $table->string('phone')->default('000-000-0000');
-            $table->string('company')->nullable();
             $table->string('address')->nullable();
             $table->string('city')->nullable();
             $table->string('state')->nullable();
             $table->string('zip')->nullable();
             $table->string('email')->unique();
+            $table->string('phone')->default('000-000-0000');
+            $table->string('company')->nullable();
+
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();
