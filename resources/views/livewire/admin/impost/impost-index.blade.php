@@ -51,6 +51,7 @@
                                                     @endphp
                                                 @endforeach
                                             </div>
+                                            {{-- Puse el porciento --}}
                                             <div class="text-gray-900 font-bold">{{ $total_tax }} %</div>
                                         </td>
 
