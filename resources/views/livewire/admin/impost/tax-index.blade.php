@@ -34,7 +34,7 @@
                                 </td>
 
                                 <td class="whitespace-nowrap px-3 py-1 text-sm text-gray-500">
-                                    <div class="text-gray-900">{{ $tax->tax }}</div>
+                                    <div class="text-gray-900">{{ $tax->tax }} %</div>
                                 </td>
 
                                 <td wire:click="delete_tax({{ $tax }})"
