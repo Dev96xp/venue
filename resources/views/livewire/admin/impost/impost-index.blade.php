@@ -52,7 +52,7 @@
                                                 @endforeach
                                             </div>
                                             {{-- Puse el porciento --}}
-                                            <div class="text-gray-900 font-bold">{{ $total_tax }}</div>
+                                            <div class="text-gray-900 font-bold">{{ $total_tax }} %</div>
                                         </td>
 
                                         <td wire:click="del_impost({{ $impost }})"
