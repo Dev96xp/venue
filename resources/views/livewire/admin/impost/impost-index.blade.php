@@ -34,7 +34,7 @@
 
                                             <div class="text-blue">
                                                 @foreach ($impost->taxes as $tax)
-                                                    {{ $tax->name }},
+                                                    {{ $tax->name }} +
                                                 @endforeach
                                             </div>
 
