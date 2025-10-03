@@ -49,3 +49,10 @@ Use: Laracasts https://github.com/openai-php/laravel, de nunomaduro para usar, E
 
 Use: composer require laraveljutsu/zap, desde https://github.com/ludoguenet/laravel-zap, pra hacer los schedule, las citas,
 NOTA : tube conflito con la tabla schedule por que ya existia, por el momento la probare en otro projecto
+
+RECUERDA QUE PARA REMOVER UN PAQUETE SE USA EN SIGUIENTE COMANDO EN TERMINAL VSC:
+
+    composer remove laraveljutsu/zap
+
+y luego borre la carpeta ZAP.PHP DE LA CARPETA DE CONFIGURACIONES
+y luego configure las migraciones cambiadas como la tabla schedule

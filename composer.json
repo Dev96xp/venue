@@ -16,7 +16,6 @@
         "laravel/jetstream": "^5.0",
         "laravel/sanctum": "^4.0",
         "laravel/tinker": "^2.8",
-        "laraveljutsu/zap": "^1.1",
         "league/flysystem-aws-s3-v3": "^3.22",
         "livewire/flux": "^1.1",
         "livewire/livewire": "^3.4",
