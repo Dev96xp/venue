@@ -85,7 +85,7 @@
 
                 <div class="col-span-3 mb-4">
                     <x-label value="email" />
-                    <x-input wire:model.defer="email" type="text" class="w-full" />
+                    <x-input readonly wire:model.defer="email" type="text" class="w-full" />
                     <x-input-error for="email" />
                 </div>
 
