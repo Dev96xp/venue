@@ -23,6 +23,9 @@ use App\Http\Controllers\Admin\Order\OrderController;
 use App\Http\Controllers\Admin\Page\PageController;
 use App\Http\Controllers\Admin\Permission\PermissionController;
 use App\Http\Controllers\Admin\Proof\ProofController;
+use App\Http\Controllers\Admin\Employee\EmployeeController;
+use App\Http\Controllers\Admin\Location\LocationController;
+use App\Http\Controllers\Admin\Attendance\AttendanceController;
 use App\Models\Business;
 use App\Models\Impost;
 
@@ -103,4 +106,12 @@ Route::post('products/{product}/save_images/', [ProductController::class,'save_i
 // Corte de Caja
 Route::get('corte/index', [BookController::class,'index'])->name('corte.index');
 Route::get('corte/prnreport/{store_id}/{date1?}/{date2?}/{radio_select?}', [BookController::class,'prnreport'])->name('corte.prnreport');
+
+// Employees module
+Route::get('employees', [EmployeeController::class, 'index'])->name('employees.index');
+Route::get('locations', [LocationController::class, 'index'])->name('locations.index');
+Route::get('attendance', [AttendanceController::class, 'index'])->name('attendance.index');
+Route::get('attendance/print', [AttendanceController::class, 'print'])->name('attendance.print');
+Route::get('attendance/payroll', [AttendanceController::class, 'payroll'])->name('attendance.payroll');
+Route::get('attendance/payroll/print', [AttendanceController::class, 'payrollPrint'])->name('attendance.payroll.print');
 

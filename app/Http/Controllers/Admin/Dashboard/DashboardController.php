@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin\Dashboard;
 
 use App\Http\Controllers\Controller;
+use App\Models\Employee;
 use App\Models\User;
 use Illuminate\Http\Request;
 
@@ -17,7 +18,9 @@ class DashboardController extends Controller
         $users = User::role('Admin')->get();
         //$users = User::all();
 
-        return view('admin.dashboard.index',compact('users'));
+        $activeEmployees = Employee::where('status', Employee::STATUS_ACTIVE)->count();
+
+        return view('admin.dashboard.index', compact('users', 'activeEmployees'));
     }
 
     /**

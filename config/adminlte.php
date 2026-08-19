@@ -430,6 +430,38 @@ return [
             ],
         ],
         [
+            'text' => 'EMPLOYEES',
+            'url'  => '#',
+            'icon' => 'fas fa-id-badge',
+            'icon_color'  => 'purple',
+            'submenu' => [
+                [
+                    'text'        => 'Employees',
+                    'route'       => 'admin.employees.index',
+                    'icon'        => 'fas fa-id-card',
+                    'icon_color'  => 'purple',
+                ],
+                [
+                    'text'        => 'Buildings',
+                    'route'       => 'admin.locations.index',
+                    'icon'        => 'fas fa-map-marker-alt',
+                    'icon_color'  => 'purple',
+                ],
+                [
+                    'text'        => 'Attendance',
+                    'route'       => 'admin.attendance.index',
+                    'icon'        => 'fas fa-clock',
+                    'icon_color'  => 'purple',
+                ],
+                [
+                    'text'        => 'Payroll',
+                    'route'       => 'admin.attendance.payroll',
+                    'icon'        => 'fas fa-money-bill-wave',
+                    'icon_color'  => 'purple',
+                ],
+            ],
+        ],
+        [
             'text'        => 'ONLINE ORDERS',
             'icon'        => 'fas fa-list-ol',
             'icon_color'  => 'yellow',

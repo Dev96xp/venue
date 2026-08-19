@@ -22,6 +22,8 @@ class Kernel extends ConsoleKernel
         $schedule->command('backup:run')->daily()->at('01:00');
 
         $schedule->command('backup:monitor')->daily()->at('02:00');
+
+        $schedule->command('attendance:close-stale')->daily()->at('02:15')->withoutOverlapping();
     }
 
     /**

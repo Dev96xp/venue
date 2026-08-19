@@ -57,7 +57,12 @@
                 </div>
 
                 <div class="col-span-4">
-                    {{-- Nada --}}
+                    <div class="card-body">
+                        <div class="text-lg">Active Employees</div>
+                        <div class="text-3xl font-bold">
+                            <a href="{{ route('admin.employees.index') }}">{{ $activeEmployees }}</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

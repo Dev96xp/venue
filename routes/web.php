@@ -17,6 +17,8 @@ use App\Http\Controllers\Pages\Store\StoreController;
 use App\Livewire\Pages\Store\ProductOverview;
 
 use OpenAI\Laravel\Facades\OpenAI;
+use App\Http\Controllers\Employee\AuthController as EmployeeAuthController;
+use App\Http\Controllers\Employee\ClockInController;
 
 /*
 |--------------------------------------------------------------------------
@@ -107,4 +109,17 @@ Route::get('shopping-cart', ShoppingCart::class)->name('shopping-cart');
 
 Route::get('prueba', function () {
     Cart::destroy();
+});
+
+
+//########## Employee Clock-In ##############
+Route::middleware('guest:employee')->group(function () {
+    Route::get('clock-in/login', [EmployeeAuthController::class, 'showLogin'])->name('employee.login');
+    Route::post('clock-in/login', [EmployeeAuthController::class, 'login'])->name('employee.login.store');
+});
+
+Route::middleware('auth:employee')->group(function () {
+    Route::get('clock-in', [ClockInController::class, 'show'])->name('employee.clock-in');
+    Route::post('clock-in', [ClockInController::class, 'toggle'])->name('employee.clock-in.toggle');
+    Route::post('clock-in/logout', [EmployeeAuthController::class, 'logout'])->name('employee.logout');
 });
