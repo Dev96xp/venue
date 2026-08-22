@@ -19,6 +19,7 @@ use App\Livewire\Pages\Store\ProductOverview;
 use OpenAI\Laravel\Facades\OpenAI;
 use App\Http\Controllers\Employee\AuthController as EmployeeAuthController;
 use App\Http\Controllers\Employee\ClockInController;
+use App\Http\Controllers\BusinessCardController;
 
 /*
 |--------------------------------------------------------------------------
@@ -123,3 +124,8 @@ Route::middleware('auth:employee')->group(function () {
     Route::post('clock-in', [ClockInController::class, 'toggle'])->name('employee.clock-in.toggle');
     Route::post('clock-in/logout', [EmployeeAuthController::class, 'logout'])->name('employee.logout');
 });
+
+
+//########## Digital Business Card (NFC) ##############
+Route::get('businesscard', [BusinessCardController::class, 'show'])->name('businesscard.show');
+Route::get('businesscard/vcard', [BusinessCardController::class, 'vcard'])->name('businesscard.vcard');
