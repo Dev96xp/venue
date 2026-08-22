@@ -11,12 +11,12 @@ class BusinessCardTest extends TestCase
         $response = $this->get('/businesscard');
 
         $response->assertStatus(200);
-        $response->assertSee('Vanessa Ramirez');
+        $response->assertSee('The Palace Team');
         $response->assertSee('Directora General');
         $response->assertSee('THE PALACE HALL');
-        $response->assertSee('309-746-4108');
-        $response->assertSee('tel:+13097464108', false);
-        $response->assertSee('https://wa.me/13097464108', false);
+        $response->assertSee('308-746-4108');
+        $response->assertSee('tel:+13087464108', false);
+        $response->assertSee('https://wa.me/13087464108', false);
     }
 
     public function test_vcard_download_has_correct_headers_and_fields(): void
@@ -25,15 +25,15 @@ class BusinessCardTest extends TestCase
 
         $response->assertStatus(200);
         $response->assertHeader('Content-Type', 'text/vcard; charset=utf-8');
-        $response->assertHeader('Content-Disposition', 'attachment; filename="vanessa-ramirez.vcf"');
+        $response->assertHeader('Content-Disposition', 'attachment; filename="the-palace-team.vcf"');
 
         $content = $response->getContent();
 
         $this->assertStringContainsString('BEGIN:VCARD', $content);
-        $this->assertStringContainsString('FN:Vanessa Ramirez', $content);
+        $this->assertStringContainsString('FN:The Palace Team', $content);
         $this->assertStringContainsString('ORG:THE PALACE HALL', $content);
         $this->assertStringContainsString('TITLE:Directora General', $content);
-        $this->assertStringContainsString('TEL;TYPE=CELL:+13097464108', $content);
+        $this->assertStringContainsString('TEL;TYPE=CELL:+13087464108', $content);
         $this->assertStringContainsString('URL:', $content);
         $this->assertStringContainsString('END:VCARD', $content);
     }

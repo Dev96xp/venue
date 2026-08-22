@@ -29,7 +29,7 @@
             <div class="mx-auto h-24 w-24 rounded-full flex items-center justify-center"
                 style="background-color: #ec4899;">
                 <span class="text-white text-3xl font-bold" style="font-family: Montserrat">
-                    {{ collect(explode(' ', $name))->map(fn ($part) => mb_substr($part, 0, 1))->join('') }}
+                    {{ collect(explode(' ', $name))->take(2)->map(fn ($part) => mb_substr($part, 0, 1))->join('') }}
                 </span>
             </div>
 

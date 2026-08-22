@@ -9,12 +9,12 @@ class BusinessCardController extends Controller
     private function data(): array
     {
         return [
-            'name' => 'Vanessa Ramirez',
+            'name' => 'The Palace Team',
             'title' => 'Directora General',
             'company' => 'THE PALACE HALL',
-            'phone' => '309-746-4108',
-            'phone_tel' => '+13097464108',
-            'phone_wa' => '13097464108',
+            'phone' => '308-746-4108',
+            'phone_tel' => '+13087464108',
+            'phone_wa' => '13087464108',
         ];
     }
 
