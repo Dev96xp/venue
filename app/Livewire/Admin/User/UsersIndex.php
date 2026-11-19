@@ -49,7 +49,8 @@ class UsersIndex extends Component
             ->where('store_id', $this->store_id)
             ->where('name', 'LIKE', '%' . $this->search . '%')
             ->orderBy($this->sort, $this->direction)
-            ->paginate(16);
+            ->orderBy('users.id', $this->direction)   // desempate: orden fijo entre páginas
+            ->paginate(self::PER_PAGE);
 
         $stores = Store::all();
 
@@ -76,6 +77,8 @@ class UsersIndex extends Component
     ];
 
     public array $selected = [];   // Para borrar varios a la vez
+
+    const PER_PAGE = 16;           // Clientes por página
 
     /**
      * Agrega al query los conteos que deciden si un cliente se puede borrar.
@@ -183,8 +186,16 @@ class UsersIndex extends Component
         }
         session()->flash('users_deleted', trim($message));
 
+        // Quedarse en la misma página; solo retroceder si la página quedó vacía
         if (count($deleted) && $this->getPage() > 1) {
-            $this->resetPage();
+            $total = User::where('store_id', $this->store_id)
+                ->where('name', 'LIKE', '%' . $this->search . '%')
+                ->count();
+            $lastPage = max(1, (int) ceil($total / self::PER_PAGE));
+
+            if ($this->getPage() > $lastPage) {
+                $this->setPage($lastPage);
+            }
         }
     }
 
