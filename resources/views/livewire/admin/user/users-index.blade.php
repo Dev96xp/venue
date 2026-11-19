@@ -63,6 +63,25 @@
             </div>
         </div>
 
+        {{-- Resultado de borrar clientes --}}
+        @if (session('users_deleted'))
+            <div class="alert alert-info m-3 mb-0">{{ session('users_deleted') }}</div>
+        @endif
+
+        {{-- Borrar varios clientes basura a la vez --}}
+        @can('User edit')
+            @if (count($selected))
+                <div class="m-3 mb-0 flex items-center gap-3">
+                    <button type="button" class="btn btn-danger btn-sm"
+                        wire:click="deleteSelected"
+                        wire:confirm="¿Eliminar {{ count($selected) }} cliente(s) seleccionados? Esta acción no se puede deshacer.">
+                        <i class="fas fa-trash"></i> Eliminar seleccionados ({{ count($selected) }})
+                    </button>
+                    <button type="button" class="btn btn-link btn-sm" wire:click="$set('selected', [])">Quitar selección</button>
+                </div>
+            @endif
+        @endcan
+
         {{-- Si existe algun usario en: $users, muestra la tabla --}}
         @if ($users->count())
 
@@ -71,6 +90,9 @@
                 <table class="table table-striped">
                     <thead>
                         <tr>
+                            @can('User edit')
+                                <th width="10px" title="Seleccionar clientes vacíos para borrarlos juntos"><i class="fas fa-check-square"></i></th>
+                            @endcan
                             <th>ID</th>
                             <th>Name</th>
                             <th>Phone, email</th>
@@ -82,7 +104,15 @@
                     </thead>
                     <tbody>
                         @foreach ($users as $user)
+                            @php $blockers = \App\Livewire\Admin\User\UsersIndex::deletionBlockers($user); @endphp
                             <tr wire:key="usuarios-{{ $user->id }}"> {{-- SUPER IMPORTANTE --}}
+                                @can('User edit')
+                                    <td>
+                                        @if (empty($blockers))
+                                            <input type="checkbox" value="{{ $user->id }}" wire:model.live="selected">
+                                        @endif
+                                    </td>
+                                @endcan
                                 <td>{{ $user->id }}</td>
                                 <td>
                                     <a class="font-bold"
@@ -139,6 +169,23 @@
                                     </a>
                                 </td>
 
+                                {{-- Borrar cliente basura con un clic (solo si no tiene datos) --}}
+                                @can('User edit')
+                                    <td class="py-1" width="10px">
+                                        @if (empty($blockers))
+                                            <button type="button" class="btn btn-outline-danger py-1" title="Eliminar cliente"
+                                                wire:click="deleteUser({{ $user->id }})" wire:loading.attr="disabled">
+                                                <i class="fas fa-trash"></i>
+                                            </button>
+                                        @else
+                                            <span class="btn btn-outline-secondary py-1 disabled" style="pointer-events: auto; cursor: not-allowed"
+                                                title="No se puede borrar: {{ implode(', ', $blockers) }}">
+                                                <i class="fas fa-lock"></i>
+                                            </span>
+                                        @endif
+                                    </td>
+                                @endcan
+
                                 {{-- Aqui se agrega el ROLE a un usuario --}}
                                 @can('User edit')
                                     <td width="10px">
@@ -191,6 +238,22 @@
                                         <i class="fas fa-file-signature"></i>
                                     </a>
                                 </td>
+
+                                @can('User edit')
+                                    @php $mBlockers = \App\Livewire\Admin\User\UsersIndex::deletionBlockers($user); @endphp
+                                    <td class="py-0" width="10px">
+                                        @if (empty($mBlockers))
+                                            <button type="button" class="btn btn-outline-danger py-0" title="Eliminar cliente"
+                                                wire:click="deleteUser({{ $user->id }})" wire:loading.attr="disabled">
+                                                <i class="fas fa-trash"></i>
+                                            </button>
+                                        @else
+                                            <span class="btn btn-outline-secondary py-0 disabled" title="No se puede borrar: {{ implode(', ', $mBlockers) }}">
+                                                <i class="fas fa-lock"></i>
+                                            </span>
+                                        @endif
+                                    </td>
+                                @endcan
 
                                 @can('User edit')
                                     <td width="10px">
