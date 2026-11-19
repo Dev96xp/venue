@@ -131,6 +131,14 @@
                                     @livewire('admin.user.edit-user', ['user' => $user], key($user->id))
                                 </td>
 
+                                {{-- Crear contrato de renta con los datos de este cliente --}}
+                                <td class="py-1" width="10px">
+                                    <a class="btn btn-warning py-1 text-nowrap" title="Nuevo contrato"
+                                        href="{{ route('admin.contracts.create', ['user' => $user->id]) }}">
+                                        <i class="fas fa-file-signature"></i> Contrato
+                                    </a>
+                                </td>
+
                                 {{-- Aqui se agrega el ROLE a un usuario --}}
                                 @can('User edit')
                                     <td width="10px">
@@ -175,6 +183,13 @@
                                 {{-- LIVEWIRE --}} {{-- BOTON - SI SIRVE PERO NO SE USA EN ESTE MOMENTO, PARA EDITAR CLIENTE --}}
                                 <td class="py-0" width="10px">
                                     @livewire('admin.user.edit-user', ['user' => $user], key($user->id))
+                                </td>
+
+                                <td class="py-0" width="10px">
+                                    <a class="btn btn-warning py-0" title="Nuevo contrato"
+                                        href="{{ route('admin.contracts.create', ['user' => $user->id]) }}">
+                                        <i class="fas fa-file-signature"></i>
+                                    </a>
                                 </td>
 
                                 @can('User edit')

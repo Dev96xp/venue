@@ -24,6 +24,9 @@ class Kernel extends ConsoleKernel
         $schedule->command('backup:monitor')->daily()->at('02:00');
 
         $schedule->command('attendance:close-stale')->daily()->at('02:15')->withoutOverlapping();
+
+        // Contratos: completa los de eventos pasados y expira los no firmados
+        $schedule->command('contracts:update-statuses')->daily()->at('02:30')->withoutOverlapping();
     }
 
     /**

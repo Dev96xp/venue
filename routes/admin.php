@@ -26,6 +26,7 @@ use App\Http\Controllers\Admin\Proof\ProofController;
 use App\Http\Controllers\Admin\Employee\EmployeeController;
 use App\Http\Controllers\Admin\Location\LocationController;
 use App\Http\Controllers\Admin\Attendance\AttendanceController;
+use App\Http\Controllers\Admin\Contract\ContractController;
 use App\Models\Business;
 use App\Models\Impost;
 
@@ -115,3 +116,11 @@ Route::get('attendance/print', [AttendanceController::class, 'print'])->name('at
 Route::get('attendance/payroll', [AttendanceController::class, 'payroll'])->name('attendance.payroll');
 Route::get('attendance/payroll/print', [AttendanceController::class, 'payrollPrint'])->name('attendance.payroll.print');
 
+
+// Contracts module (contratos de renta del salón)
+Route::get('contracts/templates', [ContractController::class, 'templates'])->name('contracts.templates');
+Route::get('contracts', [ContractController::class, 'index'])->name('contracts.index');
+Route::get('contracts/create', [ContractController::class, 'create'])->name('contracts.create');
+Route::get('contracts/{contract}', [ContractController::class, 'show'])->name('contracts.show');
+Route::get('contracts/{contract}/edit', [ContractController::class, 'edit'])->name('contracts.edit');
+Route::get('contracts/{contract}/pdf', [ContractController::class, 'pdf'])->name('contracts.pdf');

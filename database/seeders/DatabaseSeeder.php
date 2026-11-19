@@ -134,5 +134,7 @@ class DatabaseSeeder extends Seeder
 
         $this->call(PhotopackSeeder::class);
         $this->call(PhotoshotSeeder::class);
+
+        $this->call(ContractTemplateSeeder::class); // Plantilla base del contrato de renta
     }
 }

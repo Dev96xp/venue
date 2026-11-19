@@ -92,6 +92,12 @@ class User extends Authenticatable
         return $this->hasMany(Event::class);
     }
 
+    // Contratos de renta del salón de este cliente
+    public function contracts()
+    {
+        return $this->hasMany(Contract::class);
+    }
+
     public function ipxes()
     {
         return $this->hasMany(Ipx::class);

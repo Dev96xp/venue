@@ -303,6 +303,14 @@ return [
             'type'         => 'fullscreen-widget',
             'topnav_right' => true,
         ],
+        [
+            // Botón para cambiar entre modo claro y oscuro (se recuerda por sesión)
+            'type'           => 'darkmode-widget',
+            'topnav_right'   => true,
+            'icon_enabled'   => 'fas fa-sun',
+            'icon_disabled'  => 'fas fa-moon',
+            'color_enabled'  => 'warning',
+        ],
 
         // Sidebar items:
         [
@@ -502,6 +510,18 @@ return [
                     'text'      => 'Events Confi.',
                     'route'     => 'admin.configuration.event.index',    // La ruta ala que apunta
                     'icon'      => 'fas fa-fw fa-user-cog',
+                    'icon_color'  => 'yellow',
+                ],
+                [
+                    'text'      => 'Contracts',
+                    'route'     => 'admin.contracts.index',
+                    'icon'      => 'fas fa-file-signature',
+                    'icon_color'  => 'yellow',
+                ],
+                [
+                    'text'      => 'Contract Templates',
+                    'route'     => 'admin.contracts.templates',
+                    'icon'      => 'fas fa-file-alt',
                     'icon_color'  => 'yellow',
                 ],
 
