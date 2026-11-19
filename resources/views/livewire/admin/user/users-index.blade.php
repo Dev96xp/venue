@@ -158,7 +158,7 @@
 
                                 {{-- LIVEWIRE --}} {{-- BOTON - SI SIRVE PERO NO SE USA EN ESTE MOMENTO, PARA EDITAR CLIENTE --}}
                                 <td class="py-1" width="10px">
-                                    @livewire('admin.user.edit-user', ['user' => $user], key($user->id))
+                                    @livewire('admin.user.edit-user', ['user' => $user], key('edit-user-desktop-' . $user->id))
                                 </td>
 
                                 {{-- Crear contrato de renta con los datos de este cliente --}}
@@ -229,7 +229,7 @@
 
                                 {{-- LIVEWIRE --}} {{-- BOTON - SI SIRVE PERO NO SE USA EN ESTE MOMENTO, PARA EDITAR CLIENTE --}}
                                 <td class="py-0" width="10px">
-                                    @livewire('admin.user.edit-user', ['user' => $user], key($user->id))
+                                    @livewire('admin.user.edit-user', ['user' => $user], key('edit-user-mobile-' . $user->id))
                                 </td>
 
                                 <td class="py-0" width="10px">
